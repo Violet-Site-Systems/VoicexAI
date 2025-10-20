@@ -1,5 +1,4 @@
-"""
-Inter-agent message schemas for EPPN
+"""Inter-agent message schemas for EPPN
 
 Defines dataclasses for messages exchanged between agents.
 """
@@ -45,5 +44,3 @@ class EthicsReport:
     risks: List[str]
     recommendations: List[str]
     metadata: Dict[str, Any]
-
-

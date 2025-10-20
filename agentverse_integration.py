@@ -40,6 +40,8 @@ class AgentProfile:
     status: str
     registration_date: datetime
     last_activity: datetime
+    code_location: Optional[str] = None
+    endpoint: Optional[str] = None
 
 
 @dataclass
@@ -89,7 +91,9 @@ class AgentVerseIntegration:
         self.agent_version = "1.0.0"
     
     def register_agent(self, agent_name: str, agent_type: str, 
-                      capabilities: List[Dict[str, Any]]) -> str:
+                      capabilities: List[Dict[str, Any]],
+                      local_path: Optional[str] = None,
+                      endpoint: Optional[str] = None) -> str:
         """Register an agent on AgentVerse."""
         
         agent_id = str(uuid.uuid4())
@@ -108,7 +112,19 @@ class AgentVerseIntegration:
             )
             agent_capabilities.append(capability)
         
-        # Create agent profile
+        # Create agent profile (include optional local code location)
+        contact_info = {
+            "email": "contact@eppn.ai",
+            "website": "https://eppn.ai",
+            "github": "https://github.com/eppn/uagents",
+        }
+        if local_path:
+            # Add a hint where the agent lives in the repository for maintainers
+            contact_info["code_path"] = local_path
+        if endpoint:
+            # Publicly reachable endpoint for AgentVerse to call
+            contact_info["endpoint"] = endpoint
+
         profile = AgentProfile(
             agent_id=agent_id,
             name=agent_name,
@@ -116,15 +132,13 @@ class AgentVerseIntegration:
             version=self.agent_version,
             domain=self.agent_domain,
             capabilities=agent_capabilities,
-            contact_info={
-                "email": "contact@eppn.ai",
-                "website": "https://eppn.ai",
-                "github": "https://github.com/eppn/uagents"
-            },
+            contact_info=contact_info,
             reputation_score=0.0,
             status="active",
             registration_date=datetime.now(),
-            last_activity=datetime.now()
+            last_activity=datetime.now(),
+            code_location=local_path,
+            endpoint=endpoint,
         )
         
         # Register with AgentVerse
@@ -172,7 +186,12 @@ class AgentVerseIntegration:
             }
         ]
         
-        return self.register_agent("EPPN Librarian", "librarian", capabilities)
+        return self.register_agent(
+            "EPPN Librarian",
+            "librarian",
+            capabilities,
+            local_path="agents/librarian",
+        )
     
     def register_interpreter_agent(self) -> str:
         """Register the Interpreter agent."""
@@ -208,7 +227,12 @@ class AgentVerseIntegration:
             }
         ]
         
-        return self.register_agent("EPPN Interpreter", "interpreter", capabilities)
+        return self.register_agent(
+            "EPPN Interpreter",
+            "interpreter",
+            capabilities,
+            local_path="agents/interpreter",
+        )
     
     def register_summarizer_agent(self) -> str:
         """Register the Summarizer agent."""
@@ -245,7 +269,12 @@ class AgentVerseIntegration:
             }
         ]
         
-        return self.register_agent("EPPN Summarizer", "summarizer", capabilities)
+        return self.register_agent(
+            "EPPN Summarizer",
+            "summarizer",
+            capabilities,
+            local_path="agents/summarizer",
+        )
     
     def register_ethical_analyst_agent(self) -> str:
         """Register the Ethical Analyst agent."""
@@ -297,7 +326,12 @@ class AgentVerseIntegration:
             }
         ]
         
-        return self.register_agent("EPPN Ethical Analyst", "ethical_analyst", capabilities)
+        return self.register_agent(
+            "EPPN Ethical Analyst",
+            "ethical_analyst",
+            capabilities,
+            local_path="agents/ethical_analyst",
+        )
     
     def register_communicator_agent(self) -> str:
         """Register the Communicator agent."""
@@ -333,7 +367,12 @@ class AgentVerseIntegration:
             }
         ]
         
-        return self.register_agent("EPPN Communicator", "communicator", capabilities)
+        return self.register_agent(
+            "EPPN Communicator",
+            "communicator",
+            capabilities,
+            local_path="agents/communicator",
+        )
     
     def discover_agents(self, capability_requirements: Dict[str, Any]) -> List[AgentProfile]:
         """Discover agents with specific capabilities."""

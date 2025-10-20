@@ -129,12 +129,14 @@ class EPPNIntegrationManager:
         self.logger.info("Registering agents on AgentVerse...")
         
         # Register each agent type
+        endpoints = self.config.get("agent_endpoints", {}) or {}
+
         self.registered_agents["librarian"] = self.agentverse_integration.register_librarian_agent()
         self.registered_agents["interpreter"] = self.agentverse_integration.register_interpreter_agent()
         self.registered_agents["summarizer"] = self.agentverse_integration.register_summarizer_agent()
         self.registered_agents["ethical_analyst"] = self.agentverse_integration.register_ethical_analyst_agent()
         self.registered_agents["communicator"] = self.agentverse_integration.register_communicator_agent()
-        
+
         self.logger.info(f"Registered agents: {self.registered_agents}")
     
     async def _initialize_cudos(self) -> None:
