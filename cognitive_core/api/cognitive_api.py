@@ -7,6 +7,9 @@ invoking cognitive reasoning pipelines.
 
 from typing import Dict, Any, List, Optional
 
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+
 from ..atomspace.atom_types import Atom, AtomType
 from ..atomspace.atomspace_manager import AtomSpaceManager
 from ..reasoning.ethical_analyzer import EthicalAnalyzer
@@ -63,5 +66,42 @@ class CognitiveAPI:
         Returns result dict with facts, derived, and trace.
         """
         return evaluate_metta_program(program)
+
+
+# --- FastAPI wrapper so the cognitive core can be run with uvicorn ---
+app = FastAPI(title="Cognitive Core - MeTTa-enabled")
+
+# Single backend instance used by the HTTP API
+_backend = CognitiveAPI()
+
+
+class MeTTaRequest(BaseModel):
+    program: str
+
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
+
+@app.post("/metta/evaluate")
+def metta_evaluate(req: MeTTaRequest):
+    try:
+        result = _backend.evaluate_metta(req.program)
+        # Convert sets/tuples into JSON-serializable lists
+        def serialize(d):
+            if isinstance(d, set):
+                return [list(t) for t in d]
+            if isinstance(d, tuple):
+                return list(d)
+            if isinstance(d, dict):
+                return {k: serialize(v) for k, v in d.items()}
+            if isinstance(d, list):
+                return [serialize(x) for x in d]
+            return d
+
+        return serialize(result)
+    except Exception as e:  # pragma: no cover - surfacing runtime errors
+        raise HTTPException(status_code=500, detail=str(e))
 
 
