@@ -1,0 +1,17 @@
+kenya_policy_sources:
+  - name: Kenya Gazette - Urban Planning Notices
+    urls:
+      - https://www.kenyalaw.org/kenya_gazette/
+  - name: Ministry of Lands, Public Works, Housing and Urban Development
+    urls:
+      - https://housingandurban.go.ke/policies/
+  - name: National Treasury - Budget and Resource Allocation
+    urls:
+      - https://treasury.go.ke/budget/
+  - name: Council of Governors - Devolution/Public Policy
+    urls:
+      - https://cog.go.ke/publications/
+  - name: Kenya National Bureau of Statistics (KNBS)
+    urls:
+      - https://www.knbs.or.ke/?page_id=3142
+

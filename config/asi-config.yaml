@@ -1,0 +1,38 @@
+agents:
+  librarian:
+    path: agents/librarian/main.py
+    role: Fetches PDFs from public government portals
+  librarian_scheduler:
+    path: agents/librarian/scheduler.py
+    role: Schedules periodic crawling of Kenya policy sources
+  interpreter:
+    path: agents/interpreter/main.py
+    role: Extracts and structures content from PDFs
+  summarizer:
+    path: agents/summarizer/main.py
+    role: Summarizes structured data using LLMs
+  ethical_analyst:
+    path: agents/ethical_analyst/main.py
+    role: Integrates with cognitive_core for ethical reasoning
+  communicator:
+    path: agents/communicator/main.py
+    role: Interfaces with human ethics partner via dashboard
+  orchestrator:
+    path: agents/orchestrator/main.py
+    role: Routes messages across the pipeline
+  social_monitor:
+    path: agents/social_monitor/main.py
+    role: Polls RSS/social feeds and triggers crawls
+
+registry:
+  provider: asi-cloud
+  project: EPPN
+  environment: dev
+
+messaging:
+  schemas: schemas/messages.py
+  channels:
+    - name: policy_pipeline
+      agents: [orchestrator, librarian, librarian_scheduler, interpreter, summarizer, ethical_analyst, communicator, social_monitor]
+
+

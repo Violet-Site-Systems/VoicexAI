@@ -1,0 +1,116 @@
+version: '3.8'
+
+services:
+  # Cognitive Core API
+  cognitive-core:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile.cognitive-core
+    ports:
+      - "8001:8000"
+    environment:
+      - PYTHONPATH=/app
+      - LOG_LEVEL=INFO
+    volumes:
+      - ../data:/app/data
+      - ../logs:/app/logs
+    networks:
+      - eppn-network
+    depends_on:
+      - redis
+      - postgres
+
+  # Frontend Dashboard
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - COGNITIVE_CORE_URL=http://cognitive-core:8000
+      - REDIS_URL=redis://redis:6379
+    volumes:
+      - ../data:/app/data
+    networks:
+      - eppn-network
+    depends_on:
+      - cognitive-core
+      - redis
+
+  # Redis for caching and message queuing
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - eppn-network
+
+  # PostgreSQL for persistent storage
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_DB=eppn
+      - POSTGRES_USER=eppn_user
+      - POSTGRES_PASSWORD=eppn_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - eppn-network
+
+  # Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/nginx/ssl
+    networks:
+      - eppn-network
+    depends_on:
+      - frontend
+      - cognitive-core
+
+  # Monitoring with Prometheus
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    networks:
+      - eppn-network
+
+  # Grafana for visualization
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./grafana/datasources:/etc/grafana/provisioning/datasources
+    networks:
+      - eppn-network
+    depends_on:
+      - prometheus
+
+volumes:
+  redis_data:
+  postgres_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  eppn-network:
+    driver: bridge

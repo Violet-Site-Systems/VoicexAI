@@ -1,0 +1,47 @@
+uagents
+requests
+PyPDF2
+transformers
+openai
+networkx
+pandas
+numpy
+spacy
+pyyaml
+fastapi
+uvicorn
+feedparser
+
+# XAI and Human-in-the-Loop
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.0
+pydantic==2.5.0
+
+# Cudos Integration
+web3==6.11.1
+cryptography==41.0.7
+
+# AgentVerse Integration
+httpx==0.25.2
+aiohttp==3.9.1
+
+# Monitoring and Logging
+prometheus-client==0.19.0
+structlog==23.2.0
+
+# Database
+psycopg2-binary==2.9.11
+redis==5.0.1
+sqlalchemy==2.0.23
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-asyncio==0.21.1
+
+# Development
+black==23.11.0
+flake8==6.1.0
+mypy==1.7.1
+
