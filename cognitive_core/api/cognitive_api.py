@@ -10,6 +10,7 @@ from typing import Dict, Any, List, Optional
 from ..atomspace.atom_types import Atom, AtomType
 from ..atomspace.atomspace_manager import AtomSpaceManager
 from ..reasoning.ethical_analyzer import EthicalAnalyzer
+from ..reasoning.metta_interpreter import evaluate as evaluate_metta_program
 
 
 class CognitiveAPI:
@@ -54,5 +55,13 @@ class CognitiveAPI:
 
     def import_(self, filepath: str) -> None:
         self.atomspace.import_atomspace(filepath)
+
+    # MeTTa evaluation (small embedded interpreter)
+    def evaluate_metta(self, program: str) -> Dict[str, object]:
+        """Evaluate a small MeTTa-like program using the embedded interpreter.
+
+        Returns result dict with facts, derived, and trace.
+        """
+        return evaluate_metta_program(program)
 
 

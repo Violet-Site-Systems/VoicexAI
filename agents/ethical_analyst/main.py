@@ -41,14 +41,30 @@ async def handle_parsed(ctx: Context, msg: ParsedText):
         })
         atom_ids.append(atom_id)
 
+    # Run the existing ethical analysis pipeline
     report = cog.analyze_policy(atom_ids)
+
+    # Build a tiny MeTTa program from the atoms to run simple inference
+    # Each atom becomes a fact: (policy_section <doc_id> <atom_id>)
+    metta_lines = []
+    for aid in atom_ids:
+        metta_lines.append(f"(policy_section {msg.doc_id} {aid})")
+
+    # Example heuristic rule: if there's any policy_section for the doc, mark doc as 'has_policy'
+    metta_lines.append(f"(=> (has_policy {msg.doc_id}) (policy_section {msg.doc_id} {atom_ids[0] if atom_ids else 'none'}))")
+
+    metta_program = "\n".join(metta_lines)
+    try:
+        metta_result = cog.evaluate_metta(metta_program)
+    except Exception as e:  # pragma: no cover - defensive
+        metta_result = {"error": str(e)}
 
     ethics = EthicsReport(
         doc_id=msg.doc_id,
         report=report,
         risks=[r.get("conclusion", "risk") for r in report.get("contradictions", [])],
         recommendations=[],
-        metadata={"source": "ethical_analyst"}
+        metadata={"source": "ethical_analyst", "metta": metta_result}
     )
 
     await ctx.send(ctx.sender, ethics)
