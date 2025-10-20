@@ -235,3 +235,68 @@ def pipeline_run(req: PipelineRunRequest | None = None, file: UploadFile | None 
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.post("/pipeline/run_url")
+def pipeline_run_url(req: PipelineRunRequest):
+    """Accept JSON body with `urls: [...]` and run the pipeline (URL-only).
+    This avoids multipart/form-data requirements when calling with application/json.
+    """
+    # reuse logic from pipeline_run but only for URLs
+    try:
+        if not req or not getattr(req, 'urls', None):
+            raise HTTPException(status_code=400, detail="No urls provided")
+
+        os.makedirs("docs", exist_ok=True)
+        os.makedirs("data", exist_ok=True)
+
+        reports = []
+        for url in req.urls:
+            path = download_pdf(url)
+            sections = extract_sections(path)
+
+            atom_ids = []
+            for s in sections:
+                aid = _backend.create_atom({
+                    "atom_type": "PolicySection",
+                    "name": s.get("title", "section"),
+                    "content": s,
+                    "metadata": {"source": path}
+                })
+                atom_ids.append(aid)
+
+            report = _backend.analyze_policy(atom_ids)
+
+            summary_counts = report.get("summary", {})
+            key_points = [s.get("title") for s in sections[:5]]
+            contradictions = [stringify_contradiction(c) for c in report.get("contradictions", [])]
+
+            out = {
+                "doc": os.path.basename(path),
+                "summary": {
+                    "short": f"Detected {summary_counts.get('contradictions', 0)} contradictions, {summary_counts.get('ethical_implications', 0)} ethical implications, and {summary_counts.get('patterns', 0)} patterns.",
+                    "counts": summary_counts
+                },
+                "key_points": key_points,
+                "contradictions": contradictions,
+                "artifacts": {
+                    "pdf": path,
+                    "json": f"data/{os.path.basename(path)}.report.json"
+                }
+            }
+
+            try:
+                with open(out["artifacts"]["json"], "w", encoding="utf-8") as f:
+                    json.dump({"report": report, "doc": out["doc"]}, f, default=str, indent=2)
+            except Exception:
+                with open(out["artifacts"]["json"], "w", encoding="utf-8") as f:
+                    json.dump({"doc": out["doc"], "summary": out["summary"]}, f, indent=2)
+
+            reports.append(out)
+
+        return {"status": "ok", "results": reports}
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
