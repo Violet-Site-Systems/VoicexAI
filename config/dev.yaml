@@ -1,0 +1,12 @@
+# Development config example
+base_url: "http://localhost:8001"
+agentverse_api_url: "https://api.agentverse.ai"
+agentverse_api_key: ""
+
+# Map agent role -> public endpoint (used when AgentVerse needs to call your agent)
+agent_endpoints:
+  librarian: "https://dev.example.com/agents/librarian/message"
+  interpreter: "https://dev.example.com/agents/interpreter/message"
+  summarizer: "https://dev.example.com/agents/summarizer/message"
+  ethical_analyst: "https://dev.example.com/agents/ethical_analyst/message"
+  communicator: "https://dev.example.com/agents/communicator/message"

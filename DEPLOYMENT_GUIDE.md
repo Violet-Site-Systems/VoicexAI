@@ -254,6 +254,8 @@ contract EPPNGovernance {
 # Get API key from dashboard
 # Set environment variable
 export AGENTVERSE_API_KEY="your_api_key_here"
+
+See `docs/AGENT_REGISTRATION.md` for a detailed guide on when to use agent identities vs endpoints, an actionable checklist, and a minimal gateway example.
 ```
 
 ### 2. Register EPPN Agents
