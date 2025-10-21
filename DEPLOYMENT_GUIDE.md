@@ -125,6 +125,17 @@ REDIS_URL=redis://your-redis-instance:6379
 CUDOS_RPC_URL=https://rpc.cudos.org
 AGENTVERSE_API_URL=https://api.agentverse.ai
 AGENTVERSE_API_KEY=sk_dfdb772ee76f4a519f2d81870831911bb99530554f754e36a29aad452bf729df
+
+Hugging Face Integration
+
+If you want to use Hugging Face hosted inference models as an alternative to AgentVerse, set the following in your environment:
+
+```
+HF_API_TOKEN=<your-hf-api-token>
+MODEL_PROVIDER=hf  # or 'agentverse' to prefer AgentVerse, or 'local' to only use local models
+```
+
+The Cognitive Core will attempt to use AgentVerse if `AGENTVERSE_API_KEY` is present; otherwise it will try Hugging Face (if `HF_API_TOKEN` is set). If neither are present, the system falls back to a local transformer pipeline when available.
 ```
 
 ### Troubleshooting: Vercel `vercel.json` conflict (functions vs builds)
@@ -288,6 +299,43 @@ Create `deployment/cudos-job.json`:
   }
 }
 ```
+
+  ### AI model provider configuration
+
+  By default the Cognitive Core will try providers in this order for summarization and ethics:
+
+  1. AgentVerse (if `AGENTVERSE_API_KEY` is provided)
+  2. Hugging Face Inference API (if `HUGGINGFACE_API_KEY` is provided)
+  3. Local transformers summarizer (if `transformers` is installed and a model is available)
+
+  Set these environment variables in your deployment or `.env` file:
+
+  ```
+  AGENTVERSE_API_KEY=sk_...
+  HUGGINGFACE_API_KEY=hf_...
+  HUGGINGFACE_MODEL_SUMMARY=sshleifer/distilbart-cnn-12-6
+  ```
+
+  The system will automatically try each provider in order. If no hosted provider is available, the local fallback is used.
+
+  DeepSeek (OCR + document conversion)
+  -----------------------------------
+
+  If you want to use DeepSeek for OCR and document-to-markdown conversion, set the model in:
+
+  ```
+  HUGGINGFACE_MODEL_SUMMARY=deepseek-ai/DeepSeek-OCR
+  ```
+
+  DeepSeek requires additional dependencies for optimal performance:
+
+  ```
+  pip install torch==2.6.0 transformers==4.46.3 tokenizers==0.20.3 einops addict easydict
+  pip install flash-attn==2.7.3 --no-build-isolation
+  pip install pdf2image pymupdf pillow
+  ```
+
+  DeepSeek benefits from GPU (CUDA) for fast inference; if no GPU is present the code will attempt to fall back to CPU but expect slower performance.
 
 ### 4. Smart Contract Integration
 
