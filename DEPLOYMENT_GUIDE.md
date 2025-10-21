@@ -95,6 +95,7 @@ jobs:
 ### Why Vercel over Netlify?
 
 Vercel is chosen for the frontend hosting because:
+
 - **Better Next.js/React Support**: Native integration with modern frontend frameworks
 - **Edge Functions**: Better performance for API routes
 - **Automatic HTTPS**: Built-in SSL certificates
@@ -340,11 +341,11 @@ uvicorn app:app --reload --port 8000
 
 ### 4. Development URLs
 
-- Frontend Dashboard: http://localhost:8000
-- Cognitive Core API: http://localhost:8001
-- API Documentation: http://localhost:8001/docs
-- Grafana Monitoring: http://localhost:3000
-- Prometheus Metrics: http://localhost:9090
+- Frontend Dashboard: <http://localhost:8000>
+- Cognitive Core API: <http://localhost:8001>
+- API Documentation: <http://localhost:8001/docs>
+- Grafana Monitoring: <http://localhost:3000>
+- Prometheus Metrics: <http://localhost:9090>
 
 ## Production Deployment
 
@@ -535,10 +536,10 @@ add_header Strict-Transport-Security "max-age=31536000; includeSubDomains";
 
 ### Support Channels
 
-- GitHub Issues: https://github.com/yourusername/eppn-uagents/issues
-- Documentation: https://docs.eppn.ai
-- Community Discord: https://discord.gg/eppn
-- Email Support: support@eppn.ai
+- GitHub Issues: <https://github.com/yourusername/eppn-uagents/issues>
+- Documentation: <https://docs.eppn.ai>
+- Community Discord: <https://discord.gg/eppn>
+- Email Support: <support@eppn.ai>
 
 ## Conclusion
 

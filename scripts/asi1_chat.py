@@ -38,13 +38,18 @@ def chat(prompt: str, api_key: str) -> str:
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="Call ASI1.ai mini chat model")
-    parser.add_argument("--prompt", "-p", default="Hello! How can you help me today?", help="Prompt to send")
+    parser = argparse.ArgumentParser(description="Call ASI1.ai mini chat")
+    parser.add_argument(
+        "--prompt", "-p",
+        default="Hello! How can you help me today?",
+        help="Prompt to send"
+    )
     args = parser.parse_args(argv)
 
     api_key = os.getenv(ENV_KEY)
     if not api_key:
-        print(f"Please set the environment variable {ENV_KEY} with your ASI1.ai API key.")
+        print(f"Please set the environment variable {ENV_KEY} with your "
+              f"ASI1.ai API key.")
         sys.exit(1)
 
     try:

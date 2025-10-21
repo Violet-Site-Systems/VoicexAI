@@ -6,8 +6,8 @@ Extracts text and structure from PDFs and emits ParsedText.
 import os
 from typing import List, Dict, Any
 
-from PyPDF2 import PdfReader
-from uagents import Agent, Context
+from PyPDF2 import PdfReader  # type: ignore
+from uagents import Agent, Context  # type: ignore
 
 from schemas.messages import PDFReady, ParsedText
 
