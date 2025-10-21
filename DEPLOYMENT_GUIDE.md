@@ -184,6 +184,13 @@ Notes and tips:
 - If you prefer to keep `builds` (old style) then do not add any `functions` property. Instead, keep your `builds` and `routes` as-is and update `PYTHON_VERSION` only if needed.
 - If you use the Vercel UI to create Functions or change runtimes it may automatically add a `functions` section; in that case remove `builds` from the file stored in your repo.
 - Use `python3.11` where possible for FastAPI to benefit from newer stdlib/security fixes and better runtime support.
+- If you try the `functions` style, Vercel expects a runtime identifier in a specific format (for example some runtimes use `now-php@1.0.0` or `python@1.0.0`), and using `python3.11` directly may result in the error:
+
+```
+Error: Function Runtimes must have a valid version, for example `now-php@1.0.0`.
+```
+
+Because of this, I reverted the repository `vercel.json` files to the older `builds` style with `@vercel/python` which is compatible with Vercel's current validation. If you'd like, I can re-introduce `functions` with a correct runtime identifier — tell me which runtime string to use and I'll update the files again.
 - After making the change locally, run `vercel dev` (local dev) and `vercel --prod` (production) to test deployments.
 
 Quick checklist to resolve the error:

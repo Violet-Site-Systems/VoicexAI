@@ -1,9 +1,10 @@
 {
     "version": 2,
     "name": "voicexai-frontend",
-    "functions": {
-        "frontend/app.py": { "runtime": "python3.11" }
-    },
+    "builds": [{
+        "src": "frontend/app.py",
+        "use": "@vercel/python"
+    }],
     "routes": [{
         "src": "/(.*)",
         "dest": "frontend/app.py"
