@@ -1,0 +1,27 @@
+{
+  "uuid": "0e8b5803-21a0-4e5d-9ba1-4ead711a2419",
+  "atom_type": "PolicySection",
+  "name": "Page 3",
+  "content": {
+    "title": "Page 3",
+    "text": "Dataset Size tokensParameters non-embeddingCompute PF-days, non-embeddingTest LossFigure 1 Language modeling performance improves smoothly as we increase the model size, datasetset\nsize, and amount of compute2used for training. For optimal performance all three factors must be scaled\nup in tandem. Empirical performance has a power-law relationship with each individual factor when not\nbottlenecked by the other two.\nPerformance depends strongly on scale, weakly on model shape: Model performance depends most\nstrongly on scale, which consists of three factors: the number of model parameters N(excluding embed-\ndings), the size of the dataset D, and the amount of compute Cused for training. Within reasonable limits,\nperformance depends very weakly on other architectural hyperparameters such as depth vs. width. (Section\n3)\nSmooth power laws: Performance has a power-law relationship with each of the three scale factors\nN;D;C when not bottlenecked by the other two, with trends spanning more than six orders of magnitude\n(see Figure 1). We observe no signs of deviation from these trends on the upper end, though performance\nmust ﬂatten out eventually before reaching zero loss. (Section 3)\nUniversality of overﬁtting: Performance improves predictably as long as we scale up NandDin tandem,\nbut enters a regime of diminishing returns if either NorDis held ﬁxed while the other increases. The\nperformance penalty depends predictably on the ratio N0:74=D, meaning that every time we increase the\nmodel size 8x, we only need to increase the data by roughly 5x to avoid a penalty. (Section 4)\nUniversality of training: Training curves follow predictable power-laws whose parameters are roughly\nindependent of the model size. By extrapolating the early part of a training curve, we can roughly predict the\nloss that would be achieved if we trained for much longer. (Section 5)\nTransfer improves with test performance: When we evaluate models on text with a different distribution\nthan they were trained on, the results are strongly correlated to those on the training validation set with\na roughly constant offset in the loss – in other words, transfer to a different distribution incurs a constant\npenalty but otherwise improves roughly in line with performance on the training set. (Section 3.2.2)\nSample efﬁciency: Large models are more sample-efﬁcient than small models, reaching the same level of\nperformance with fewer optimization steps (Figure 2) and using fewer data points (Figure 4).\nConvergence is inefﬁcient: When working within a ﬁxed compute budget Cbut without any other restric-\ntions on the model size Nor available data D, we attain optimal performance by training very large models\nand stopping signiﬁcantly short of convergence (see Figure 3). Maximally compute-efﬁcient training would\ntherefore be far more sample efﬁcient than one might expect based on training small models to convergence,\nwith data requirements growing very slowly as D\u0018C0:27with training compute. (Section 6)\nOptimal batch size: The ideal batch size for training these models is roughly a power of the loss only,\nand continues to be determinable by measuring the gradient noise scale [MKAT18]; it is roughly 1-2 million\ntokens at convergence for the largest models we can train. (Section 5.1)\nTaken together, these results show that language modeling performance improves smoothly and predictably\nas we appropriately scale up model size, data, and compute. We expect that larger language models will\nperform better and be more sample efﬁcient than current models.\n3",
+    "page": 3
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.3177842565597668,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:39.629118",
+  "updated_at": "2025-10-21T02:01:01.059299",
+  "last_accessed": "2025-10-21T01:59:39.638747"
+}

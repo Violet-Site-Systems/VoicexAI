@@ -1,0 +1,27 @@
+{
+  "uuid": "9ebf3e5b-7d9f-40f8-b1a5-3bd3ea709a66",
+  "atom_type": "PolicySection",
+  "name": "Page 10",
+  "content": {
+    "title": "Page 10",
+    "text": "Extending this idea, let I\u001a[K] denote a set of indices. We consider inner and outer\nsetsbyinandbyoutthat index all con\fgurations of the labels yI= (yi)i2I2f\u0006 1gm, so that\nanalogizing the condition (12), we de\fne the 2minner and outer sets\nbyin(x;yI)k= minfy0\nkjy02bCimp(x);y0\nI=yIg\n=8\n><\n>:\u00001 if max y0:y0\nk=\u00001;y0\nI=yIs(x;y0)\u0015bq\u000b(x)\u0000bQ1\u0000\u000b\n1 if max y0:y0\nk=1;y0\nI=yIs(x;y0)\u0015bq\u000b(x)\u0000bQ1\u0000\u000band preceding fails\n+1otherwise;(13a)\nand similarly\nbyout(x;yI)k= maxfy0\nkjy02bCimp(x);y0\nI=yIg: (13b)\nFor anyI\u001a[K] withjIj=m, we can then de\fne the index-based inner/outer con\fdence set\nbCio(x;I):=[yI2f\u00061gmfy2Yjbyin(x;yI)\u0016y\u0016byout(x;yI)g; (14)\nwhich analogizes the function (11). When mis small, this union of rectangles is e\u000eciently\nrepresentable, and gives a tighter approximation to bCimpthan does the simpler representa-\ntion (11); indeed, if for some pair ( i;j)2Iwe haveyi=\u0000yjfor ally2bCimp(x), but for which\nthere are vectors y2bCimp(x) realizingyi= 1 andyi=\u00001, thenjbCio(x;I)j\u0014jbCio(x)j=2. More-\nover, no matter the choice Iof the index set, we have the containment bCio(x;I)\u001bbCimp(x), so\nthat Corollary 3.1 holds and bCioprovides valid marginal coverage. The sets (13) are e\u000eciently\ncomputable for the scoring functions swe consider (cf. Sec. 3.2).\nThe choice of the indices Iover which to split the rectangles requires some care. A reason-\nable heuristic is to obtain the inner/outer vectors byin(x) andbyout(x) in Alg. 2, and if they pro-\nvide too large a con\fdence set, select a pair of variables I= (i;j) for whichbyin(x)i;j= (\u00001;\u00001)\nwhilebyout(x)i;j= (1;1). To choose the pair, we suggest the most negatively correlated pair\nof labels in the training data that satisfy this joint inclusion; the heuristic is to \fnd those\npairings most likely to yield empty con\fdence sets in the collections (13).\n3.2 E\u000ecient construction of inner and outer con\fdence sets\nWith the validity of any inner/outer construction verifying the conditions (12) established,\nwe turn to two approaches to e\u000eciently satisfy these. The \frst focuses on the scenario where\na prediction method provides individual scoring functions sk:X!Rfor each task k2[K]\n(as frequent for complex classi\fers, such as random forests or deep networks [e.g. 18, 30]),\nwhile the second considers the case when we have a scoring function s:X\u0002Y! Rthat is\ntree-structured in a sense we make precise; in the next section, we will show how to construct\nsuch tree-structured scores using any arbitrary multilabel prediction method.\nA direct inner/outer method using individual task scores We assume here that we\nobserve individual scoring functions sk:X!Rfor each task. We can construct inner and\nouter sets using only these scores while neglecting label correlations by learning threshold\nfunctionstin\u0015tout:X!R, where we would like to have the (true) labels yksatisfy\nsign(sk(x)\u0000tin(x))\u0014yk\u0014sign(sk(x)\u0000tout(x)):\nIn Algorithm 3, we accomplish this via quantile threshold functions on the maximal and\nminimal values of the scores skfor positive and negative labels, respectively.\n10",
+    "page": 10
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4661198192270645,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:08.657465",
+  "updated_at": "2025-10-21T02:01:00.992574",
+  "last_accessed": "2025-10-21T01:56:08.669187"
+}

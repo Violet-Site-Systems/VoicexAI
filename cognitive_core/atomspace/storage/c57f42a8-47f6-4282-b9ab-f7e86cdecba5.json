@@ -1,0 +1,27 @@
+{
+  "uuid": "c57f42a8-47f6-4282-b9ab-f7e86cdecba5",
+  "atom_type": "PolicySection",
+  "name": "Page 30",
+  "content": {
+    "title": "Page 30",
+    "text": "A.2.1 Proof of Lemma A.1\nFixx2X. LetF\u001b;xandFxbe the respective cumulative distribution functions of s\u001b(x;Y;Z )\nands(x;Y) conditionally on X=x, and de\fne the (left-continuous) inverse CDFs\nF\u00001\n\u001b;x(u) = infft2R:u\u0014F\u001b;x(t)gandF\u00001\nx(u) = infft2R:u\u0014Fx(t)g:\nWe use a standard lemma about the convergence of inverse CDFs, though for lack of a proper\nreference, we include a proof in Section A.2.2.\nLemma A.2. Let(Fn)n\u00151be a sequence of cumulative distribution functions converging\nweakly toF, with inverses F\u00001\nnandF\u00001. Then for each u2(0;1),\nF\u00001(u)\u0014lim inf\nn!1F\u00001\nn(u)\u0014lim sup\nn!1F\u00001\nn(u)\u0014F\u00001(u+): (30)\nAsF\u001b;xconverges weakly to Fxas\u001b!0, Lemma A.2 implies that\nF\u00001\nx(\u000b)\u0014lim inf\n\u001b!0F\u00001\n\u001b;x(\u000b):\nBut observe that q\u001b\n\u000b(x) =F\u00001\n\u001b;x(\u000b) andq\u000b(x) =F\u00001\nx(\u000b), so that we have the desired result\nq\u000b(x)\u0014lim inf\u001b!0q\u001b\n\u000b(x).\nA.2.2 Proof of Lemma A.2\nWe prove only the \frst inequality, as the last inequality is similar. Fix u2(0;1) and\u000f>0.\nFis right-continuous and non-decreasing, so its set of continuity points is dense in R; thus,\nthere exists a continuity point wofFsuch thatw<F\u00001(u)\u0014w+\u000f.\nSincew<F\u00001(u), it must hold that F(w)<u, by de\fnition of F\u00001. Aswis a continuity\npoint ofF, limn!1Fn(w) =F(w)<u, which means that Fn(w)<ufor large enough n, or\nequivalently, that w<F\u00001\nn(u). We can thus conclude that\nlim infF\u00001\nn(u)\u0015w\u0015F\u00001(u)\u0000\u000f:\nTaking\u000f!0 proves the \frst inequality.\nA.3 E\u000ecient computation of maximal marginals for condition (12)\nWe describe a more or less standard dynamic programming approach to e\u000eciently compute the\nmaximum marginals (17) (i.e. maximal values of a tree-structured score s:Y=f\u00001;1gK!\nR), referring to standard references on max-product message passing [7, 41, 22] for more. Let\nT= ([K];E) be a tree with nodes [ K] and undirected edges E, though we also let edges( T)\nand nodes(T) denote the edges and nodes of the tree T. Assume\ns(y) =KX\nk=1'k(yk) +X\ne=(k;l)2E e(yk;yl):\nTo compute the maximum marginals maxy2Yfs(y)jyk= ^ykg, we perform two message\npassing steps on the tree: an upward and downward pass. Choose a node rarbitrarily to be\nthe root ofT, and letTdown be the directed tree whose edges are Ewithras its root (which\nis evidently unique); let Tupbe the directed tree with all edges reversed from Tdown.\n30",
+    "page": 30
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4070327839590647,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:41.952221",
+  "updated_at": "2025-10-21T02:01:01.049021",
+  "last_accessed": "2025-10-21T01:56:41.953900"
+}

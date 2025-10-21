@@ -1,0 +1,27 @@
+{
+  "uuid": "0b258314-c648-4f6b-982a-cdf78ec2d6c5",
+  "atom_type": "PolicySection",
+  "name": "Page 2",
+  "content": {
+    "title": "Page 2",
+    "text": "where\u000b>0 is some a-priori acceptable error level. We could then output conditionally valid\ncon\fdence sets for each x2X at level 1\u0000\u000bby returning\nfy2Yjs(x;y)\u0015q\u000b(x)g:\nUnfortunately, such conditional coverage is impossible without either vacuously loose thresh-\nolds [39] or strong modeling assumptions [39, 1], but this idea forms the basis for our approach.\nTo address this impossibility, conformal inference [40] resolves instead to a marginal cov-\nerage guarantee: given nobservations and a desired con\fdence level 1 \u0000\u000b, conformal methods\nconstruct con\fdence sets C(x) such that for a new pair ( Xn+1;Yn+1) from the same distri-\nbution,Yn+12C(Xn+1) with probability at least 1 \u0000\u000b, where the probability is jointly over\nXandY. Conformal inference algorithms can build upon arbitrary predictors, neural net-\nworks, random forests, kernel methods and treat them as black boxes, \\conformalizing\" them\npost-hoc.\nThis distribution-free coverage is only achievable marginally, and standard conformal pre-\ndictions for classi\fcation achieve it (as we see later) by providing good coverage on easy\nexamples at the expense of miscoverage on harder instances. We wish to provide more uni-\nform coverage, and we address this in both multiclass|where each example belongs to a single\nclass|and multilabel|where each example may belong to several classes|classi\fcation prob-\nlems. We combine the ideas of conformal prediction [40] with an approach to \ft a quantile\nfunctionqon the scores s(x;y) of the prediction model, which Romano et al. [32] originate for\nregression problems, and build feature-adaptive quantile predictors that output sets of labels,\nallowing us to guarantee valid marginal coverage (independent of the data generating distri-\nbution) while better approximating the conditional coverage (1). A challenge is to evaluate\nwhether we indeed do provide better than marginal coverage, so we provide new validation\nmethodology to test this as well.\nConformal inference in classi\fcation For multiclass problems, we propose a method\nthat \fts a quantile function on the scores, conformalizing it on held-out data. While this\nimmediately provides valid marginal coverage, the accuracy of the quantile function|how\nwell it approximates the conditional quantiles|determines conditional coverage performance.\nUnder certain consistency assumptions on the learned scoring functions and quantiles as\nsample size increases, we show in Section 2 that we recover the conditional coverage (1)\nasymptotically.\nThe multilabel case poses new statistical and computational challenges, as a K-class prob-\nlem entails 2Kpotential responses. In this case, we seek e\u000eciently representable inner and\nouter setsCin(x) andCout(x)\u001af1;:::;Kgsuch that\nP(Cin(X)\u001aY\u001aCout(X))\u00151\u0000\u000b: (2)\nWe propose two approaches to guarantee the containments (2). The \frst directly \fts inner\nand outer sets by solving two separate quantile regression problems. The second begins by\nobserving that labels are frequently correlated|think, for example, of chairs, which frequently\nco-occur with a table|and learns a tree-structured graphical model [22] to e\u000eciently address\nsuch correlation. We show how to build these on top of any predictive model. In an extension\nwhen the sets (2) provide too imprecise con\fdence sets, we show how to also construct a small\nnumber of sets C(i)\nin/outthat similarly satisfy P([ifC(i)\nin(X)\u001aY\u001aC(i)\nout(X))\u00151\u0000\u000bwhile\nguaranteeing Cin(x)\u001a[iC(i)\nin(x) andCout(x)\u001b[iC(i)\nout(x).\n2",
+    "page": 2
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4876529953451402,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:55:49.003978",
+  "updated_at": "2025-10-21T02:01:01.071651",
+  "last_accessed": "2025-10-21T01:55:49.012295"
+}

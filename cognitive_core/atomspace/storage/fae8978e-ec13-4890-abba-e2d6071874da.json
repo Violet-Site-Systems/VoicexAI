@@ -1,0 +1,27 @@
+{
+  "uuid": "fae8978e-ec13-4890-abba-e2d6071874da",
+  "atom_type": "PolicySection",
+  "name": "Page 5",
+  "content": {
+    "title": "Page 5",
+    "text": "f(Xi;Yi)gi2I3[fn+1g, then Theorem 1 remains valid if the exchangeability assumption holds\nfor the instances in I3[fn+ 1g.\nTheorem 1. Assume thatf(Xi;Yi)gn+1\ni=1\u0018Pare exchangeable, where Pis an arbitrary\ndistribution. Then the prediction set bC1\u0000\u000bof the split CQC Algorithm 1 satis\fes\nPfYn+12bC1\u0000\u000b(Xn+1)g\u00151\u0000\u000b:\nProof The argument is due to Romano et al. [32, Thm. 1]. Observe that Yn+12bC1\u0000\u000b(Xn+1)\nif and only if Sn+1\u0014Q1\u0000\u000b(S;I3). De\fne the \u001b-\feldF12=\u001bf(Xi;Yi)ji2I1[I2g. Then\nP(Yn+12bC1\u0000\u000b(Xn+1)jF12) =P(Sn+1\u0014Q1\u0000\u000b(S;I3)jF12):\nWe use the following lemma.\nLemma 2.1 (Lemma 2, Romano et al. [32]) .LetZ1;:::;Zn+1be exchangable random vari-\nables andbQn(\u0001)be the empirical quantile function of Z1;:::Zn. Then for any \u000b2(0;1),\nP\u0000\nZn+1\u0014bQn((1 +n\u00001)\u000b)\u0001\n\u0015\u000b:\nIfZ1;:::;Znare almost surely distinct, then\nP\u0000\nZn+1\u0014bQn((1 +n\u00001)\u000b)\u0001\n\u0014\u000b+1\nn:\nAs the original sample is exchangeable, so are the conformity scores Sifori2I 3, con-\nditionally onF12. Lemma 2.1 implies P(Sn+1\u0014Q1\u0000\u000b(S;I3)jF12)\u00151\u0000\u000b, and taking\nexpectations over F12yields the theorem.\nThe conditional distribution of scores given Xis discrete, so the con\fdence set may be\nconservative: it is possible that for any qsuch thatP(s(X;Y )\u0015qjX)\u00151\u0000\u000b, we have\nP(s(X;Y )\u0015qjX)\u00151\u0000\u000ffor some\u000f\u001c\u000b:Conversely, as the CQC procedure 1 seeks\n1\u0000\u000bmarginal coverage, it may sacri\fce a few examples to bring the coverage down to 1 \u0000\u000b.\nMoreover, there may be no unique quantile function for the scores. One way to address these\nissues is to estimate a quantile function on I2(recall step (5) of the CQC method) so that we\ncan guarantee higher coverage (which is more conservative, but is free in the \u000f\u001c\u000bcase).\nAn alternative to achieve exact 1 \u0000\u000basymptotic coverage and a unique quantile, which\nwe outline here, is to randomize scores without changing the relative order. Let Ziiid\u0018\u0019for\nsome distribution \u0019with continuous density supported on the entire real line, and let \u001b >0\nbe a noise parameter. Then for any scoring function s:X\u0002Y! R, we de\fne\ns\u001b(x;y;z ):=s(x;y;z ) +\u001bz:\nAss\u001b(x;y;z )\u0000s\u001b(x;y0;z) =s(x;y)\u0000s(x;y0), this maintains the ordering of label scores,\nonly giving the score function a conditional density. Now, consider replacing the quantile\nestimator (5) with the randomized estimator\nbq\u001b\n\u000b2argmin\nq2Q\u001a1\nn2X\ni2I2\u001a\u000b(bs\u001b(Xi;Yi;Zi)\u0000q(Xi))\u001b\n; (7)\nand letS\u001b\ni:=bq\u001b\n\u000b(Xi)\u0000bs\u001b(Xi;Yi;Zi) be the corresponding conformity scores. Similarly, replace\nthe prediction set (6) with\nbC\u001b\n1\u0000\u000b(x;z):=fk2[K]jbs\u001b(x;k;z )\u0015bq\u001b\n\u000b(x)\u0000Q1\u0000\u000b(S\u001b;I3)g: (8)\n5",
+    "page": 5
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4070327839590647,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:41.946012",
+  "updated_at": "2025-10-21T02:01:00.962980",
+  "last_accessed": "2025-10-21T01:56:41.953874"
+}

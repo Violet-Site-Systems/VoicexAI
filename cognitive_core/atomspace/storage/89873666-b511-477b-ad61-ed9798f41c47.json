@@ -1,0 +1,27 @@
+{
+  "uuid": "89873666-b511-477b-ad61-ed9798f41c47",
+  "atom_type": "PolicySection",
+  "name": "Page 9",
+  "content": {
+    "title": "Page 9",
+    "text": "Corollary 3.1. Assume thatf(Xi;Yi)gn+1\ni=1\u0018Pare exchangeable, where Pis an arbitrary\ndistribution. Then for any con\fdence set bC:\u0013YsatisfyingbC(x)\u001bbCimp(x)for allx,\nP(Yn+12bC(Xn+1))\u00151\u0000\u000b:\nInstead of the inner/outer set bCioin Eq. (11), we could use any con\fdence set bC(x)\u001bbCimp(x)\nand maintain validity. Unfortunately, as we note above, the set bCimpmay be exponentially\ncomplex to represent and compute, necessitating a simplifying construction, such as our in-\nner/outer approach. Conveniently, the set (11) we construct via byinandbyoutsatisfying the\nconditions (12) satis\fes Corollary 3.1. Indeed, we have the following.\nProposition 2. Letbyinandbyoutsatisfy the conditions (12). Then the con\fdence set bCio(x)\nin Algorithm 2 is the smallest set containing bCimp(x)and admitting the form (11).\nProof The conditions (12) immediately imply\nbyin(x)k= min\ny2bCimp(x)ykandbyout(x)k= max\ny2bCimp(x)yk;\nwhich shows that bCimp(x)\u001abCio(x). On the other hand, suppose that ~ yin(x) and ~yout(x) are\ncon\fgurations inducing a con\fdence set ~C(x) that satis\fes bCimp(x)\u001a~C(x). Then for any\nlabelkincluded in ~ yin(x), all con\fgurations y2bCimp(x) satisfyyk= 1, asbCimp(x)\u001a~C(x),\nso we must have ~ yin(x)k\u0014byin(x)k. The argument to prove ~ yout(x)k\u0015byout(x)kis similar.\nThe expansion from bCimp(x) tobCio(x) may increase the size of the con\fdence set, most\nnotably in cases when labels repel each other. As a paradoxical worst-case, if bCimp(x) includes\nonly each of the Ksingle-label con\fgurations then bCio=f\u00001;1gK. In such cases, re\fnement\nof the inner/outer sets may be necessary; we outline an approach that considers unions of\nsuch sets in Sec. 3.1.1 to come. Yet in problems for which we have strong predictors, we\ntypically do not expect \\opposing\" con\fgurations yand\u0000yto both belong to bCio(x), which\nlimits the increase in practice; moreover, in the case that the standard implicit con\fdence set\nbCimpis a singleton, there is a single y2Ysatisfyings(x;y)\u0015bq\u000b(x)\u0000bQ1\u0000\u000band by de\fnition\nbyin(x) =byout(x), so thatbCio=bCimp.\n3.1.1 Unions of inner and outer sets\nAs we note above, it can be bene\fcial to approximate the implicit set (10) more carefully;\nhere, we consider a union of easily representable sets. The idea is that if two tasks always\nhave opposing labels, the con\fdence sets should re\rect that, yet it is possible that the naive\ncondition (12) fails this check. For example, consider a set bCimp(x) for which any con\fguration\ny2bCimp(x) satis\fesy1=\u0000y2, but which contains labels with both y1= 1 andy1=\u00001.\nIn this case, necessarily byin(x)1=byin(x)2=\u00001 andbyout(x)1=byout(x)2= 1. If instead we\nconstruct two sets of inner and outer vectors by(i)\nin;by(i)\noutfori= 1;2, where\nby(1)\nin(x)1=\u0000by(1)\nin(x)2= 1 andby(2)\nin(x)2=\u0000by(2)\nin(x)2= 1;\nthen choose the remaining labels k= 3;:::;K so thatby(1)\nin(x)\u0016y\u0016by(1)\nin(x) for ally2bCimp(x)\nsatisfyingy1=\u0000y2= 1, and vice-versa for by(2)\ninandby(2)\nout, we may evidently reduce the size of\nthe con\fdence set bCio(x) by half while maintaining validity.\n9",
+    "page": 9
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.440038",
+  "updated_at": "2025-10-21T02:01:00.960971",
+  "last_accessed": "2025-10-21T01:59:47.448238"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "545c88e4-784a-4b19-adc5-600c83f8f35d",
+  "atom_type": "PolicySection",
+  "name": "Page 6",
+  "content": {
+    "title": "Page 6",
+    "text": "whereQ1\u0000\u000b(S\u001b;I3) is the (1\u0000\u000b)(1 + 1=n3)-th empirical quantile of fS\u001b\nigi2I3. Then for a\nnew inputXn+12X, we simulate a new independent variable Zn+1\u0018\u0019, and give the con\f-\ndence setbC\u001b\n1\u0000\u000b(Xn+1;Zn+1). As the next result shows, this gives nearly perfectly calibrated\ncoverage.\nCorollary 2.1. Assume thatf(Xi;Yi)gn+1\ni=1\u0018Pare exchangeable, where Pis an arbitrary\ndistribution. Let the estimators (7)and (8)replace the estimators (5)and (6)in the CQC\nAlgorithm 1, respectively. Then the prediction set bC\u001b\n1\u0000\u000bsatis\fes\n1\u0000\u000b\u0014PfYn+12bC\u001b\n1\u0000\u000b(Xn+1;Zn+1)g\u00141\u0000\u000b+1\n1 +n3:\nProof The argument is identical to that for Theorem 1, except that we apply the second\npart of Lemma 2.1 to achieve the upper bound, as the scores are a.s. distinct.\n2.2 Asymptotic optimality of CQC method\nUnder appropriate assumptions typical in proving the consistency of prediction methods,\nConformalized Quantile Classi\fcation (CQC) guarantees conditional coverage asymptotically.\nTo set the stage, assume that as n\"1, the \ft score functions bsnin Eq. (4) converge to a\n\fxeds:X\u0002Y! R(cf. Assumption A1). Let\nq\u000b(x):= inffz2Rj\u000b\u0014P(s(x;Y)\u0014zjX=x)g\nbe the\u000b-quantile function of the limiting scores s(x;Y) and for\u001b>0 de\fne\nq\u001b\n\u000b(x):= inffz2Rj\u000b\u0014P(s\u001b(x;Y;Z )\u0014zjX=x)g;\nwhereZ\u0018\u0019(for a continuous distribution \u0019as in the preceding section) is independent of\nx;y, to be the\u000b-quantile function of the noisy scores s\u001b(x;Y;Z ) =s(x;Y) +\u001bZ. With these,\nwe can make the following natural de\fnitions of our desired asymptotic con\fdence sets.\nDe\fnition 2.1. The randomized-oracle andsuper-oracle con\fdence sets are C\u001b\n1\u0000\u000b(X;Z):=\nfk2[K]js\u001b(X;k;Z )\u0015q\u001b\n\u000b(X)gandC1\u0000\u000b(X) =fk2[K]js(X;k)\u0015q\u000b(Xg, respectively.\nOur aim will be to show that the con\fdence sets of the split CQC method 1 (or its randomized\nvariant) converge to these con\fdence sets under appropriate consistency conditions.\nTo that end, we consider the following consistency assumption.\nAssumption A1 (Consistency of scores and quantile functions) .The score functions bsand\nquantile estimator bq\u001b\n\u000bare mean-square consistent, so that as n1;n2;n3!1 ,\nkbs\u0000sk2\nL2(PX):=Z\nXkbs(x;\u0001)\u0000s(x;\u0001)k2\n1dPX(x)p!0\nand\nkbq\u001b\n\u000b\u0000q\u001b\n\u000bk2\nL2(PX):=Z\nX(bq\u001b\n\u000b(x)\u0000q\u001b\n\u000b(x))2dPX(x)p!0:\nWith this assumption, we have the following theorem, whose proof we provide in Appendix A.1.\nTheorem 2. Let Assumption A1 hold. Then the con\fdence sets bC\u001b\n1\u0000\u000bsatisfy\nlim\nn!1P(bC\u001b\n1\u0000\u000b(Xn+1;Zn+1)6=C\u001b\n1\u0000\u000b(Xn+1;Zn+1)) = 0:\n6",
+    "page": 6
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.439396",
+  "updated_at": "2025-10-21T02:01:00.977776",
+  "last_accessed": "2025-10-21T01:59:47.448234"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "f1fecc6b-843a-401b-92c7-362d5dcceadc",
+  "atom_type": "PolicySection",
+  "name": "Page 11",
+  "content": {
+    "title": "Page 11",
+    "text": "Algorithm 3: Split Conformalized Direct Inner/Outer method for Classi\fcation\n(CDioC).\nInput: Samplef(Xi;Yi)gn\ni=1, disjoint index sets I2;I3\u001a[n], quantile functions Q,\ndesired con\fdence level \u000b, andKscore functions sk:X!R.\n1. Fit threshold functions (noting the sign conventions)\n^tin=\u0000argmin\nt2Q\u001aX\ni2I2\u001a\u000b=2\u0010\n\u0000max\nkfsk(Xi)jYi;k=\u00001g\u0000t(Xi)\u0011\u001b\n^tout= argmin\nt2Q\u001aX\ni2I2\u001a\u000b=2\u0010\nmin\nkfsk(Xi)jYi;k= 1g\u0000t(Xi)\u0011\u001b (15)\n2. De\fne score s(x;y) = minfmink:yk=1sk(x)\u0000^tout(x);^tin(x)\u0000maxk:yk=\u00001sk(x)g\nand compute conformity scores Si:=\u0000s(Xi;Yi).\n3. LetbQ1\u0000\u000bbe the (1 + 1 =jI3j)(1\u0000\u000b)-empirical quantile of S=fSigi2I3and\ntin(x):=^tin(x) +bQ1\u0000\u000bandtout(x):=^tout(x)\u0000bQ1\u0000\u000b:\n4. De\fnebyin(x)k= sign(sk(x)\u0000tin(x)) andbyout(x)k= sign(sk(x)\u0000tout(x)) and\nreturn prediction set bCioas in Eq. (11).\nThe method is a slightly modi\fed instantiation of the CQioC method in Alg. 2 that allows\neasier computation. We can also see that it guarantees validity.\nCorollary 3.2. Assume thatf(Xi;Yi)gn+1\ni=1\u0018Pare exchangeable, where Pis an arbitrary\ndistribution. Then the con\fdence set bCioin Algorithm 3 satis\fes\nP(Yn+12bCio(Xn+1))\u00151\u0000\u000b:\nProof We show that the de\fnitions of byinandbyoutin Alg. 3 are special cases of the\ncondition (12), which then allows us to apply Corollary 3.1. We focus on the inner set, as the\nouter is similar. Suppose in Alg. 3 that byin(x)k= 1. Then sk(x)\u0000^tin(x)\u0000bQ1\u0000\u000b\u00150, which\nimplies that ^tin(x)\u0000sk(x)\u0014\u0000bQ1\u0000\u000b, and for any y2Ysatisfyingyk=\u00001, we have\n^tin(x)\u0000max\nl:yl=\u00001sl(x)\u0014\u0000bQ1\u0000\u000b:\nFor the scores s(x;y) in line 2 of Alg. 3, we then immediately obtain s(x;y)\u0014\u0000bQ1\u0000\u000bfor any\ny2Ywithyk=\u00001. This is the \frst condition (12), so that (performing, mutatis-mutandis ,\nthe same argument with byout(x)k) Corollary 3.1 implies the validity of bCioin Algorithm 3.\nA prediction method for tree-structured scores We now turn to e\u000ecient computation\nof the inner and outer vectors (12) when the scoring function s:X\u0002Y! Ris tree-structured.\nBy this we mean that there is a tree T= ([K];E), with nodes [ K] and edges E\u001a[K]2, and\nan associated set of pairwise and singleton factors  e:f\u00001;1g2\u0002X ! Rfore2Eand\n'k:f\u00001;1g\u0002X! Rfork2[K] such that\ns(x;y) =KX\nk=1'k(yk;x) +X\ne=(k;l)2E e(yk;yl;x): (16)\n11",
+    "page": 11
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4661198192270645,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:08.657803",
+  "updated_at": "2025-10-21T02:01:01.033841",
+  "last_accessed": "2025-10-21T01:56:08.669188"
+}

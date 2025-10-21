@@ -1,0 +1,27 @@
+{
+  "uuid": "80a43f17-85f8-4b6c-95b7-accfa3cb1274",
+  "atom_type": "PolicySection",
+  "name": "Page 7",
+  "content": {
+    "title": "Page 7",
+    "text": "Unlike other work [34, 33] in conformal inference, validity of Theorem 2 does not rely\non the scores being consistent for the log-conditional probabilities. Instead, we require the\n(1\u0000\u000b)-quantile function to be consistent for the scoring function at hand, which is weaker\n(though still a strong assumption). Of course, the ideal scenario occurs when the limiting score\nfunctionsis optimal (cf. [2, 43, 38]), so that s(x;y)>s(x;y0) whenever P(Y=yjX=x)>\nP(Y=y0jX=x). Under this additional condition, the super-oracle con\fdence set C1\u0000\u000b(X)\nin Def. 2.1 is the smallest conditionally valid con\fdence set at level 1 \u0000\u000b. Conveniently, our\nrandomization is consistent as \u001b#0: the super oracle con\fdence set C1\u0000\u000bcontainsC\u001b\n1\u0000\u000b\n(with high probability). We provide the proof of the following result in Appendix A.2.\nProposition 1. The con\fdence sets C\u001b\n1\u0000\u000bsatisfy\nlim\n\u001b!0P(C\u001b\n1\u0000\u000b(Xn+1;Zn+1)\u0012C1\u0000\u000b(Xn+1)) = 1:\nBecause we always have P(Y2C\u001b\n1\u0000\u000b(X;Z))\u00151\u0000\u000b, Proposition 1 shows that we maintain\nvalidity while potentially shrinking the con\fdence sets.\n3 The multilabel setting\nIn multilabel classi\fcation, we observe a single feature vector x2X and wish to predict a\nvectory2f\u0000 1;1gKwhereyk= 1 indicates that label kis present and yk=\u00001 indicates\nits absence. For example, in object detection problems [31, 37, 25], we wish to detect several\nentities in an image, while in text classi\fcation tasks [26, 27, 19], a single document can\npotentially share multiple topics. To conformalize such predictions, we wish to output an\naggregated set of predictions fby(x)g\u001af\u0000 1;1gK|a collection of \u00001-1-valued vectors|that\ncontains the true con\fguration Y= (Y1;:::;YK) with probability at least 1 \u0000\u000b.\nThe multilabel setting poses statistical and computational challenges. On the statistical\nside, multilabel prediction engenders a multiple testing challenge: even if each task has an\nindividual con\fdence set Ck(x) such that P(Yk2Ck(X))\u00151\u0000\u000b, in general we can only\nconclude that P(Y2C1(X)\u0002\u0001\u0001\u0001\u0002CK(X))\u00151\u0000K\u000b; as all predictions share the same\nfeaturesx, we wish to leverage correlation through x. Additionally, as we discuss in the\nintroduction (recall Eq. (3)), we require a scoring function s:X\u0002Y! R. Given a predictor by:\nX!f\u0000 1;1gk, a naive scoring function for multilabel problems is to use s(x;y) = 1fby(x) =yg,\nbut this fails, as the con\fdence sets contain either all con\fgurations or a single con\fguration.\nOn the computational side, the total number of label con\fgurations (2K) grows exponentially,\nso a \\standard\" multiclass-like approach outputting con\fdence sets bC(X)\u001aY =f\u00001;1gK,\nalthough feasible for small values of K, is computationally impractical even for moderate K.\nWe instead propose using inner and outer set functions bCin;bCout:X\u0013[K] to e\u000eciently\ndescribe a con\fdence set on Y, where we require they satisfy the coverage guarantee\nP\u0010\nbCin(X)\u001aY\u001abCout(X)\u0011\n\u00151\u0000\u000b; (9a)\nor equivalently, we learn two functions byin;byout:X!Y =f\u00001;1gKsuch that\nP(byin(X)\u0016Y\u0016byout(X))\u00151\u0000\u000b: (9b)\nWe thus say that coverage is valid if the inner set exclusively contains positive labels and\nthe outer set contains at least all positive labels. For example, byin(x) =0andbyout(x) =1\nare always valid, though uninformative, while the smaller the set di\u000berence between bCin(X)\n7",
+    "page": 7
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.439604",
+  "updated_at": "2025-10-21T02:01:00.979493",
+  "last_accessed": "2025-10-21T01:59:47.448236"
+}

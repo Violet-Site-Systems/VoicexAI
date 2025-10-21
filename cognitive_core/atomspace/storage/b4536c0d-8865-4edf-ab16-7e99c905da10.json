@@ -1,0 +1,27 @@
+{
+  "uuid": "b4536c0d-8865-4edf-ab16-7e99c905da10",
+  "atom_type": "PolicySection",
+  "name": "Page 24",
+  "content": {
+    "title": "Page 24",
+    "text": "105106107108109\nParameters, including reuse (non-embedding)2.53.03.54.04.5Test Loss\n 2x Reuse\n4x Reuse\n8x Reuse\nNon-recurrent Models\n105106107108109\nParameters (non-embedding)2.53.03.54.04.5Test Loss\n2x Reuse\n4x Reuse\n8x Reuse\nNon-recurrent ModelsFigure 17 We compare recurrent Transformers [DGV+18], which re-use parameters, to standard Trans-\nformers. Recurrent Transformers perform slightly better when comparing models with equal parameter count,\nbut slightly worse when accounting for reuse and comparing per FLOP.\n102103104105\nStep10610710810910101011Tokens Processed\nBatch Size Scan - 3M Params\n46810\nTest Loss\n101102103104105\nStep1061081010Tokens Processed\nBatch Size Scan - 85M Params\n46810\nTest Loss\nFigure 18 These ﬁgures demonstrate ﬁts to Equation (5.1) for a large number of values of the loss L, and\nfor two different Transformer model sizes. These ﬁts were used to measure Bcrit(L)for Figure 10.\nD.4 Sample Efﬁciency vs Model Size\nIt is easy to see from ﬁgure 2 that larger models train faster, and are therefore more sample efﬁcient. We\nprovide another way of looking at this phenomenon in ﬁgure 19, which shows when different models reach\nvarious ﬁxed values of the loss.\n106107108\nParameters (non-embedding)103104105Minimum Steps (Smin)\n2.53.03.54.04.55.05.5\nLoss\n106107108\nParameters (non-embedding)10810910101011Minimum Examples (Emin)\n2.53.03.54.04.55.05.5\nLoss\nFigure 19 The number of minimum serial steps needed to reach any ﬁxed value of the test loss decreases\nprecipitously with model size. Sample efﬁciency (show here for training far below the critical batch size)\nimproves greatly as well, improving by a factor of almost 100 when comparing the smallest possible model\nto a very large one.\n24",
+    "page": 24
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4757998708764747,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:01.901958",
+  "updated_at": "2025-10-21T02:01:00.977980",
+  "last_accessed": "2025-10-21T01:56:01.903576"
+}

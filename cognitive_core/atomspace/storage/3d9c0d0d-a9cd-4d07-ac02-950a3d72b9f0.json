@@ -1,0 +1,27 @@
+{
+  "uuid": "3d9c0d0d-a9cd-4d07-ac02-950a3d72b9f0",
+  "atom_type": "PolicySection",
+  "name": "Page 18",
+  "content": {
+    "title": "Page 18",
+    "text": "0.800.850.900.95\nCDioC ArbiTree−CQC PGM−CQC Oracle\nMethodCoverageType of CS\nImplicit\nExplicit\n1234\nCDioC ArbiTree−CQC PGM−CQC Oracle\nMethodAverage SizeType of Set\nInner\nOuter\nP(Y2^C(X))\nEjbyin(X)jandEjbyout(X)j\nFigure 4.3. Results for simulated multilabel experiment with label distribution (26). Methods\nare the true oracle con\fdence set; the conformalized direct inner/outer method (CDioC, Alg. 3)\nand tree-based methods with implicit con\fdence sets bCimpor explicit inner/outer sets bCio,\nlabeled ArbiTree and PGM (see Sec. 4.1.2). Left: Marginal coverage probability at level\n1\u0000\u000b=:8 for di\u000berent methods. Right: con\fdence set sizes of methods.\nlabels and mitigate this disadvantage, at least relative to CDioC.\nOur setting follows, where we consider K= 5 tasks and dimension d= 2. For each\nexperiment, we choose a tree T= ([K];E) uniformly at random, where each edge e2E\nhas a correlation strength value \u001ce\u0018Uni[\u00005;5], and for every task kwe sample a vector\n\u0012k\u0018Uni(rSd\u00001) with radius r= 5. For each observation, we draw Xiid\u0018N(0;Id) and draw\nindependent uniform hidden variables He2f\u0000 1;1gfor each edge eof the tree. Letting Ek\nbe the set of edges adjacent to k, we drawYk2f\u0000 1;1gfrom the logistic model\nP(Yk=ykjX=x;H =h)/exp\u001a\n\u0000yk\u0010\n1 +xT\u0012k+X\ne2Ek\u001cehe\u0011\u001b\n: (26)\nWe simulate ntotal= 200,000 data points, using ntr= 100,000 for training, nv= 40,000 for\nvalidation, nc= 40,000 for calibration, and nte= 20,000 for testing.\nThe methods CDioC and PGM-CQC require per-task scores sk, so for each method we \ft\nKseparate logistic regressions of YkagainstX(leaving the hidden variables Hunobserved)\non the training data. We then use the \ft parameters b\u0012k2Rdto de\fne scores sk(x) =b\u0012T\nkx(for\nthe methods CDioC and PGM-CQC) and the \\arbitrary\" predictor byk(x) = sign(sk(x)) (for\nmethod ArbiTree-CQC). We use a one-layer fully-connected neural network with 16 hidden\nneurons as the class Qin the quantile regression step (5) of the methods; no matter our choice\nofQ, the \fnal conformalization step guarantees (marginal) validity.\nFigure 4.3, 4.5, and 4.4 show our results. In Fig. 4.3, we give the marginal coverage of each\nmethod (left plot), including both the implicit bCimpand explicity bCiocon\fdence sets, and the\naverage con\fdence set sizes for the explicit con\fdence set bCioin the right plot. The explicit sets\nbCioin the ArbiTree-CQC and PGM-CQC methods both overcover, though not substantially\nmore than the oracle method; the sizes of bCiofor the PGM-CQC and oracle methods are\n18",
+    "page": 18
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.443900",
+  "updated_at": "2025-10-21T02:01:01.008124",
+  "last_accessed": "2025-10-21T01:59:47.448247"
+}

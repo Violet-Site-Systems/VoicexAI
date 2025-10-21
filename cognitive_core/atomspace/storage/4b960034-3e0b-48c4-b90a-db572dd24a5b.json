@@ -1,0 +1,27 @@
+{
+  "uuid": "4b960034-3e0b-48c4-b90a-db572dd24a5b",
+  "atom_type": "PolicySection",
+  "name": "Page 15",
+  "content": {
+    "title": "Page 15",
+    "text": "Measures beyond marginal coverage Except in simulated experiments, we cannot com-\npute conditional coverage of each instance, necessitating approximations that provide more\nconditional-like measures of coverage|where methods providing weaker marginal coverage\nmay fail to uniformly cover|while still allowing e\u000ecient computation. To that end, we con-\nsider at coverage over slabs\nSv;a;b:=n\nx2Rdja\u0014vTx\u0014bo\n;\nwherev2Rdanda<b2R, which satisfy these desiderata. For a direction vand threshold\n0<\u000e\u00141, we consider the worst coverage over all slabs containing \u000emass infXign\ni=1, de\fning\nWSCn(bC;v):= inf\na<bn\nPn(Y2bC(X)ja\u0014vTX\u0014b) s.t.Pn(a\u0014vTX\u0014b)\u0015\u000eo\n;(23)\nwherePndenotes the empirical distribution on ( Xi;Yi)n\ni=1, which is e\u000eciently computable in\nO(n) time [28]. As long as the mapping bC:X\u0013Yis constructed independently of Pn, we can\nshow that these quantities concentrate. Indeed, let us temporarily assume that the con\fdence\nset has the form bC(x) =fyjs(x;y)\u0015q(x)gfor an arbitrary scoring function s:X\u0002Y! R\nand threshold functions q. LetV\u001aRd; we abuse notation to let VC( V) be the VC-dimension\nof the set of halfspaces it induces, where we note that VC( V)\u0014minfd;log2jVjg. Then for\nsome numerical constant C, for allt>0\nsup\nv2V;a\u0014b:Pn(X2Sv;a;b)\u0015\u000en\njPn(Y2bC(X)jX2Sv;a;b)\u0000P(Y2bC(X)jX2Sv;a;b)jo\n(24)\n\u0014Cr\nVC(V) logn+t\n\u000en\u0014Cr\nminfd;logjVjglogn+t\n\u000en\nwith probability at least 1 \u0000e\u0000t. (See Appendix A.4 for a brief derivation of inequality (24)\nand a few other related inequalities.)\nEach of the con\fdence sets we develop in this paper satisfy bC(x)\u001bfyjs(x;y)\u0015q(x)gfor\nsome scoring function sand function q. Thus, ifbC:X\u0013Ye\u000bectively provides conditional\ncoverage at level 1 \u0000\u000b, we should observe that\ninf\nv2VWSCn(bC;v)\u00151\u0000\u000b\u0000O(1)r\nVC(V) logn\n\u000en\u00151\u0000\u000b\u0000O(1)r\nminfd;logjVjglogn\n\u000en:\nIn each of our coming experiments, we draw M= 1000 samples vjuniformly on Sd\u00001,\ncomputing the worst-slab coverage (23) for each vj. In the multiclass case, we expect our\nconformal quantile classi\fcation (CQC, Alg. 1) method to provide larger worst-slab cover-\nage than the standard marginal method (3), while in the multilabel case, we expect that\nthe combination of tree-based scores (Algorithms 4 or 5) with the conformalized quantile in-\nner/outer classi\fcation (CQioC, Alg. 2) should provide larger worst-slab coverage than the\nconformalized direct inner/outer classi\fcation (CDioC, Alg. 3). In both cases, we expect\nthat our more sophisticated methods should provide con\fdence sets of comparable size to\nthe marginal methods. In multiclass experiments, for comparison, we additionally include\nthe Generalized Inverse Quantile method (GIQ, Algorithm 1 [33], which appeared after the\ninitial version of the current paper appeared on the arXiv ), which similarly targets improved\nconditional coverage. Unlike in the multiclass case, we know of no baseline method for multi-\nlabel problems, as the \\marginal\" method (3) is computationally ine\u000ecient when the number\n15",
+    "page": 15
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.441829",
+  "updated_at": "2025-10-21T02:01:01.045990",
+  "last_accessed": "2025-10-21T01:59:47.448244"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "f1b6b8ef-6462-4efc-92eb-792d28485cd0",
+  "atom_type": "PolicySection",
+  "name": "Page 25",
+  "content": {
+    "title": "Page 25",
+    "text": "100101102103\nToken Index345678Per-Token Test Loss4.0+3.2T0.47\n3.4+4.0T0.56\n2.9+4.5T0.56\n2.7+4.9T0.60\n2.4+5.1T0.61\n2.3+5.4T0.62\n106107108\nModel Parameters\n101103105\nStep246810Test LossPer-token Loss (774M Params)\n100101102103\nToken IndexFigure 20 This ﬁgure provides information about the performance per token as a function of model size\nand training time. Left: Loss per token as a function of its position Tin the 1024-token context. Loss scales\npredictably as a power-law in T.Right: Test loss per token as a function of training step.\n104105106107108109\nParameters (excl. embedding)3.04.56.07.5Test Loss\nToken 1/1024\nToken 2/1024\nToken 4/1024\nToken 8/1024\nToken 16/1024\nToken 64/1024\nToken 256/1024\nToken 1024/1024\nToken 1/8\nToken 2/8\nToken 4/8\nToken 8/8\nFigure 21 In addition to the averaged loss, individual tokens within the 1024-token context also improve\nsmoothly as model size increases. Training runs with shorter context nctx= 8(dashed lines) perform better\non early tokens, since they can allocate all of their capacity to them.\nD.5 Context Dependence\nThe trends for loss as a function of model size are displayed for different tokens in the context in Figure 21.\nWe see that models trained on nctx= 1024 show steady improvement with model size on all but the ﬁrst\ntoken.\nFixing model size, it appears that the loss scales as a power-law as a function of position Tin the context, see\nFigure 20. This may be a consequence of underlying power-law correlations in language [EP94, ACDE12,\nLT16], or a more general feature of the model architecture and optimization. It provides some suggestion for\nthe potential beneﬁts (or lack thereof) from training on larger contexts. Not only do larger models converge\nto better performance at T= 1024 , but they also improve more quickly at early tokens, suggesting that larger\nmodels are more efﬁcient at detecting patterns with less contextual information. In the right-hand plot we\nshow how per-token performance varies for a ﬁxed model as a function of the training step. The model begins\nby learning short-range information, and only learns longer-range correlations later in training.\nWe have also included models trained with a tiny context nctx= 8 in order to compare with our longer\ncontext models. Even modestly sized models trained on nctx= 8 can dominate our largest nctx= 1024\nmodels on very early tokens. This also suggests that further improvements should be possible with much\nlarger models trained on large contexts.\nD.6 Learning Rate Schedules and Error Analysis\nWe experimented with a variety of learning rates and schedules. A host of schedules and resulting test\nperformances for a small language model are plotted in Figure 22. We conclude that the choice of learning\nrate schedule is mostly irrelevant, as long as the total summed learning rate is sufﬁciently large, and the\nschedule includes a warmup period and a ﬁnal decay to near-vanishing learning rate. Variations among\n25",
+    "page": 25
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.3177842565597668,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:39.637157",
+  "updated_at": "2025-10-21T02:01:00.963497",
+  "last_accessed": "2025-10-21T01:59:39.638773"
+}

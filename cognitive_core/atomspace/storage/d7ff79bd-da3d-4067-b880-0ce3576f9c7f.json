@@ -1,0 +1,27 @@
+{
+  "uuid": "d7ff79bd-da3d-4067-b880-0ce3576f9c7f",
+  "atom_type": "PolicySection",
+  "name": "Page 14",
+  "content": {
+    "title": "Page 14",
+    "text": "informations between each pair ( k;l) of tasks, choosing the tree Tthat maximizes these\nvalues to approximate problem (22) in Algorithm 5, using the selected tree bTto choose\n\u000b;\fmaximizing Ln(bT;\u000b;\f ). (In the algorithm we superscript Yto make task labels versus\nobservations clearer.)\nAlgorithm 5: Chow-Liu-type approximate Maximum Likelihood Tree and Scoring\nFunction\nInput: Samplef(X(i);Y(i))gi2I1, andKscore functions sk:X!R.\nForeach paire= (k;l)2[K]2\n1. De\fne the single-edge tree Te= (fk;lg;feg)\n2. Fit model (21) for tree Tevia (b\u000b;b\f):= argmax\u000b;\fLn(Te;\u000b;\f )\n3. Estimate edge empirical mutual information\nbIe:=nX\ni=1log\u0012pTe;b\u000b;b\f(Y(i)\nk;Y(i)\nljX(i))\npTe;b\u000b;b\f(Y(i)\nkjX(i))pTe;b\u000b;b\f(Y(i)\nljX(i))\u0013\nSetbT=MaxSpanningTree ((bIe)e2[K]2) and (b\u000b;b\f) = argmax\u000b;\fLn(bT;\u000b;\f ).\nReturn scoring function\nsbT;b\u000b;b\f(x;y):=X\ne=(k;l)2Eb\fT\ne (yk;yl) +KX\nk=1b\u000bT\nk'k(yk;x)\nThe algorithm takes time roughly O(nK2+K2log(K)), as each optimization step 2 solves\nanO(1)-dimensional concave maximization problem, which is straightforward via a Newton\nmethod (or gradient descent). The approach does not guarantee recovery of the correct tree\nstructure even if the model is well-speci\fed, as we neglect information coming from labels\nother than kandlin the estimates bIefor edgee= (k;l), although we expect the heuristic\nto return su\u000eciently reasonable tree structures. In any case, the actual scoring function s\nit returns still allows e\u000ecient conformalization and valid predictions via Alg. 2, regardless of\nits accuracy; a more accurate tree will simply allow smaller and more accurate con\fdence\nsets (12).\n4 Experiments\nOur main motivation is to design methods with more robust conditional coverage than the\n\\marginal\" split-conformal method (3). Accordingly, the methods we propose in Sections 2\nand 3 \ft conformalization scores that depend on features xand, in some cases, model de-\npendencies among yvariables. Our experiments consequently focus on more robust notions\nof coverage than the nominal marginal coverage the methods guarantee, and we develop a\nnew evaluation metric for validation and testing of coverage, looking at connected subsets of\nthe spaceXand studying coverage over these. Broadly, we expect our proposed methods to\nmaintain coverage of (nearly) 1 \u0000\u000bacross subsets; the experiments are consistent with this\nexpectation. We include a few additional plots in supplementary appendices for completeness.\n14",
+    "page": 14
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4661198192270645,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:08.658511",
+  "updated_at": "2025-10-21T02:01:01.077596",
+  "last_accessed": "2025-10-21T01:56:08.669191"
+}

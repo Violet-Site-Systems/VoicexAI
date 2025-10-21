@@ -1,0 +1,27 @@
+{
+  "uuid": "3065d7f5-042a-476b-b61d-36854c890a1c",
+  "atom_type": "PolicySection",
+  "name": "Page 32",
+  "content": {
+    "title": "Page 32",
+    "text": "IfpPf\u0015\"n, we set\u0011=pPf=\"nand obtain1\n2(Pnf\u0000Pf)\u0014pPf\"n, while ifpPf < \"n,\nthen setting \u0011= 1 yields1\n2(Pnf\u0000Pf)\u00141\n2(Pf+\"2\nn)\u00141\n2(pPf\"n+\"2\nn). In either case,\nPnf\u0000Pf\u0014C\"r\nPfdlogn+t\nn+dlogn+t\nn#\n:\nA symmetric argument replacing each PnwithP(and vice versa) gives the lemma.\nWe can now demonstrate inequality (24). Let V\u001aRdandV:=ffx2RdjvTx\u00140ggv2V\nthe collection of halfspaces it induces. The collection S=fSv;a;bgv2V;a<b of slabs has VC-\ndimension VC(S)\u0014O(1)VC(V). Letf:X\u0002Y! Randc:S!Rbe arbitrary functions.\nIf forS\u001aX we de\fneS+:=f(x;y)jx2S;f(x;y)\u0015c(S)gand the collection S+:=fS+j\nS2Sg , then VC(S+)\u0014VC(S) + 1 [1, Lemma 5]. As a consequence, for the conformal sets\ninequality (24) speci\fes, for any t>0 we have with probability at least 1 \u0000e\u0000tthat\n\f\f\fPn(Y2bC(X);X2Sv;a;b)\u0000P(Y2bC(X);X2Sv;a;b)\f\f\f\n\u0014O(1)\"r\nminfP(Y2bC(X);X2Sv;a;b);Pn(Y2bC(X);X2Sv;a;b)gVC(V) logn+t\nn#\n+O(1)\u0014VC(V) logn+t\nn\u0015\nsimultaneously for all v2V;a<b2R, and similarly\njPn(X2Sv;a;b)\u0000P(X2Sv;a;b)j\n\u0014O(1)\"r\nminfP(X2Sv;a;b);Pn(X2Sv;a;b)gVC(V) logn+t\nn+VC(V) logn+t\nn#\n:\nNow, we use the following simple observation. For any \"and nonnegative \u000b;\f;\r with\n\u000b\u0014\rand 2j\"j\u0014\r,\n\f\f\f\f\u000b\n\r+\"\u0000\f\n\r\f\f\f\f\u0014j\u000b\u0000\fj\n\r+j\u000b\u000fj\n\r2+\r\u000f\u0014j\u000b\u0000\fj\n\r+2j\u000fj\n\r:\nThus, as soon as \u000e\u0015VC(V) logn+t\nn, we have with probability at least 1 \u0000e\u0000tthat\njPn(Y2bC(X)jX2Sv;a;b)\u0000P(Y2bC(X)jX2Sv;a;b)j\n=\f\f\f\f\fPn(Y2bC(X);X2Sv;a;b)\nPn(X2Sv;a;b)\u0000P(Y2bC(X);X2Sv;a;b)\nP(X2Sv;a;b)\f\f\f\f\f\n\u0014O(1)\"r\nVC(V) logn+t\n\u000en+VC(V) logn+t\n\u000en#\nsimultaneously for all v2V;a<b2R, where we substitute \r=P(X2Sv;a;b),\u000b=P(Y2\nbC(X);X2Sv;a;b),\f=Pn(Y2bC(X);X2Sv;a;b), and\"= (Pn\u0000P)(X2Sv;a;b). Note that\nifVC(V) logn+t\n\u000en\u00151, the bound is vacuous in any case.\nB Additional Figures\n32",
+    "page": 32
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.447024",
+  "updated_at": "2025-10-21T02:01:01.064989",
+  "last_accessed": "2025-10-21T01:59:47.448262"
+}

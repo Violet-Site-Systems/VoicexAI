@@ -1,0 +1,27 @@
+{
+  "uuid": "4d2457db-a653-4268-abec-2fde3d44828b",
+  "atom_type": "PolicySection",
+  "name": "Page 3",
+  "content": {
+    "title": "Page 3",
+    "text": "Related work and background Vovk et al. [40] introduce (split-)conformal inference,\nwhich splits the \frst nsamples of the exchangeable pairs f(Xi;Yi)gn+1\ni=1into two sets (say,\neach of size n1andn2respectively) where the \frst training set ( I1) is used to learn a scoring\nfunctions:X\u0002Y ! Rand the second validation set ( I2) to \\conformalize\" the scoring\nfunction and construct a con\fdence set over potential labels (or targets) Yof the form\nC(x):=fy2Yjs(x;y)\u0015tg\nfor some threshold t. The basic split-conformal method chooses the (1+1 =n2)(1\u0000\u000b)-empirical\nquantile ^Qmarg\n1\u0000\u000bof the negative scores f\u0000s(Xi;Yi)gi2I2(on the validation set) and de\fnes\nC(x):=fy2Yjs(x;y)\u0015\u0000^Qmarg\n1\u0000\u000bg: (3)\nThe argument that these sets Cprovide valid coverage is beautifully simple and is extensible\ngiven any scoring function s: lettingSi=\u0000s(Xi;Yi), if^Qmarg\n1\u0000\u000bis the (1 + 1 =n2) (1\u0000\u000b)-quantile\noffSigi2I2and the pairsf(Xi;Yi)gn+1\ni=1are exchangeable, we have\nP(Yn+12C(Xn+1)) =P(s(Xn+1;Yn+1)\u0015\u0000^Qmarg\n1\u0000\u000b)\n=P\u0000\nRank ofSn+1infSigi2I2[fn+1g\u0014d(n2+ 1)(1\u0000\u000b)e\u0001\n\u00151\u0000\u000b:\nWe refer to the procedure (3) as the Marginal conformal prediction method. Such a \\confor-\nmalization\" scheme typically outputs a con\fdence set by listing all the labels that it contains,\nwhich is feasible in a K-class multiclass problem, but more challenging in a K-class multil-\nabel one, as the number of con\fgurations (2K) grows exponentially. This, to the best of our\nknowledge, has completely precluded e\u000ecient conformal methods for multilabel problems.\nWhile conformal inference guarantees marginal coverage without assumption on the distri-\nbution generateing the data, Vovk [39] shows it is virtually impossible to attain distribution-\nfree conditional coverage, and Barber et al. [1] prove that in regression, one can only achieve\na weaker form of approximately-conditional coverage without conditions on the underlying\ndistribution. Because of this theoretical limitation, work in conformal inference often focuses\non minimizing con\fdence set sizes or guaranteeing di\u000berent types of coverage. For instance,\nSadinle et al. [34] propose conformal prediction algorithms for multiclass problems that min-\nimize the expected size of the con\fdence set and conformalize the scores separately for each\nclass, providing class-wise coverage. In the same vein, Hechtlinger et al. [17] use density es-\ntimates ofp(xjy) as conformal scores to build a \\cautious\" predictor, the idea being that\nit should output an empty set when the new sample di\u000bers too much from the original dis-\ntribution. In work building o\u000b of the initial post of this paper to the arXiv , Romano et al.\n[33] build conformal con\fdence sets for multi-class problems by leveraging pivotal p-value-like\nquantities, which provide conditional coverage when models are well-speci\fed. In regression\nproblems, Romano et al. [32] conformalize a quantile predictor, which allows them to build\nmarginally valid con\fdence sets that are adaptive to feature heterogeneity and empirically\nsmaller on average than purely marginal con\fdence sets. We adapt this regression approach\nto classi\fcation tasks, learning quantile functions to construct valid|potentially conditionally\nvalid|con\fdence predictions.\nNotationPis a set of distributions on X\u0002Y , whereY=f0;1gKis a discrete set of\nlabels,K\u00152 is the number of classes, and X \u001aRd. We assume that we observe a \fnite\nsequence (Xi;Yi)1\u0014i\u0014niid\u0018Pfrom some distribution P=PX\u0002PYjX2Pand wish to predict a\ncon\fdence set for a new example Xn+1\u0018PX.Pstands over the randomness of both the new\n3",
+    "page": 3
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4876529953451402,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:55:49.004239",
+  "updated_at": "2025-10-21T02:01:01.029307",
+  "last_accessed": "2025-10-21T01:55:49.012297"
+}

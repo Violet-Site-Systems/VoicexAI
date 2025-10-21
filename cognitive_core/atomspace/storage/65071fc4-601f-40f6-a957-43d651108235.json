@@ -1,0 +1,27 @@
+{
+  "uuid": "65071fc4-601f-40f6-a957-43d651108235",
+  "atom_type": "PolicySection",
+  "name": "Page 15",
+  "content": {
+    "title": "Page 15",
+    "text": "Models between 0.6x and 2.2x the optimal size can be trained with a 20% larger compute budgetSmaller models require more steps to train, while larger models require fewerOur framework does not capture early training dynamics\nFigure 12 Left: Given a ﬁxed compute budget, a particular model size is optimal, though somewhat larger\nor smaller models can be trained with minimal additional compute. Right: Models larger than the compute-\nefﬁcient size require fewer steps to train, allowing for potentially faster training if sufﬁcient additional paral-\nlelism is possible. Note that this equation should not be trusted for very large models, as it is only valid in the\npower-law region of the learning curve, after initial transient effects.\n108\n106\n104\n102\n100\nCompute (PF-days), non-embedding234567Test LossL=(Cmin/2.3108)0.050\nL=(C/2.0107)0.057\nFigure 13 When adjusting performance to simulate training far below the critical batch size, we ﬁnd a\nsomewhat altered power law for L(Cmin)when compared with the fully empirical results. The conspicuous\nlump at 10\u00005PF-days marks the transition from 1-layer to 2-layer networks; we exclude 1-layer networks\nin the power-law ﬁts. It is the L(Cmin)trend that we expect to provide a reliable extrapolation for larger\ncompute.\nthat in fact we could train more efﬁciently6by training at the batch size Bcritdiscussed in Section 5.1.\nLarge and small values of the loss could have been achieved with fewer samples or fewer steps, respectively,\nand correcting for this inefﬁciency by standardizing to the critical batch size results in cleaner and more\npredictable trends.\nIn this section we will adjust for this oversight. More importantly, we will use the results of Section 5\nto determine the optimal allocation of compute between model size Nand the quantity of data processed\nduring training, namely 2BcritSmin. We will determine this allocation both empirically and theoretically, by\nusing the equation for L(N;S min), and we will demonstrate that these methods agree.\n6.1 Optimal Performance and Allocations\nLet us ﬁrst study the loss as a function of the optimally allocated compute from Equation (5.5). The result is\nplotted in Figure 13, along with a power-law ﬁt. We see that as compared to the compute plot of Figure 1, the\nnew ﬁt with Cminis somewhat improved.\nGivenL(Cmin), it is natural to ask for the optimal model size N(Cmin)that provides the minimal loss with a\ngiven quantity of training compute. The optimal model size is shown in Figure 14. We observe that N(Cmin)\n6One might ask why we did not simply train at Bcritin the ﬁrst place. The reason is that it depends not only on the\nmodel but also on the target value of the loss we wish to achieve, and so is a moving target.\n15",
+    "page": 15
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.3177842565597668,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:39.632532",
+  "updated_at": "2025-10-21T02:01:01.049831",
+  "last_accessed": "2025-10-21T01:59:39.638762"
+}

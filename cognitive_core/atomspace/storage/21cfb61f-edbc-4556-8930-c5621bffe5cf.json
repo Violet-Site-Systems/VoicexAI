@@ -1,0 +1,27 @@
+{
+  "uuid": "21cfb61f-edbc-4556-8930-c5621bffe5cf",
+  "atom_type": "PolicySection",
+  "name": "Page 22",
+  "content": {
+    "title": "Page 22",
+    "text": "B.3 Comparison to Inefﬁcient\nTypically, researchers train models until they appear to be close to convergence. In this section, we compare\nthe efﬁcient training procedure described above to this more typical setup. We deﬁne a the convergence factor\nfas the percent deviation from the converged loss:\nL(N;C ) = (1 +f)L(N;1): (B.11)\nFor compute-efﬁcient training we have f=\u000bN=\u000bS\u001910% from the previous section, but researchers\ntypically use a much smaller value. Here, we choose f0= 2% as an estimate. For a ﬁxed value of the loss,\nwe predict:\nNf\nNf0=\u00121 +f\n1 +f0\u00131=\u000bN\n\u00192:7 (B.12)\nSf\nSf0= \n1 +1\nf\n1 +1\nf0!1=\u000bS\n\u00190:13 (B.13)\nCf\nCf0=Nf\nNf0Sf\nSf0\u00190:35 (B.14)\nSo that compute-efﬁcient training uses 7.7x fewer parameter updates, 2.7x more parameters, and 65% less\ncompute to reach the same loss.\nB.4 Suboptimal Model Sizes\nWe can solve A.1 to ﬁnd an expression for the amount of compute needed to reach a given value of the loss\nLwith a model of size N:\nC(N;L) =\u0012\n6B\u0003ScN\nL1=\u000bB\u0013\u0012\nL\u0000\u0012Nc\nN\u0013\u000bN\u0013\u00001=\u000bS\n: (B.15)\nUsing A.6 and A.9, we can eliminate Lin favor ofNe\u000b(L), the model size which reaches Lmost efﬁciently.\nFrom there, we ﬁnd an expression for the excess compute needed as a consequence of using a suboptimal\nmodel size:\nC(N;N e\u000b)\nC(Ne\u000b;Ne\u000b)=N\nNe\u000b\u0014\n1 +\u000bS\n\u000bN\u0012\n1\u0000\u0012Ne\u000b\nN\u0013\u000bN\u0013\u0015\u00001=\u000bS\n: (B.16)\nThe result is shown in Figure X. Models between 0.6x and 2.2x the optimal size can be used with only a\n20% increase in compute budget. Using a smaller model is useful when accounting for the cost inference. A\nlarger model can be trained the the same level of performance in fewer steps, allowing for more parallelism\nand faster training if sufﬁcient harware is available (see Figure Y):\nS(N;N e\u000b)\nS(Ne\u000b;Ne\u000b)=\u0014\n1 +\u000bS\n\u000bN\u0012\n1\u0000\u0012Ne\u000b\nN\u0013\u000bN\u0013\u0015\u00001=\u000bS\n: (B.17)\nA 2.2x larger model requires 45% fewer steps at a cost of 20% more training compute. Note that this equation\nshould not be trusted for very large models, as it is only valid in the power-law region of the learning curve\nafter initial transient effects.\nC Caveats\nIn this section we list some potential caveats to our analysis.\n\u000fAt present we do not have a solid theoretical understanding for any of our proposed scaling laws.\nThe scaling relations with model size and compute are especially mysterious. It may be possible to\nunderstand scaling at very large Dholding model size ﬁxed [AS17], and also the shape of learning\ncurves late in training, by modeling the loss with a noisy quadratic. But the scaling with Dat very\nlarge model size still remains mysterious. Without a theory or a systematic understanding of the\ncorrections to our scaling laws, it’s difﬁcult to determine in what circumstances they can be trusted.\n22",
+    "page": 22
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4757998708764747,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:01.901471",
+  "updated_at": "2025-10-21T02:01:00.968123",
+  "last_accessed": "2025-10-21T01:56:01.903574"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "76f5c95d-3fcb-487f-8600-12bc0cae415e",
+  "atom_type": "PolicySection",
+  "name": "Page 21",
+  "content": {
+    "title": "Page 21",
+    "text": "the compute budget. We start with the Equation (1.6), repeated here for convenience:\nL(N;S) =\u0012Nc\nN\u0013\u000bN\n+\u0012Sc\nS\u0013\u000bS\n: (B.1)\nHere,Srepresents the number of parameter updates when training at the critical batch size [MKAT18],\nwhich was deﬁned in Equation (5.2)9:\nB(L) =B\u0003\nL1=\u000bB: (B.2)\nWe would like to determine optimal training parameters for a ﬁxed compute budget, so we replace S=\nC=(6NB(L)), whereCis the number of FLOPs used in the training run:\nL(N;C ) =\u0012Nc\nN\u0013\u000bN\n+\u0012\n6B\u0003ScN\nL1=\u000bBC\u0013\u000bS\n: (B.3)\nNow, we set @NL\f\f\nC= 0to ﬁnd the condition for optimality:\n0 =@L\n@N\f\f\nC\n=\u0000\u000bN\nN\u0012Nc\nN\u0013\u000bN\n+\u000bS\nN\u0012\n6B\u0003ScN\nL1=\u000bBC\u0013\u000bS\u0012\n1\u00005N\nL\u001a\u001a\u001a@L\n@N\f\f\nC\u0013\n=)\u000bN\n\u000bS\u0012Nc\nN\u0013\u000bN\n=\u0012\n6B\u0003ScN\nL1=\u000bBC\u0013\u000bS\n(B.4)\nEquation (B.3) and (B.4) together determine the compute-efﬁcient frontier.\nB.2 Efﬁcient Training\nNow we assemble the implications of (B.3) and (B.4). First, note that inserting (B.4) into (B.3) yields\nL(Ne\u000b(C);C) =\u0012\n1 +\u000bN\n\u000bS\u0013\nL(Ne\u000b;1); (B.5)\nwhich implies that for compute-efﬁcient training, we should train to a ﬁxed percentage\u000bN\n\u000bS\u001910% above\nthe converged loss. Next, let’s determine how the optimal loss depends on the compute budget. Eliminating\nNyields a power-law dependence of performance on compute:\nL(C) =\u0012Cc\nC\u0013\u000bC\n(B.6)\nwhere we deﬁned\n\u000bC= 1=(1=\u000bS+ 1=\u000bB+ 1=\u000bN)\u00190:052 (B.7)\nCc= 6NcB\u0003Sc\u0012\n1 +\u000bN\n\u000bS\u00131=\u000bS+1=\u000bN\u0012\u000bS\n\u000bN\u00131=\u000bS\n: (B.8)\nSimilarly, we can eliminate Lto ﬁndN(C):\nN(C)\nNc=\u0012C\nCc\u0013\u000bC=\u000bN\u0012\n1 +\u000bN\n\u000bS\u00131=\u000bN\n(B.9)\nand\nS(C) =Cc\n6NcB\u0003\u0012\n1 +\u000bN\n\u000bS\u0013\u00001=\u000bN\u0012C\nCc\u0013\u000bC=\u000bS\n(B.10)\n9There is a slight ambiguity here: we can imagine training either at a constant batch size B(Ltarget ), or we could\ninstead train at a variable batch size ~B(L), where ~Bis the instantaneous critical batch size (as opposed to B, which is\nthe averaged version). These two prescriptions result in the same number of steps, so we can ignore this subtlety (see\n[MKAT18]).\n21",
+    "page": 21
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4335948456850463,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:34.784187",
+  "updated_at": "2025-10-21T02:01:01.027665",
+  "last_accessed": "2025-10-21T01:56:34.791432"
+}

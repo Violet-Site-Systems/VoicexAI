@@ -21,6 +21,22 @@ from ..atomspace.atom_types import Atom, AtomType
 from ..atomspace.atomspace_manager import AtomSpaceManager
 from ..reasoning.ethical_analyzer import EthicalAnalyzer
 from ..reasoning.metta_interpreter import evaluate as evaluate_metta_program
+from tools.agentverse_client import get_client
+from tools.huggingface_client import get_client as get_hf_client
+from tools.deepseek_client import get_client as get_deepseek_client
+try:
+    import fitz  # PyMuPDF
+except Exception:
+    fitz = None
+try:
+    from pdf2image import convert_from_path
+except Exception:
+    convert_from_path = None
+from tools.huggingface_client import get_client as get_hf_client
+try:
+    from transformers import pipeline as hf_pipeline
+except Exception:  # pragma: no cover - optional dependency
+    hf_pipeline = None
 
 
 class CognitiveAPI:
@@ -80,6 +96,9 @@ app = FastAPI(title="Cognitive Core - MeTTa-enabled")
 
 # Single backend instance used by the HTTP API
 _backend = CognitiveAPI()
+_agentverse = get_client()
+_hf_client = get_hf_client()
+MODEL_PROVIDER = os.getenv("MODEL_PROVIDER", "auto").lower()
 
 
 class MeTTaRequest(BaseModel):
@@ -151,6 +170,138 @@ def stringify_contradiction(c):
         return str(c)
 
 
+def sections_to_text(sections: List[Dict[str, Any]]) -> str:
+    parts = []
+    for s in sections:
+        title = s.get("title", "")
+        text = s.get("text", "")
+        if title:
+            parts.append(title + "\n")
+        if text:
+            parts.append(text)
+    return "\n\n".join(parts).strip()
+
+
+def call_hosted_summarizer(sections: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    # Prefer based on MODEL_PROVIDER: 'agentverse', 'hf', 'local', or 'auto'
+    if MODEL_PROVIDER in ("agentverse", "auto") and _agentverse.enabled:
+        try:
+            summarizer_prompt = json.dumps({
+                "task": "summarize_policy",
+                "instructions": "Produce a 2-3 sentence executive summary and 5 bullet key points aimed at policymakers.",
+                "sections": sections
+            })
+            return _agentverse.call_model("gema-2", summarizer_prompt, params={"temperature": 0.0}, timeout=120)
+        except Exception:
+            pass
+
+    if MODEL_PROVIDER in ("hf", "auto") and _hf_client:
+        try:
+            text = sections_to_text(sections)
+            # Use a summarization model on HF
+            res = _hf_client.call_model("sshleifer/distilbart-cnn-12-6", text, params={"max_length": 120}, timeout=120)
+            # Normalize response
+            if isinstance(res, list):
+                first = res[0]
+                if isinstance(first, dict):
+                    s = first.get("summary_text") or first.get("generated_text") or str(first)
+                else:
+                    s = str(first)
+            elif isinstance(res, dict):
+                s = res.get("summary_text") or res.get("generated_text") or json.dumps(res)
+            else:
+                s = str(res)
+            sentences = [p.strip() for p in s.split('.') if p.strip()]
+            short = " ".join(sentences[:2]) if sentences else s
+            key_points = sentences[2:7] if len(sentences) > 2 else []
+            return {"short_summary": short, "key_points": key_points}
+        except Exception:
+            pass
+
+    # Local fallback
+    return local_summarize_sections(sections)
+
+
+def call_hosted_ethics(sections: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    if MODEL_PROVIDER in ("agentverse", "auto") and _agentverse.enabled:
+        try:
+            ethics_prompt = json.dumps({
+                "task": "ethical_analysis",
+                "instructions": "Return JSON with keys: ethical_summary (string), contradictions (list), recommendations (list).",
+                "sections": sections,
+                "frameworks": ["justice", "sustainability", "inclusion"]
+            })
+            return _agentverse.call_model("gema-2", ethics_prompt, params={"temperature": 0.0}, timeout=180)
+        except Exception:
+            pass
+
+    if MODEL_PROVIDER in ("hf", "auto") and _hf_client:
+        try:
+            # Build a text prompt asking HF model to output JSON
+            text = "Perform an ethical analysis and return a JSON object with keys: 'ethical_summary', 'contradictions', 'recommendations'. Sections:\n\n" + sections_to_text(sections)
+            res = _hf_client.call_model("google/flan-t5-small", text, timeout=180)
+            # Parse HF result: try JSON extraction
+            if isinstance(res, list) and res:
+                out_text = res[0].get("generated_text") if isinstance(res[0], dict) else str(res[0])
+            elif isinstance(res, dict):
+                out_text = res.get("generated_text") or json.dumps(res)
+            else:
+                out_text = str(res)
+            # Try to parse JSON from the model output
+            try:
+                parsed = json.loads(out_text)
+                return parsed if isinstance(parsed, dict) else {"ethical_summary": out_text}
+            except Exception:
+                # fallback: return text as ethical_summary
+                return {"ethical_summary": out_text, "contradictions": [], "recommendations": []}
+        except Exception:
+            pass
+
+    return None
+
+
+def local_summarize_sections(sections: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    """Produce a short summary and key points using a local transformers model.
+
+    This is a best-effort fallback when hosted summarization is unavailable.
+    """
+    if hf_pipeline is None:
+        return None
+    try:
+        # Use a lightweight summarization model
+        summarizer = hf_pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
+        texts = [s.get("text", "") for s in sections if s.get("text")]
+        if not texts:
+            return None
+        # Chunk text to avoid oversized inputs
+        max_chunk = 800
+        chunks = []
+        current = ""
+        for t in texts:
+            if len(current) + len(t) + 1 <= max_chunk:
+                current = (current + " " + t).strip()
+            else:
+                if current:
+                    chunks.append(current)
+                current = t[:max_chunk]
+        if current:
+            chunks.append(current)
+
+        summaries = []
+        for c in chunks:
+            out = summarizer(c, max_length=120, min_length=30, do_sample=False)
+            summaries.append(out[0]["summary_text"] if isinstance(out, list) and out else str(out))
+
+        combined = " ".join(summaries)
+        # Derive short summary and key points (naive sentence split)
+        sentences = [s.strip() for s in combined.split('.') if s.strip()]
+        short = " ".join(sentences[:2]) if sentences else combined
+        key_points = sentences[2:7] if len(sentences) > 2 else []
+        return {"short_summary": short, "key_points": key_points}
+    except Exception:
+        return None
+
+
 @app.post("/pipeline/run")
 def pipeline_run(req: PipelineRunRequest | None = None, file: UploadFile | None = File(None)):
     """Run a simple ingestion->analysis pipeline.
@@ -202,14 +353,102 @@ def pipeline_run(req: PipelineRunRequest | None = None, file: UploadFile | None 
 
             contradictions = [stringify_contradiction(c) for c in report.get("contradictions", [])]
 
+            # If AgentVerse client enabled, call hosted models for nicer output
+            hosted_summary = None
+            hosted_ethics = None
+            if _agentverse.enabled:
+                try:
+                    summarizer_prompt = json.dumps({
+                        "task": "summarize_policy",
+                        "instructions": "Produce a 2-3 sentence executive summary and 5 bullet key points aimed at policymakers.",
+                        "sections": sections
+                    })
+                    hosted_summary = _agentverse.call_model("gema-2", summarizer_prompt, params={"temperature": 0.0}, timeout=120)
+                except Exception:
+                    hosted_summary = None
+
+                try:
+                    ethics_prompt = json.dumps({
+                        "task": "ethical_analysis",
+                        "instructions": "Return JSON with keys: ethical_summary (string), contradictions (list), recommendations (list).",
+                        "sections": sections,
+                        "frameworks": ["justice", "sustainability", "inclusion"]
+                    })
+                    hosted_ethics = _agentverse.call_model("gema-2", ethics_prompt, params={"temperature": 0.0}, timeout=180)
+                except Exception:
+                    hosted_ethics = None
+
+            if hosted_ethics is None:
+                # Try a simple HF prompt for ethics if available
+                try:
+                    hf = get_hf_client()
+                    combined = "\n\n".join([s.get("text", "") for s in sections])
+                    ethics_prompt = f"Analyze the following policy text for ethical implications, contradictions, and recommendations. Return JSON: {{'ethical_summary': ..., 'contradictions': [...], 'recommendations': [...]}}. Text:\n\n{combined}"
+                    hf_res = hf.summarize(ethics_prompt, max_length=200, min_length=50)
+                    if isinstance(hf_res, dict) and hf_res.get("summary_text"):
+                        # Put the result into a simple structure
+                        hosted_ethics = {"ethical_summary": hf_res.get("summary_text"), "contradictions": [], "recommendations": []}
+                except Exception:
+                    hosted_ethics = None
+
+            # Try Hugging Face if AgentVerse not available or did not return a hosted summary
+            if hosted_summary is None:
+                try:
+                    hf = get_hf_client()
+                    model_name = os.environ.get("HUGGINGFACE_MODEL_SUMMARY", "sshleifer/distilbart-cnn-12-6")
+                    combined = "\n\n".join([s.get("text", "") for s in sections])
+                    # DeepSeek works on images; if selected, call deepseek image OCR pipeline
+                    if model_name.startswith("deepseek-ai/"):
+                        ds = get_deepseek_client(model_name)
+                        # Convert first page of PDF to image
+                        pdf_path = path
+                        page_image = None
+                        if fitz is not None:
+                            doc = fitz.open(pdf_path)
+                            pix = doc.load_page(0).get_pixmap()
+                            tmp = os.path.join("/tmp", f"{os.path.basename(pdf_path)}.png")
+                            pix.save(tmp)
+                            page_image = tmp
+                        elif convert_from_path is not None:
+                            imgs = convert_from_path(pdf_path, first_page=1, last_page=1)
+                            tmp = os.path.join("/tmp", f"{os.path.basename(pdf_path)}.png")
+                            imgs[0].save(tmp)
+                            page_image = tmp
+                        if page_image:
+                            hosted_summary = {"summary_text": ds.infer_image_to_markdown(page_image, prompt=None)}
+                        else:
+                            hosted_summary = None
+                    else:
+                        hosted_summary = hf.summarize(combined)
+                except Exception:
+                    hosted_summary = None
+            else:
+                # Try Hugging Face Inference API if available
+                hf_client = get_hf_client()
+                try:
+                    hosted_summary = hf_client.call_model("sshleifer/distilbart-cnn-12-6", sections, params={"max_length": 120}, timeout=120)
+                except Exception:
+                    hosted_summary = None
+
+                try:
+                    # No direct ethics model assumed; try a text2text inference model
+                    hosted_ethics = hf_client.call_model("google/flan-t5-small", {
+                        "task": "ethical_analysis",
+                        "instructions": "Return JSON with keys: ethical_summary, contradictions, recommendations.",
+                        "sections": sections
+                    }, timeout=180)
+                except Exception:
+                    hosted_ethics = None
+
             out = {
                 "doc": os.path.basename(path),
                 "summary": {
-                    "short": f"Detected {summary_counts.get('contradictions', 0)} contradictions, {summary_counts.get('ethical_implications', 0)} ethical implications, and {summary_counts.get('patterns', 0)} patterns.",
+                    "short": (hosted_summary.get("short_summary") if isinstance(hosted_summary, dict) and hosted_summary.get("short_summary") else (hosted_summary.get("summary_text") if isinstance(hosted_summary, dict) and hosted_summary.get("summary_text") else f"Detected {summary_counts.get('contradictions', 0)} contradictions, {summary_counts.get('ethical_implications', 0)} ethical implications, and {summary_counts.get('patterns', 0)} patterns.")),
                     "counts": summary_counts
                 },
-                "key_points": key_points,
-                "contradictions": contradictions,
+                "key_points": (hosted_summary.get("key_points") if isinstance(hosted_summary, dict) and hosted_summary.get("key_points") else key_points),
+                "contradictions": (hosted_ethics.get("contradictions") if isinstance(hosted_ethics, dict) and hosted_ethics.get("contradictions") else contradictions),
+                "recommendations": (hosted_ethics.get("recommendations") if isinstance(hosted_ethics, dict) and hosted_ethics.get("recommendations") else []),
                 "artifacts": {
                     "pdf": path,
                     "json": f"data/{os.path.basename(path)}.report.json"
@@ -269,14 +508,39 @@ def pipeline_run_url(req: PipelineRunRequest):
             key_points = [s.get("title") for s in sections[:5]]
             contradictions = [stringify_contradiction(c) for c in report.get("contradictions", [])]
 
+            hosted_summary = None
+            hosted_ethics = None
+            if _agentverse.enabled:
+                try:
+                    summarizer_prompt = json.dumps({
+                        "task": "summarize_policy",
+                        "instructions": "Produce a 2-3 sentence executive summary and 5 bullet key points aimed at policymakers.",
+                        "sections": sections
+                    })
+                    hosted_summary = _agentverse.call_model("gema-2", summarizer_prompt, params={"temperature": 0.0}, timeout=120)
+                except Exception:
+                    hosted_summary = None
+
+                try:
+                    ethics_prompt = json.dumps({
+                        "task": "ethical_analysis",
+                        "instructions": "Return JSON with keys: ethical_summary (string), contradictions (list), recommendations (list).",
+                        "sections": sections,
+                        "frameworks": ["justice", "sustainability", "inclusion"]
+                    })
+                    hosted_ethics = _agentverse.call_model("gema-2", ethics_prompt, params={"temperature": 0.0}, timeout=180)
+                except Exception:
+                    hosted_ethics = None
+
             out = {
                 "doc": os.path.basename(path),
                 "summary": {
-                    "short": f"Detected {summary_counts.get('contradictions', 0)} contradictions, {summary_counts.get('ethical_implications', 0)} ethical implications, and {summary_counts.get('patterns', 0)} patterns.",
+                    "short": (hosted_summary.get("short_summary") if isinstance(hosted_summary, dict) and hosted_summary.get("short_summary") else f"Detected {summary_counts.get('contradictions', 0)} contradictions, {summary_counts.get('ethical_implications', 0)} ethical implications, and {summary_counts.get('patterns', 0)} patterns."),
                     "counts": summary_counts
                 },
-                "key_points": key_points,
-                "contradictions": contradictions,
+                "key_points": (hosted_summary.get("key_points") if isinstance(hosted_summary, dict) and hosted_summary.get("key_points") else key_points),
+                "contradictions": (hosted_ethics.get("contradictions") if isinstance(hosted_ethics, dict) and hosted_ethics.get("contradictions") else contradictions),
+                "recommendations": (hosted_ethics.get("recommendations") if isinstance(hosted_ethics, dict) and hosted_ethics.get("recommendations") else []),
                 "artifacts": {
                     "pdf": path,
                     "json": f"data/{os.path.basename(path)}.report.json"

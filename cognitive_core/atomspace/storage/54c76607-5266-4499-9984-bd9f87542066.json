@@ -1,0 +1,27 @@
+{
+  "uuid": "54c76607-5266-4499-9984-bd9f87542066",
+  "atom_type": "PolicySection",
+  "name": "Page 12",
+  "content": {
+    "title": "Page 12",
+    "text": "101 3×1004×1006×100\nWebText2 Train Loss103104105106Critical Batch Size (Tokens)\nCritical Batch Size vs. Performance\nEmpirical Bcrit, N=3M\nEmpirical Bcrit, N=85M\nBcrit=2.1×108tokensL4.8\nNoise Scale MeasurementFigure 10 The critical batch size Bcritfollows a power law in the loss as performance increase, and does\nnot depend directly on the model size. We ﬁnd that the critical batch size approximately doubles for every\n13% decrease in loss. Bcritis measured empirically from the data shown in Figure 18, but it is also roughly\npredicted by the gradient noise scale, as in [MKAT18].\ndeﬁning\n\u000eL(N;D )\u0011L(N;D )\nL(N;1)\u00001 (4.2)\nand studying it as a function of N;D . In fact, we see empirically that \u000eLdepends only a speciﬁc combination\nofNandD, as shown in Figure 16. This follows from the scaling law of Equation (1.5), which implies\n\u000eL\u0019 \n1 +\u0012N\nNc\u0013\u000bN\n\u000bDDc\nD!\u000bD\n\u00001 (4.3)\nNote that at large Dthis formula also has a series expansion in powers of 1=D.\nWe estimate that the variation in the loss with different random seeds is roughly 0:02, which means that to\navoid overﬁtting when training to within that threshold of convergence we require\nD&(5\u0002103)N0:74(4.4)\nWith this relation, models smaller than 109parameters can be trained with minimal overﬁtting on the 22B\ntoken WebText2 dataset, but our largest models will encounter some mild overﬁtting. More generally, this\nrelation shows that dataset size may grow sub-linearly in model size while avoiding overﬁtting. Note however\nthat this does not typically represent maximally compute-efﬁcient training. We should also emphasize that\nwe have not optimized regularization (eg the dropout probability) while varying dataset and model size.\n5 Scaling Laws with Model Size and Training Time\nIn this section we will demonstrate that a simple scaling law provides a good description for the loss as a\nfunction of model size Nand training time. First we will explain how to use the results of [MKAT18] to\ndeﬁne a universal training step Smin, which accounts for the fact that most of our models have not been\ntrained at an optimal batch size. Then we will demonstrate that we can ﬁt the model size and training time\ndependence of the loss using Equation (1.6). Later we will use these results to predict the optimal allocation\nof training compute between model size and training time, and then conﬁrm that prediction.\n5.1 Adjustment for Training at Bcrit(L)\nA simple empirical theory for the batch size dependence of training was developed in [MKAT18] (see also\n[SLA+18, ZLN+19]). It was argued that there is a critical batch size Bcritfor training; for Bup toBcrit\nthe batch size can be increased with very minimal degradation in compute-efﬁciency, whereas for B >B crit\nincreases in Bresult in diminishing returns. It was also argued that the gradient noise scale provides a simple\n12",
+    "page": 12
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4335948456850463,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:34.776985",
+  "updated_at": "2025-10-21T02:01:00.984926",
+  "last_accessed": "2025-10-21T01:56:34.791422"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "50dbe80d-0d36-4ba8-a9ce-11ed526fb53f",
+  "atom_type": "PolicySection",
+  "name": "Page 2",
+  "content": {
+    "title": "Page 2",
+    "text": "Contents\n1 Introduction 2\n2 Background and Methods 6\n3 Empirical Results and Basic Power Laws 7\n4 Charting the Inﬁnite Data Limit and Overﬁtting 10\n5 Scaling Laws with Model Size and Training Time 12\n6 Optimal Allocation of the Compute Budget 14\n7 Related Work 18\n8 Discussion 18\nAppendices 20\nA Summary of Power Laws 20\nB Empirical Model of Compute-Efﬁcient Frontier 20\nC Caveats 22\nD Supplemental Figures 23\n1 Introduction\nLanguage provides a natural domain for the study of artiﬁcial intelligence, as the vast majority of reason-\ning tasks can be efﬁciently expressed and evaluated in language, and the world’s text provides a wealth of\ndata for unsupervised learning via generative modeling. Deep learning has recently seen rapid progress in lan-\nguage modeling, with state of the art models [RNSS18, DCLT18, YDY+19, LOG+19, RSR+19] approaching\nhuman-level performance on many speciﬁc tasks [WPN+19], including the composition of coherent multi-\nparagraph prompted text samples [RWC+19].\nOne might expect language modeling performance to depend on model architecture, the size of neural models,\nthe computing power used to train them, and the data available for this training process. In this work we will\nempirically investigate the dependence of language modeling loss on all of these factors, focusing on the\nTransformer architecture [VSP+17, LSP+18]. The high ceiling and low ﬂoor for performance on language\ntasks allows us to study trends over more than seven orders of magnitude in scale.\nThroughout we will observe precise power-law scalings for performance as a function of training time, con-\ntext length, dataset size, model size, and compute budget.\n1.1 Summary\nOur key ﬁndings for Transformer language models are are as follows:\n2Here we display predicted compute when using a sufﬁciently small batch size. See Figure 13 for comparison to the\npurely empirical data.\n2",
+    "page": 2
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4335948456850463,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:34.769147",
+  "updated_at": "2025-10-21T02:01:01.038562",
+  "last_accessed": "2025-10-21T01:56:34.791410"
+}

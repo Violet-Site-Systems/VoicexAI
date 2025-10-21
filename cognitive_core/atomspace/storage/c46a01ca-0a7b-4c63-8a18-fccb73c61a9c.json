@@ -1,0 +1,27 @@
+{
+  "uuid": "c46a01ca-0a7b-4c63-8a18-fccb73c61a9c",
+  "atom_type": "PolicySection",
+  "name": "Page 28",
+  "content": {
+    "title": "Page 28",
+    "text": "A Technical proofs and appendices\nA.1 Proof of Theorem 2\nOur proof adapts arguments similar to those that Sesia and Cand\u0012 es [35] use in the regression\nsetting, repurposing and modifying them for classi\fcation. We have that kbs\u0000skL2(PX)p!0\nandkbq\u001b\n\u000b\u0000q\u001b\n\u000bkL2(PX)p!0. We additionally have that\nbQ:=Q1\u0000\u000b(E\u001b;I3)p!0: (27)\nThis is item (ii) in the proof of Theorem 1 of Sesia and Cand\u0012 es [35] (see Appendix A of their\npaper), which proves the convergence (27) of the marginal quantile of the error precisely when\nbq\u001b\n\u000bandbsareL2-consistent in probability (when the randomized quantity s(x;Y) +\u001bZhas a\ndensity), as in our Assumption A1.\nRecalling that bs;bqtacitly depend on the sample size n, let\u000f >0 be otherwise arbitrary,\nand de\fne the sets\nBn:=\b\nx2Xjkbs(x;\u0001)\u0000s(x;\u0001)k1>\u000f2orjbq\u001b\n\u000b(x)\u0000q\u001b\n\u000b(x)j>\u000f2\t\n:\nThenBn\u001aX is measurable, and by Markov's inequality,\nPX(Bn)\u0014kbs\u0000skL2(PX)\n\u000f+kbq\u001b\n\u000b\u0000q\u001b\n\u000bkL2(PX)\n\u000f;\nso\nP(PX(Bn)\u0015\u000f)\u0014P(kbs\u0000skL2(PX)>\u000f2) +P(kbq\u001b\n\u000b\u0000q\u001b\n\u000bkL2(PX)>\u000f2)!0: (28)\nThus, the measure of the sets Bntends to zero in probability, i.e., PX(Bn)p!0.\nNow recall the shorthand (27) that bQ=Q1\u0000\u000b(E\u001b;I3). Let us consider the event that\nbC\u001b\n1\u0000\u000b(x;z)6=C\u001b\n1\u0000\u000b(x;z). If this is the case, then we must have one of\nA1(x;k;z ):=n\nbs(x;k) +\u001bz\u0015bq\u001b\n\u000b(x)\u0000bQands(x;k) +\u001bz<q\u001b\n\u000b(x)o\nor\nA2(x;k;z ):=n\nbs(x;k) +\u001bz<bq\u001b\n\u000b(x)\u0000bQands(x;k) +\u001bz\u0015q\u001b\n\u000b(x)o\n:(29)\nWe show that the probability of the set A1is small; showing that the probability of set A2\nis small is similar. Using the convergence (27), let us assume that jbQj\u0014\u000f, and suppose\nthatx62Bn. Then for A1to occur, we must have both s(x;k) +\u000f+\u001bz\u0015q\u001b\n\u000b(x)\u00002\u000fand\ns(x;k) +\u001bz<q\u001b\n\u000b(x), or\nq\u001b\n\u000b(x)\u0000s(x;k)\u00003\u000f\u0014\u001bz<q\u001b\n\u000b(x)\u0000s(x;k):\nAsZhas a bounded density, we have lim sup\u000f!0supa2RPZ(a\u0014\u001bZ\u0014a+ 3\u000f) = 0, or (with\nsome notational abuse) lim sup\u000f!0supx62BnPZ(A1(x;k;Z )) = 0.\nNow, letFn=\u001b(fXign\ni=1;fYign\ni=1;fZign\ni=1) be the\u001b-\feld of the observed sample. Then\nby the preceding derivation ( mutatis mutandis for the setA2in de\fnition (29)) for any \u0011>0,\nthere is an \u000f>0 (in the de\fnition of Bn) such that\nsup\nx2XP\u0010\nbC\u001b\n1\u0000\u000b(x;Zn+1)6=C\u001b\n1\u0000\u000b(x;Zn+1)jFn\u0011\n1fx62Bng1n\njbQj\u0014\u000fo\n\u0014sup\nx62BnKX\nk=1P(A1(x;k;Zn+1) orA2(x;k;Zn+1)jFn) 1n\njbQj\u0014\u000fo\n\u0014\u0011:\n28",
+    "page": 28
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.446067",
+  "updated_at": "2025-10-21T02:01:00.988930",
+  "last_accessed": "2025-10-21T01:59:47.448257"
+}

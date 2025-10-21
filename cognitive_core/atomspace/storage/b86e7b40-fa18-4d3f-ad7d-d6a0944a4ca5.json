@@ -1,0 +1,27 @@
+{
+  "uuid": "b86e7b40-fa18-4d3f-ad7d-d6a0944a4ca5",
+  "atom_type": "PolicySection",
+  "name": "Page 10",
+  "content": {
+    "title": "Page 10",
+    "text": "104105106107108109\nParameters (non-embedding)34567Test Loss\nWebText2 (Test)\nInternet Books\nBooks\nWikipedia\nCommon Crawl\n2.5 3.0 3.5 4.0 4.5 5.0\nTest Loss on Training Distribution2.53.03.54.04.55.0Loss on Other DistributionBooks during training\nWikipedia during training\nBooks at convergence\nWikipedia at convergenceFigure 8 Left: Generalization performance to other data distributions improves smoothly with model size,\nwith only a small and very slowly growing offset from the WebText2 training distribution. Right: Gener-\nalization performance depends only on training distribution performance, and not on the phase of training.\nWe compare generalization of converged models (points) to that of a single large model (dashed curves) as it\ntrains.\nwith the best performance on step S=C\n6BS. Note that in these results the batch size Bremains ﬁxed for\nall models , which means that these empirical results are not truly optimal. We will account for this in later\nsections using an adjusted Cminto produce cleaner trends.\nThe result appears as the heavy black line on the left-hand plot in Figure 1. It can be ﬁt with\nL(C)\u0019\u0012Cc\nC\u0013\u000bC\n(3.3)\nThe ﬁgure also includes images of individual learning curves to clarify when individual models are optimal.\nWe will study the optimal allocation of compute more closely later on. The data strongly suggests that sample\nefﬁciency improves with model size, and we also illustrate this directly in Figure 19 in the appendix.\n4 Charting the Inﬁnite Data Limit and Overﬁtting\nIn Section 3 we found a number of basic scaling laws for language modeling performance. Here we will\nstudy the performance of a model of size Ntrained on a dataset with Dtokens while varying NandD\nsimultaneously. We will empirically demonstrate that the optimally trained test loss accords with the scaling\nlaw of Equation (1.5). This provides guidance on how much data we would need to train models of increasing\nsize while keeping overﬁtting under control.\n4.1 Proposed L(N;D )Equation\nWe have chosen the parameterization (1.5) (repeated here for convenience):\nL(N;D ) =\"\u0012Nc\nN\u0013\u000bN\n\u000bD+Dc\nD#\u000bD\n(4.1)\nusing three principles:\n1. Changes in vocabulary size or tokenization are expected to rescale the loss by an overall factor. The\nparameterization of L(N;D )(and all models of the loss) must naturally allow for such a rescaling.\n2. FixingDand sending N!1 , the overall loss should approach L(D). Conversely, ﬁxing Nand\nsendingD!1 the loss must approach L(N).\n3.L(N;D )should be analytic at D=1, so that it has a series expansion in 1=Dwith integer powers.\nTheoretical support for this principle is signiﬁcantly weaker than for the ﬁrst two.\nOur choice of L(N;D )satisﬁes the ﬁrst requirement because we can rescale Nc;Dcwith changes in the\nvocabulary. This also implies that the values of Nc;Dchave no fundamental meaning.\n10",
+    "page": 10
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4911807109608145,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:55:40.440832",
+  "updated_at": "2025-10-21T02:01:01.073128",
+  "last_accessed": "2025-10-21T01:55:40.446151"
+}

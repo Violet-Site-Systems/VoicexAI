@@ -1,0 +1,19 @@
+{
+  "doc": "1706.03762.pdf",
+  "summary": {
+    "contradictions": 1,
+    "fairness_signals": 30,
+    "ethical_implications": 8,
+    "urban_planning_ethics": 82,
+    "resource_allocation_issues": 1,
+    "patterns": 25
+  },
+  "contradictions": [
+    "{'conclusion': 'Contradiction detected between Page 7 and Page 10', 'premises': ['826feb26-0110-4df4-87c6-2938d9a11f3c', 'ca36bcf5-a4ee-453a-9ab9-6015ca1dc64f'], 'rule_used': <InferenceRule.CONTRADICTION_DETECTION: 'ContradictionDetection'>, 'truth_value': TruthValue(strength=0.8, confidence=0.7), 'confidence': 0.7, 'evidence': ['826feb26-0110-4df4-87c6-2938d9a11f3c', 'ca36bcf5-a4ee-453a-9ab9-6015ca1dc64f']}"
+  ],
+  "counts": {
+    "contradictions": 1,
+    "fairness": 30,
+    "ethical_implications": 8
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "e8dcb3e5-deea-470e-b981-abfdf9db02d2",
+  "atom_type": "PolicySection",
+  "name": "Page 17",
+  "content": {
+    "title": "Page 17",
+    "text": "The intersection point is sensitive to the precise power-law parameters\nFigure 15 Far beyond the model sizes we study empirically, we ﬁnd a contradiction between our equations\nforL(Cmin)andL(D)due to the slow growth of data needed for compute-efﬁcient training. The intersection\nmarks the point before which we expect our predictions to break down. The location of this point is highly\nsensitive to the precise exponents from our power-law ﬁts.\n6.3 Contradictions and a Conjecture\nWe observe no signs of deviation from straight power-law trends at large values of compute, data, or model\nsize. Our trends must eventually level off, though, since natural language has non-zero entropy.\nIndeed, the trends for compute-efﬁcient training described in this section already contain an apparent contra-\ndiction. At scales several orders of magnitude above those documented here, the performance predicted by\ntheL(Cmin)scaling law decreases below what should be possible given the slow growth in training data with\ncompute. This implies that our scaling laws must break down before this point, but we conjecture that the\nintersection point has a deeper meaning: it provides an estimate of the point at which Transformer language\nmodels reach maximal performance.\nSince the amount of data used by compute-efﬁcient training grows slowly with the compute budget, the\nperformance predicted by L(Cmin)eventually hits a lower bound set by the L(D)power law (see Figure 15).\nLet us work this out in more detail.\nTo keep overﬁtting under control, the results of Section 4 imply that we should scale the dataset size as\nD/N0:74/C0:54\nmin (6.6)\nwhere we have used the compute-efﬁcient N(Cmin)from Figure 14.\nLet us compare this to the data requirements of compute-efﬁcient training. If we train at the critical batch\nsize (i.e.C= 2Cmin) and never re-use data during training, we ﬁnd that data usage grows with compute as\nD(Cmin) =2Cmin\n6N(Cmin)\u0019\u0000\n4\u00021010tokens\u0001\n(Cmin=PF-Day)0:26(6.7)\nThis is the maximum rate at which the dataset size can productively grow with compute, since it means that\nwe are only training for a single epoch. But it grows the dataset much more slowly than in Equation (6.6).\nIt appears to imply that compute-efﬁcient training will eventually run into a problem with overﬁtting, even if\nthe training process never re-uses any data!\nAccording to Figure 1, we expect that when we are bottlenecked by the dataset size (ie by overﬁtting), the\nloss should scale as L(D)/D\u00000:095. This implies that the loss would scale with compute as L(D(Cmin))/\nC\u00000:03\nmin once we are data-limited. Once again, we have a contradiction, as this will eventually intersect with\nour prediction for L(Cmin)from Figure 13, where we found a scaling L(Cmin)/C\u00000:050\nmin .\nThe intersection point of L(D(Cmin))andL(Cmin)occurs at\nC\u0003\u0018104PF-DaysN\u0003\u00181012parameters; D\u0003\u00181012tokens; L\u0003\u00181:7nats/token (6.8)\nthough the numerical values are highly uncertain, varying by an order or magnitude in either direction de-\npending on the precise values of the exponents from the power-law ﬁts. The most obvious interpretation is\nthat our scaling laws break down at or before we reach this point, which is still many orders of magnitude\naway in both compute and model size.\n17",
+    "page": 17
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4911807109608145,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:55:40.442625",
+  "updated_at": "2025-10-21T02:01:01.060037",
+  "last_accessed": "2025-10-21T01:55:40.446158"
+}

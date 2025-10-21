@@ -1,0 +1,27 @@
+{
+  "uuid": "acdbe4b7-c992-42c7-8b5a-d74234c8944a",
+  "atom_type": "PolicySection",
+  "name": "Page 14",
+  "content": {
+    "title": "Page 14",
+    "text": "104106108\nParameters (non-embedding)2345678Test LossPerformance vs Compute Budget\n105\n104\n103\n102\n101\n100\nPF-dayss\n106107108109\nParameters (non-embedding)2.43.03.64.24.85.4Test LossPerformance vs Steps\n104105\nStepsFigure 11 When we hold either total compute or number of training steps ﬁxed, performance follows\nL(N;S)from Equation (5.6). Each value of compute budget has an associated optimal model size that\nmaximizes performance. Mediocre ﬁts at small Sare unsurprising, as the power-law equation for the learning\ncurves breaks down very early in training.\nParameter \u000bN\u000bSNcSc\nValue 0:077 0:76 6:5\u000210132:1\u0002103\nTable 3 Fits toL(N;S)\nWith these parameters, we obtain the learning curve ﬁts in Figure 4. Though the ﬁts are imperfect, we believe\nthey are quite compelling given the simplicity of Equation (5.6).\nThe data and ﬁts can be visualized in a different and more interesting way, as shown in Figure 11. There we\nstudy the test loss as a function of model size while ﬁxing either the total non-embedding compute Cused\nin training, or the number of steps S. For the ﬁts we use Equation (5.5) and (5.4) along with the parameters\nabove and Equation (5.6).\nThe power-law dependence of the loss on Sminreﬂects the interplay of optimizer dynamics and the loss\nlandscape. Since the ﬁts are best late in training, when the loss may be approximately quadratic, the power-\nlaw should provide information about the spectrum of the Hessian of the loss. Its universality suggests that\nthe Hessian eigenvalue density is roughly independent of model size.\n5.3 Lower Bound on Early Stopping Step\nThe results for L(N;S min)can be used to derive a lower-bound (and rough estimate) of the step at which\nearly stopping should occur when training is data limited. It is motivated by the idea that ﬁnite and inﬁnite D\nlearning curves for a given model will be very similar until we reach Smin\u0019Sstop. Thus overﬁtting should\nbe proportional to the correction from simply ending training at Sstop. This will underestimate Sstop, because\nin reality the test loss will decrease more slowly when we have a ﬁnite D, and therefore we will require more\ntraining steps to reach the optimal test loss at ﬁnite D. This line of reasoning leads to the inequality\nSstop(N;D )&Sc\n[L(N;D )\u0000L(N;1)]1=\u000bS(5.7)\nwhereL(N;1)is the converged loss, evaluated with inﬁnite available data. This inequality and its com-\nparison to the empirical data is displayed in Figure 16 in the appendix. In that ﬁgure, the values of Sstop\nandL(N;D )are empirical (though Sstopis adjusted to mimic training at B\u001dBcrit), whileL(N;1)is\ncomputed from the ﬁt to L(N;D )evaluated at D=1.\n6 Optimal Allocation of the Compute Budget\nWe displayed the empirical trend of performance as a function of the computation used during training in\nthe top-right of Figure 1. However, this result involved training at a ﬁxed batch size B, whereas we know\n14",
+    "page": 14
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4335948456850463,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:34.778354",
+  "updated_at": "2025-10-21T02:01:01.045058",
+  "last_accessed": "2025-10-21T01:56:34.791424"
+}

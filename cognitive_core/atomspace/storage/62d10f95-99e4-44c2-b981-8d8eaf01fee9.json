@@ -1,0 +1,27 @@
+{
+  "uuid": "62d10f95-99e4-44c2-b981-8d8eaf01fee9",
+  "atom_type": "PolicySection",
+  "name": "Page 8",
+  "content": {
+    "title": "Page 8",
+    "text": "Feed-Forward Ratio (dff / dmodel) 50M ParametersAspect Ratio (dmodel / nlayer)Attention Head Dimension (dmodel / nhead) 25M Parameters10%8%6%4%2%0%Loss IncreaseA wide range of architectures achieve similar performance22% additional compute\ncompensates for 1% loss increaseFigure 5 Performance depends very mildly on model shape when the total number of non-embedding\nparametersNis held ﬁxed. The loss varies only a few percent over a wide range of shapes. Small differences\nin parameter counts are compensated for by using the ﬁt to L(N)as a baseline. Aspect ratio in particular can\nvary by a factor of 40 while only slightly impacting performance; an (nlayer;dmodel ) = (6;4288) reaches a\nloss within 3% of the (48;1600) model used in [RWC+19].\n106107108109\nParameters (with embedding)234567Test Loss\n0 Layer\n1 Layer\n2 Layers\n3 Layers\n6 Layers\n>6 Layers\n103104105106107108109\nParameters (non-embedding)234567Test Loss\n1 Layer\n2 Layers\n3 Layers\n6 Layers\n>6 Layers\nFigure 6 Left: When we include embedding parameters, performance appears to depend strongly on the\nnumber of layers in addition to the number of parameters. Right: When we exclude embedding parameters,\nthe performance of models with different depths converge to a single trend. Only models with fewer than 2\nlayers or with extreme depth-to-width ratios deviate signiﬁcantly from the trend.\nIn this section we will display data along with empirically-motivated ﬁts, deferring theoretical analysis to\nlater sections.\n3.1 Approximate Transformer Shape and Hyperparameter Independence\nTransformer performance depends very weakly on the shape parameters nlayer;nheads , andd\u000bwhen we hold\nthe total non-embedding parameter count Nﬁxed. To establish these results we trained models with ﬁxed\nsize while varying a single hyperparameter. This was simplest for the case of nheads . When varying nlayer,\nwe simultaneously varied dmodel while keeping N\u001912nlayerd2\nmodel ﬁxed. Similarly, to vary d\u000bat ﬁxed\nmodel size we also simultaneously varied the dmodel parameter, as required by the parameter counts in Table\n1. Independence of nlayers would follow if deeper Transformers effectively behave as ensembles of shallower\nmodels, as has been suggested for ResNets [VWB16]. The results are shown in Figure 5.\n3.2 Performance with Non-Embedding Parameter Count N\nIn Figure 6 we display the performance of a wide variety of models, ranging from small models with shape\n(nlayer;dmodel ) = (2;128) through billion-parameter models, ranging in shape from (6;4288) through\n(207;768) . Here we have trained to near convergence on the full WebText2 dataset and observe no over-\nﬁtting (except possibly for the very largest models).\nAs shown in Figure 1, we ﬁnd a steady trend with non-embedding parameter count N, which can be ﬁt to the\nﬁrst term of Equation (1.5), so that\nL(N)\u0019\u0012Nc\nN\u0013\u000bN\n(3.1)\n8",
+    "page": 8
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4335948456850463,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:34.773358",
+  "updated_at": "2025-10-21T02:01:01.026697",
+  "last_accessed": "2025-10-21T01:56:34.791418"
+}

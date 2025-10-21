@@ -1,0 +1,27 @@
+{
+  "uuid": "854dde1a-a7a9-4d7f-87bf-47fc24be9a5c",
+  "atom_type": "PolicySection",
+  "name": "Page 22",
+  "content": {
+    "title": "Page 22",
+    "text": "0.000.250.500.751.00\n1e−01 1e+00 1e+01 1e+02 1e+03\nSizeCDF P(|C(X)| <= Size)Conformalization\nMarginal\nCQC\nGIQ\n0.880.900.920.94\n1 10 100 1000\nSizeP(Coverage | |C(X)| <= Size)Conformalization\nMarginal\nCQC\nGIQ\nP(Y2bC(X)jcard(bC(X))\u0014t) P(card(bC(X))\u0014t)\n0 1 10 100 1000\nCon\fdence set size t(log-scale)Con\fdence set size t(log-scale)\nFigure 4.7. ImageNet results over 20 trials. Methods are the marginal method (Alg. 3), the\nCQC method (Alg. 1), and the GIQ method (Alg. 1, [33]). Top: cumulative distribution of\ncon\fdence set size. Bottom: probability of coverage conditioned on con\fdence set size.\n0.750.800.85\nCDioC ArbiTree−CQC PGM−CQC\nMethodCoverageType of CS\nImplicit\nExplicit\n0.250.501.002.004.008.0016.00\nCDioC ArbiTree−CQC PGM−CQC\nMethodAverage SizeType of Set\nInner\nOuter P(Y2^C(X))\nEjbyin(X)jandEjbyout(X)j(log-scale)\nFigure 4.8. Pascal-VOC dataset [13] results over 20 trials. Methods are the conformalized\ndirect inner/outer method (CDioC, Alg. 3) and tree-based methods with implicit con\fdence\nsetsbCimpor explicit inner/outer sets bCio, labeled ArbiTree and PGM (see Sec. 4.1.2). Left:\nMarginal coverage probability at level 1 \u0000\u000b=:8. Right: con\fdence set sizes of methods.\n22",
+    "page": 22
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4070327839590647,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:41.950353",
+  "updated_at": "2025-10-21T02:01:00.959259",
+  "last_accessed": "2025-10-21T01:56:41.953892"
+}

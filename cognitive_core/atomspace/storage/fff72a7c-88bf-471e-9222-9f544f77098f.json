@@ -1,0 +1,27 @@
+{
+  "uuid": "fff72a7c-88bf-471e-9222-9f544f77098f",
+  "atom_type": "PolicySection",
+  "name": "Page 24",
+  "content": {
+    "title": "Page 24",
+    "text": "0.770.790.810.830.85\nPGM−CQC\nMethodCoverageType of CS\nImplicit\nUnique\nMultipleA\n0.000.250.500.751.00\n2025210215220\nSizeDistribution of sizeTypeConfidenceSets\nMultiple\nUniqueB\n0.000.250.500.751.00\n2020.52121.522\nSizeDifferenceDistribution of size differenceC\nP(Y2bC(X)\nP(jbCio(x)j=jbCio(x;I)j\u0014t) P(jbC(x)j\u0014t)\nWorst Coverage probability tSizet\nRatio of size t\nFigure 4.10. Comparison between standard inner/outer sets (11) (\\Unique\" in the \fgure)\nand union of inner/outer sets (14) (\\Multiple\"), on Pascal-VOC dataset. The dotted line is\nthe desired (marginal) coverage. The label index set Icontains two labels for each instance\nx(see Sec. 3.1.1). A: summary box plot of coverage for each type of con\fdence set over 20\ntrials. B: cumulative distribution of the number of total con\fgurations in each con\fdence set.\nC: cumulative distribution of the ratio of size of con\fdence sets (11) and (14) (with m= 2).\n24",
+    "page": 24
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4070327839590647,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:41.950817",
+  "updated_at": "2025-10-21T02:01:00.987945",
+  "last_accessed": "2025-10-21T01:56:41.953894"
+}

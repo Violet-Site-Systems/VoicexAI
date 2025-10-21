@@ -1,0 +1,27 @@
+{
+  "uuid": "440f0336-8deb-4de8-806d-6aa6ec5321b8",
+  "atom_type": "PolicySection",
+  "name": "Page 4",
+  "content": {
+    "title": "Page 4",
+    "text": "Larger models require fewer samples to reach the same performance10864The optimal model size grows smoothly with the loss target and compute budgetLine color indicates\nnumber of parameters\n1071091011Tokens ProcessedCompute (PF-days)10-910-610-3100Test LossCompute-eﬃcient training stops far short of convergence\n103109106103 Params109 Params\n10864Figure 2 We show a series of language model training runs, with models ranging in size from 103to109\nparameters (excluding embeddings).\n100x Batch Size<10x Serial Steps>1,000,000x Model SizeData requirements\ngrow relatively slowlyOptimal model size\nincreases very quicklyMinimum serial steps increases negligibly\nFigure 3 As more compute becomes available, we can choose how much to allocate towards training larger\nmodels, using larger batches, and training for more steps. We illustrate this for a billion-fold increase in\ncompute. For optimally compute-efﬁcient training, most of the increase should go towards increased model\nsize. A relatively small increase in data is needed to avoid reuse. Of the increase in data, most can be used to\nincrease parallelism through larger batch sizes, with only a very small increase in serial training time required.\n1.2 Summary of Scaling Laws\nThe test loss of a Transformer trained to autoregressively model language can be predicted using a power-law\nwhen performance is limited by only either the number of non-embedding parameters N, the dataset size D,\nor the optimally allocated compute budget Cmin(see Figure 1):\n1. For models with a limited number of parameters, trained to convergence on sufﬁciently large\ndatasets:\nL(N) = (Nc=N)\u000bN;\u000bN\u00180:076; N c\u00188:8\u00021013(non-embedding parameters) (1.1)\n2. For large models trained with a limited dataset with early stopping:\nL(D) = (Dc=D)\u000bD;\u000bD\u00180:095; D c\u00185:4\u00021013(tokens) (1.2)\n3. When training with a limited amount of compute, a sufﬁciently large dataset, an optimally-sized\nmodel, and a sufﬁciently small batch size (making optimal3use of compute):\nL(Cmin) =\u0000\nCmin\nc=Cmin\u0001\u000bmin\nC;\u000bmin\nC\u00180:050; Cmin\nc\u00183:1\u0002108(PF-days) (1.3)\n3We also observe an empirical power-law trend with the training compute C(Figure 1) while training at ﬁxed batch\nsize, but it is the trend with Cminthat should be used to make predictions. They are related by equation (5.5).\n4",
+    "page": 4
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4335948456850463,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:34.770268",
+  "updated_at": "2025-10-21T02:01:01.014778",
+  "last_accessed": "2025-10-21T01:56:34.791413"
+}

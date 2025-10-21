@@ -1,0 +1,27 @@
+{
+  "uuid": "7a7e804e-1535-4107-9acd-3bb69278fea4",
+  "atom_type": "PolicySection",
+  "name": "Page 26",
+  "content": {
+    "title": "Page 26",
+    "text": "0 50000 100000 150000 200000 250000\nStep0.00000.00020.00040.00060.00080.0010Learning Rate\n50 100 150 200 250\nLR Summed Over Steps3.653.703.753.803.853.90LossFigure 22 We test a variety of learning rate schedules including cosine decay, linear decay, as well as other\nfaster/slower decays schedules on a 3 million parameter model, shown on the left. For these experiments we\ndo not decay to zero, since we ﬁnd that this tends to give a ﬁxed improvement close to the end of training.\nWe ﬁnd that, as long as the learning rate is not too small and does not decay too quickly, performance does\nnot depend strongly on learning rate. Run-to-run variation is at the level of 0.05 in the loss, so averaging\nmultiple runs is necessary to validate performance changes smaller than this level.\n104105106107108109\nParameters (non-embedding)23456Test Loss (at convergence)\nL=(N/8.81013)0.076\nL=0.25log(N/7.11012)\nFigure 23 The trend for performance as a function of parameter count, L(N), is ﬁt better by a power law\nthan by other functions such as a logarithm at a qualitative level.\nschedules appear to be statistical noise, and provide a rough gauge for the scale of variation between different\ntraining runs. Experiments on larger models suggest that the variation in the ﬁnal test loss between different\nrandom seeds is roughly constant in magnitude for different model sizes.\nWe found that larger models require a smaller learning rate to prevent divergence, while smaller models can\ntolerate a larger learning rate. To implement this, the following rule of thumb was used for most runs:\nLR(N)\u00190:003239 +\u00000:0001395 log( N) (D.1)\nWe expect that this formula could be improved. There may be a dependence on network width, likely set by\nthe initialization scale. The formula also breaks down for N > 1010parameters. Nevertheless, we found that\nit works sufﬁciently well for the models we considered.\nD.7 Fit Details and Power Law Quality\nWe experimented with a number of functional forms for the ﬁts to L(N);L(C), andL(D); the power-law\nﬁts were qualitatively much more accurate than other functions such as logarithms (see Figure 23).\nForL(C), we do not include small models with only 1 layer in the ﬁt, as the transition from 1 to 2 layers\ncauses a noticable lump in the data. For L(N)we also do not include very small models with only 1 layer in\nthe ﬁt, and we exclude the largest models that have not trained fully to convergence. Fit parameters change\nmarginally if we do include them, and the trend extrapolates well in both directions regardless.\nD.8 Generalization and Architecture\nIn ﬁgure 24 we show that generalization to other data distributions does not depend on network depth when we\nhold the total parameter count ﬁxed. It seems to depend only on the performance on the training distribution.\n26",
+    "page": 26
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.3177842565597668,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:39.637445",
+  "updated_at": "2025-10-21T02:01:00.981306",
+  "last_accessed": "2025-10-21T01:59:39.638775"
+}

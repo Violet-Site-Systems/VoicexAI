@@ -1,0 +1,27 @@
+{
+  "uuid": "9b8b1c69-fa5b-465b-8188-389dc39596da",
+  "atom_type": "PolicySection",
+  "name": "Page 31",
+  "content": {
+    "title": "Page 31",
+    "text": "A maximum marginal message passing algorithm then computes a single downward and\na single upward pass through each tree, each in topological order of the tree. The downard\nmessagesml!k:f\u00001;1g!Rare de\fned for ^ y2f\u0000 1;1gby\nml!k(^y) = max\nyl2f\u00001;1g8\n<\n:'l(yl) + (l;k)(yl;^y) +X\ni:(i!l)2edges(Tdown)mi!l(yl)9\n=\n;;\nwhile the upward pass is de\fned similarly except that TupreplacesTdown. After a single\ndownward and upward pass through the tree, which takes time O(K), the invariant of message\npassing on the tree [22, Ch. 13.3] then guarantees that for each k2[K],\nmax\ny2Yfs(y)jyk= ^ykg='k(^yk) +X\ne=(l;k)2Tml!k(^yk); (31)\nwhere we note that there exists exactly one message to k(whether from the downward or\nupward pass) from each node lneighboring kinT.\nWe can evidently then compute all of these maximal values (the sets S\u0006in Eq. (17))\nsimultaneously in time of the order of the number of edges in the tree T, orO(K), as each\nmessageml!kcan appear in at most one of the maxima (31), and there are 2 Kmessages.\nA.4 Concentration of coverage quantities\nWe sketch a derivation of inequality (24); see also [1, Theorem 5] for related arguments.\nWe begin with a technical lemma that is the basis for our result. In the lemma, we abuse\nnotation brie\ry, and let F\u001aZ!f 0;1gbe a collection of functions with VC-dimension d.\nWe de\fnePf=R\nf(z)dP(z) andPnf=1\nnPn\ni=1f(Zi), as is standard.\nLemma A.3 (Relative concentration bounds, e.g. [3], Theorem 5.1) .LetVC(F)\u0014d. There\nis a numerical constant Csuch that for any t>0, with probability at least 1\u0000e\u0000t,\nsup\nf2F(\njPf\u0000Pnfj\u0000Cr\nminfPf;Pnfgdlogn+t\nn)\n\u0014Cdlogn+t\nn:\nProof By Boucheron et al. [3, Thm. 5.1] for t>0, with probability at least 1 \u0000e\u0000twe have\nsup\nf2FPf\u0000PnfpPf\u0014Cr\ndlogn+t\nnand sup\nf2FPnf\u0000PfpPnf\u0014Cr\ndlogn+t\nn:\nLet\"n=Cp\n(dlogn+t)=nfor shorthand. Then the second inequality is equivalent to the\nstatement that for all f2F,\nPnf\u0000Pf\u00141\n2\u0011Pnf+\u0011\n2\"2\nnfor all\u0011>0:\nRearranging the preceding display, we have\n\u0012\n1\u00001\n2\u0011\u0013\n(Pnf\u0000Pf)\u00141\n2\u0011Pf+\u0011\n2\"2\nn:\n31",
+    "page": 31
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.446793",
+  "updated_at": "2025-10-21T02:01:01.056438",
+  "last_accessed": "2025-10-21T01:59:47.448261"
+}

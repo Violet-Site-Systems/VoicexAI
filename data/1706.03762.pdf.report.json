@@ -1,0 +1,1934 @@
+{
+  "report": {
+    "summary": {
+      "contradictions": 1,
+      "fairness_signals": 30,
+      "ethical_implications": 8,
+      "urban_planning_ethics": 82,
+      "resource_allocation_issues": 1,
+      "patterns": 25
+    },
+    "contradictions": [
+      {
+        "conclusion": "Contradiction detected between Page 7 and Page 10",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f",
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ],
+        "rule_used": "InferenceRule.CONTRADICTION_DETECTION",
+        "truth_value": "TruthValue(strength=0.8, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f",
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ]
+      }
+    ],
+    "fairness": [
+      {
+        "conclusion": "Potential anchoring detected: initial_bias",
+        "premises": [
+          "80618a9e-e99e-4751-96bf-4a008efe7524"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.5, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "80618a9e-e99e-4751-96bf-4a008efe7524"
+        ]
+      },
+      {
+        "conclusion": "Potential anchoring detected: reference_point",
+        "premises": [
+          "80618a9e-e99e-4751-96bf-4a008efe7524"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.5, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "80618a9e-e99e-4751-96bf-4a008efe7524"
+        ]
+      },
+      {
+        "conclusion": "Potential anchoring detected: initial_bias",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Potential anchoring detected: reference_point",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Potential availability detected: recent_events",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Potential availability detected: salient_examples",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: selective_evidence",
+        "premises": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: cherry_picking",
+        "premises": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ]
+      },
+      {
+        "conclusion": "Potential anchoring detected: initial_bias",
+        "premises": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ]
+      },
+      {
+        "conclusion": "Potential anchoring detected: reference_point",
+        "premises": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: selective_evidence",
+        "premises": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: cherry_picking",
+        "premises": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: selective_evidence",
+        "premises": [
+          "ae83608d-3754-4818-8b35-db6f94201277"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "ae83608d-3754-4818-8b35-db6f94201277"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: cherry_picking",
+        "premises": [
+          "ae83608d-3754-4818-8b35-db6f94201277"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "ae83608d-3754-4818-8b35-db6f94201277"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: selective_evidence",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: cherry_picking",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Potential anchoring detected: initial_bias",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Potential anchoring detected: reference_point",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: selective_evidence",
+        "premises": [
+          "5a771765-6fae-4633-85f9-fe76f723538a"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "5a771765-6fae-4633-85f9-fe76f723538a"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: cherry_picking",
+        "premises": [
+          "5a771765-6fae-4633-85f9-fe76f723538a"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "5a771765-6fae-4633-85f9-fe76f723538a"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: selective_evidence",
+        "premises": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: cherry_picking",
+        "premises": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ]
+      },
+      {
+        "conclusion": "Potential anchoring detected: initial_bias",
+        "premises": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ]
+      },
+      {
+        "conclusion": "Potential anchoring detected: reference_point",
+        "premises": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: selective_evidence",
+        "premises": [
+          "1643b950-92af-457b-9112-6f0962d41d53"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "1643b950-92af-457b-9112-6f0962d41d53"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: cherry_picking",
+        "premises": [
+          "1643b950-92af-457b-9112-6f0962d41d53"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "1643b950-92af-457b-9112-6f0962d41d53"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: selective_evidence",
+        "premises": [
+          "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: cherry_picking",
+        "premises": [
+          "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: selective_evidence",
+        "premises": [
+          "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+        ]
+      },
+      {
+        "conclusion": "Potential confirmation_bias detected: cherry_picking",
+        "premises": [
+          "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.5)",
+        "confidence": 0.5,
+        "evidence": [
+          "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+        ]
+      }
+    ],
+    "ethical_implications": [
+      {
+        "conclusion": "Policy aligns with deontological principle: respect_autonomy",
+        "premises": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ]
+      },
+      {
+        "conclusion": "Policy aligns with deontological principle: duty_based",
+        "premises": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ]
+      },
+      {
+        "conclusion": "Policy aligns with deontological principle: universal_principles",
+        "premises": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+        ]
+      },
+      {
+        "conclusion": "Policy aligns with deontological principle: respect_autonomy",
+        "premises": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ]
+      },
+      {
+        "conclusion": "Policy aligns with deontological principle: duty_based",
+        "premises": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ]
+      },
+      {
+        "conclusion": "Policy aligns with deontological principle: universal_principles",
+        "premises": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ]
+      },
+      {
+        "conclusion": "Policy aligns with utilitarian principle: maximize_happiness",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Policy aligns with utilitarian principle: minimize_suffering",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.25, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      }
+    ],
+    "urban_planning_ethics": [
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "80618a9e-e99e-4751-96bf-4a008efe7524"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "80618a9e-e99e-4751-96bf-4a008efe7524"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "80618a9e-e99e-4751-96bf-4a008efe7524"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "80618a9e-e99e-4751-96bf-4a008efe7524"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "80618a9e-e99e-4751-96bf-4a008efe7524"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "80618a9e-e99e-4751-96bf-4a008efe7524"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "80618a9e-e99e-4751-96bf-4a008efe7524"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "80618a9e-e99e-4751-96bf-4a008efe7524"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with resource_allocation_ethics principle: efficiency_optimization",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with resource_allocation_ethics principle: equity_considerations",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with resource_allocation_ethics principle: transparency",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with resource_allocation_ethics principle: stakeholder_participation",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with resource_allocation_ethics principle: accountability",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with resource_allocation_ethics principle: proportional_distribution",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "7c1580d3-08c8-44d4-9e84-b3011b374844"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "da57cc80-8f85-45de-a24a-adb098214f24"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "5f0c7ada-4094-44f6-8fc6-fc67547e8d1d"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "5f0c7ada-4094-44f6-8fc6-fc67547e8d1d"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "5f0c7ada-4094-44f6-8fc6-fc67547e8d1d"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "5f0c7ada-4094-44f6-8fc6-fc67547e8d1d"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "5f0c7ada-4094-44f6-8fc6-fc67547e8d1d"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "5f0c7ada-4094-44f6-8fc6-fc67547e8d1d"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "5f0c7ada-4094-44f6-8fc6-fc67547e8d1d"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "5f0c7ada-4094-44f6-8fc6-fc67547e8d1d"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "ae83608d-3754-4818-8b35-db6f94201277"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "ae83608d-3754-4818-8b35-db6f94201277"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "ae83608d-3754-4818-8b35-db6f94201277"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "ae83608d-3754-4818-8b35-db6f94201277"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "ae83608d-3754-4818-8b35-db6f94201277"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "ae83608d-3754-4818-8b35-db6f94201277"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "ae83608d-3754-4818-8b35-db6f94201277"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "ae83608d-3754-4818-8b35-db6f94201277"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with spatial_justice principle: equitable_access",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with spatial_justice principle: spatial_distribution",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with spatial_justice principle: territorial_rights",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with spatial_justice principle: place_based_equity",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with spatial_justice principle: geographic_fairness",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with spatial_justice principle: accessibility_standards",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with resource_allocation_ethics principle: efficiency_optimization",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with resource_allocation_ethics principle: equity_considerations",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with resource_allocation_ethics principle: transparency",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with resource_allocation_ethics principle: stakeholder_participation",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with resource_allocation_ethics principle: accountability",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with resource_allocation_ethics principle: proportional_distribution",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "9bcadcd1-8797-4e20-8677-9dd2d489b779"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9bcadcd1-8797-4e20-8677-9dd2d489b779"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "9bcadcd1-8797-4e20-8677-9dd2d489b779"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9bcadcd1-8797-4e20-8677-9dd2d489b779"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "9bcadcd1-8797-4e20-8677-9dd2d489b779"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9bcadcd1-8797-4e20-8677-9dd2d489b779"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "9bcadcd1-8797-4e20-8677-9dd2d489b779"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9bcadcd1-8797-4e20-8677-9dd2d489b779"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with environmental_justice principle: environmental_equity",
+        "premises": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with environmental_justice principle: pollution_burden_distribution",
+        "premises": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with environmental_justice principle: green_space_access",
+        "premises": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with environmental_justice principle: climate_vulnerability",
+        "premises": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with environmental_justice principle: ecological_sustainability",
+        "premises": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with environmental_justice principle: natural_resource_rights",
+        "premises": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with environmental_justice principle: environmental_equity",
+        "premises": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with environmental_justice principle: pollution_burden_distribution",
+        "premises": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with environmental_justice principle: green_space_access",
+        "premises": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with environmental_justice principle: climate_vulnerability",
+        "premises": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with environmental_justice principle: ecological_sustainability",
+        "premises": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ]
+      },
+      {
+        "conclusion": "Urban planning policy aligns with environmental_justice principle: natural_resource_rights",
+        "premises": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ],
+        "rule_used": "InferenceRule.ETHICAL_IMPLICATION",
+        "truth_value": "TruthValue(strength=0.16666666666666666, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "1643b950-92af-457b-9112-6f0962d41d53"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "1643b950-92af-457b-9112-6f0962d41d53"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "1643b950-92af-457b-9112-6f0962d41d53"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "1643b950-92af-457b-9112-6f0962d41d53"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "1643b950-92af-457b-9112-6f0962d41d53"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "1643b950-92af-457b-9112-6f0962d41d53"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "1643b950-92af-457b-9112-6f0962d41d53"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "1643b950-92af-457b-9112-6f0962d41d53"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: displacement",
+        "premises": [
+          "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: affordability_crisis",
+        "premises": [
+          "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: cultural_erasure",
+        "premises": [
+          "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+        ]
+      },
+      {
+        "conclusion": "Potential urban planning economic_gentrification detected: wealth_concentration",
+        "premises": [
+          "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.2, confidence=0.6)",
+        "confidence": 0.6,
+        "evidence": [
+          "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+        ]
+      }
+    ],
+    "resource_allocation_fairness": [
+      {
+        "conclusion": "Resource allocation policy includes equity considerations",
+        "premises": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ],
+        "rule_used": "InferenceRule.FAIRNESS_ANALYSIS",
+        "truth_value": "TruthValue(strength=0.8, confidence=0.7)",
+        "confidence": 0.7,
+        "evidence": [
+          "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+        ]
+      }
+    ],
+    "patterns": {
+      "text": [
+        {
+          "pattern_id": "text_patterns_-2177675173901263105",
+          "pattern_type": "text_patterns",
+          "frequency": 2,
+          "confidence": 0.2,
+          "atoms": [
+            "ae83608d-3754-4818-8b35-db6f94201277",
+            "5a771765-6fae-4633-85f9-fe76f723538a"
+          ],
+          "description": "Pattern: may\\s+\\w+ (found 2 times)",
+          "metadata": {
+            "template": "may\\s+\\w+",
+            "matches": [
+              "may allow",
+              "may be"
+            ]
+          }
+        },
+        {
+          "pattern_id": "structural_patterns_3396516354653227292",
+          "pattern_type": "structural_patterns",
+          "frequency": 5,
+          "confidence": 0.5,
+          "atoms": [
+            "7c1580d3-08c8-44d4-9e84-b3011b374844",
+            "5a771765-6fae-4633-85f9-fe76f723538a",
+            "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+          ],
+          "description": "Pattern: section\\s+\\d+ (found 5 times)",
+          "metadata": {
+            "template": "section\\s+\\d+",
+            "matches": [
+              "section 3",
+              "section 3",
+              "section 5",
+              "section 22",
+              "section 23"
+            ]
+          }
+        }
+      ],
+      "ethical": [
+        {
+          "pattern_id": "ethical_fairness_6056060247529967470",
+          "pattern_type": "ethical_concept",
+          "frequency": 2,
+          "confidence": 0.5,
+          "atoms": [
+            "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b",
+            "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+          ],
+          "description": "Ethical concept 'fairness' pattern (found in 2 atoms)",
+          "metadata": {
+            "concept": "fairness",
+            "keywords": [
+              "fair",
+              "equitable",
+              "just",
+              "impartial"
+            ],
+            "total_occurrences": 2
+          }
+        },
+        {
+          "pattern_id": "ethical_equality_1651647943828695081",
+          "pattern_type": "ethical_concept",
+          "frequency": 4,
+          "confidence": 1.0,
+          "atoms": [
+            "80618a9e-e99e-4751-96bf-4a008efe7524",
+            "5f0c7ada-4094-44f6-8fc6-fc67547e8d1d",
+            "ae83608d-3754-4818-8b35-db6f94201277",
+            "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+          ],
+          "description": "Ethical concept 'equality' pattern (found in 4 atoms)",
+          "metadata": {
+            "concept": "equality",
+            "keywords": [
+              "equal",
+              "same",
+              "uniform",
+              "consistent"
+            ],
+            "total_occurrences": 5
+          }
+        },
+        {
+          "pattern_id": "ethical_transparency_-3883120643469340079",
+          "pattern_type": "ethical_concept",
+          "frequency": 2,
+          "confidence": 0.5,
+          "atoms": [
+            "9456fd19-f5b6-4dad-97cb-66a4922ec54f",
+            "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+          ],
+          "description": "Ethical concept 'transparency' pattern (found in 2 atoms)",
+          "metadata": {
+            "concept": "transparency",
+            "keywords": [
+              "transparent",
+              "clear",
+              "open",
+              "public"
+            ],
+            "total_occurrences": 2
+          }
+        },
+        {
+          "pattern_id": "ethical_autonomy_7021005019415740398",
+          "pattern_type": "ethical_concept",
+          "frequency": 3,
+          "confidence": 0.75,
+          "atoms": [
+            "7c1580d3-08c8-44d4-9e84-b3011b374844",
+            "da57cc80-8f85-45de-a24a-adb098214f24",
+            "ae83608d-3754-4818-8b35-db6f94201277"
+          ],
+          "description": "Ethical concept 'autonomy' pattern (found in 3 atoms)",
+          "metadata": {
+            "concept": "autonomy",
+            "keywords": [
+              "autonomous",
+              "independent",
+              "self-determination",
+              "choice"
+            ],
+            "total_occurrences": 3
+          }
+        }
+      ],
+      "structural": [
+        {
+          "pattern_id": "section_structure",
+          "pattern_type": "structural",
+          "frequency": 5,
+          "confidence": 0.5,
+          "atoms": [
+            "80618a9e-e99e-4751-96bf-4a008efe7524",
+            "7c1580d3-08c8-44d4-9e84-b3011b374844",
+            "254ca10f-c4ad-4443-8a0b-bee49ef83c2a",
+            "da57cc80-8f85-45de-a24a-adb098214f24",
+            "5f0c7ada-4094-44f6-8fc6-fc67547e8d1d",
+            "ae83608d-3754-4818-8b35-db6f94201277",
+            "9456fd19-f5b6-4dad-97cb-66a4922ec54f",
+            "9bcadcd1-8797-4e20-8677-9dd2d489b779",
+            "5a771765-6fae-4633-85f9-fe76f723538a",
+            "624d82f0-6414-46c6-93e3-a74ab1aab45c",
+            "9ff20159-bec5-4652-8ed7-b2f1fd235bff",
+            "7a2a39c1-4903-451d-bdf4-8822ad3d7726",
+            "1643b950-92af-457b-9112-6f0962d41d53",
+            "94a2acf6-ed3e-4861-b59a-d77bfb6c2f7b",
+            "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+          ],
+          "description": "Section structure pattern (non-sequential numbering)",
+          "metadata": {
+            "section_numbers": [
+              3,
+              3,
+              5,
+              22,
+              23
+            ],
+            "is_sequential": false
+          }
+        }
+      ],
+      "relationships": [
+        {
+          "pattern_id": "causal_4421662610954604363",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.6,
+          "atoms": [
+            "5f0c7ada-4094-44f6-8fc6-fc67547e8d1d"
+          ],
+          "description": "Causal relationship pattern in Page 5",
+          "metadata": {
+            "causal_keywords": [
+              "due to"
+            ]
+          }
+        },
+        {
+          "pattern_id": "causal_-4084691902079030683",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.6,
+          "atoms": [
+            "ae83608d-3754-4818-8b35-db6f94201277"
+          ],
+          "description": "Causal relationship pattern in Page 6",
+          "metadata": {
+            "causal_keywords": [
+              "because"
+            ]
+          }
+        },
+        {
+          "pattern_id": "causal_-4695052073867741874",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.6,
+          "atoms": [
+            "5a771765-6fae-4633-85f9-fe76f723538a"
+          ],
+          "description": "Causal relationship pattern in Page 9",
+          "metadata": {
+            "causal_keywords": [
+              "results in"
+            ]
+          }
+        },
+        {
+          "pattern_id": "causal_1932006729588544413",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.6,
+          "atoms": [
+            "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+          ],
+          "description": "Causal relationship pattern in Page 10",
+          "metadata": {
+            "causal_keywords": [
+              "results in"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_1644539248136658260",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "80618a9e-e99e-4751-96bf-4a008efe7524"
+          ],
+          "description": "Implication pattern in Page 1",
+          "metadata": {
+            "implication_keywords": [
+              "if"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_-3051760156714634629",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "7c1580d3-08c8-44d4-9e84-b3011b374844"
+          ],
+          "description": "Implication pattern in Page 2",
+          "metadata": {
+            "implication_keywords": [
+              "if",
+              "then"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_-8759392648026239265",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "254ca10f-c4ad-4443-8a0b-bee49ef83c2a"
+          ],
+          "description": "Implication pattern in Page 3",
+          "metadata": {
+            "implication_keywords": [
+              "if"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_2586523267007717042",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "da57cc80-8f85-45de-a24a-adb098214f24"
+          ],
+          "description": "Implication pattern in Page 4",
+          "metadata": {
+            "implication_keywords": [
+              "if",
+              "then"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_4421662610954604363",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "5f0c7ada-4094-44f6-8fc6-fc67547e8d1d"
+          ],
+          "description": "Implication pattern in Page 5",
+          "metadata": {
+            "implication_keywords": [
+              "if"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_-4084691902079030683",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "ae83608d-3754-4818-8b35-db6f94201277"
+          ],
+          "description": "Implication pattern in Page 6",
+          "metadata": {
+            "implication_keywords": [
+              "if",
+              "requires"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_8509042108496616912",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "9456fd19-f5b6-4dad-97cb-66a4922ec54f"
+          ],
+          "description": "Implication pattern in Page 7",
+          "metadata": {
+            "implication_keywords": [
+              "if",
+              "requires"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_-2293001282322798542",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "9bcadcd1-8797-4e20-8677-9dd2d489b779"
+          ],
+          "description": "Implication pattern in Page 8",
+          "metadata": {
+            "implication_keywords": [
+              "if"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_-4695052073867741874",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "5a771765-6fae-4633-85f9-fe76f723538a"
+          ],
+          "description": "Implication pattern in Page 9",
+          "metadata": {
+            "implication_keywords": [
+              "if"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_1932006729588544413",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "624d82f0-6414-46c6-93e3-a74ab1aab45c"
+          ],
+          "description": "Implication pattern in Page 10",
+          "metadata": {
+            "implication_keywords": [
+              "if"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_-2740398321660925026",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "9ff20159-bec5-4652-8ed7-b2f1fd235bff"
+          ],
+          "description": "Implication pattern in Page 11",
+          "metadata": {
+            "implication_keywords": [
+              "if"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_490429444464941655",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "7a2a39c1-4903-451d-bdf4-8822ad3d7726"
+          ],
+          "description": "Implication pattern in Page 12",
+          "metadata": {
+            "implication_keywords": [
+              "if"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_5407717990747281815",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "1643b950-92af-457b-9112-6f0962d41d53"
+          ],
+          "description": "Implication pattern in Page 13",
+          "metadata": {
+            "implication_keywords": [
+              "if"
+            ]
+          }
+        },
+        {
+          "pattern_id": "implication_-8875055304533164661",
+          "pattern_type": "concept_relationship",
+          "frequency": 1,
+          "confidence": 0.7,
+          "atoms": [
+            "883db75b-938c-4cd0-9fb1-ad2cf9d2ddf8"
+          ],
+          "description": "Implication pattern in Page 15",
+          "metadata": {
+            "implication_keywords": [
+              "if"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "doc": "1706.03762.pdf"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "1ee0a544-706d-4750-bc24-3a794da8475b",
+  "atom_type": "PolicySection",
+  "name": "Page 19",
+  "content": {
+    "title": "Page 19",
+    "text": "0.50.60.70.80.91.0\n0.00 0.25 0.50 0.75 1.00\nConditionalCoveragef(Worst−Slab Coverage)Method\nCDioC\nArbiTree−CQC\nPGM−CQC\nOracle\nPX(fx:P(Y2bC(X)jX=x)\u0015tg)\nConditional coverage probability t\nFigure 4.4. Simulated multilabel experiment with label distribution (26). The plot shows\ntheX-probability of achieving a given level tof conditional coverage versus coverage t, i.e.,\nt7!PX(P(Y2bCMethod (X)jX)\u0015t), using explicit con\fdence sets bCio. The ideal is to observe\nt7!1ft\u00141\u0000\u000bg. Con\fdence bands display the range of the statistic over M= 20 trials.\nsimilar (see supplementary Fig. B.12). On the other hand, the PGM-CQC explicit con\fdence\nsets (which expand the implicit set bCimpas in (12)) cover more than the direct Inner/Outer\nmethod CDioC. The con\fdence sets of the scoreless method ArbiTree-CQC are wider, which\nis consistent with the limitations of a method using only the predictions byk= sign(sk).\nFigures 4.4 and 4.5 consider each method's approximation to conditional coverage; the\nformer with exact calculations and the latter via worst-slab coverage measures (23). Both\nplots dovetail with our expectations that the PGM-CQC and ArbiTree-CQC methods are more\nrobust and feature-adaptive. Indeed, Figure 4.4 shows that the PGM-CQC method provides\nat least coverage 1 \u0000\u000bfor 75% of the examples, against only 60% for the CDioC method, and\nhas an overall consistently higher coverage. In Figure 4.5, each of the M= 103experiments\ncorresponds to a draw of viid\u0018Uni(Sd\u00001), then evaluating the worst-slab coverage (23) with\n\u000e=:2. In the left plot, we show its empirical cumulative distribution across draws of vfor each\nmethod, which shows a substantial di\u000berence in coverage between the CDioC method and the\nothers. We also perform direct comparisons in the right plot: we draw the same directions v\nfor each method, and then (for the given v) evaluate the di\u000berence WSC n(bC;v)\u0000WSCn(bC0;v),\nwherebCandbC0are the con\fdence sets each method produces, respectively. Thus, we see\nthat both tree-based methods always provide better worst-slab coverage, whether we use the\nimplicit con\fdence sets bCimpor the larger direct inner/outer (explicit) con\fdence sets bCio,\nthough in the latter case, some of the di\u000berence likely comes from the di\u000berences in marginal\ncoverage. The worst-slab coverage is consistent with the true conditional coverage in that the\nrelative ordering of method performance is consistent, suggesting its usefulness as a proxy.\n4.2 More robust coverage on CIFAR 10 and ImageNet datasets\nIn our \frst real experiments, we study two multiclass image classi\fcation problems with the\nbenchmark CIFAR-10 [23] and ImageNet [9] datasets. We use similar approaches to construct\nour feature vectors and scoring functions. With the CIFAR-10 dataset, which consists of\nn= 60,000 32\u000232 images across 10 classes, we use ntr= 50,000 of them to train the full\n19",
+    "page": 19
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.444152",
+  "updated_at": "2025-10-21T02:01:00.990548",
+  "last_accessed": "2025-10-21T01:59:47.448248"
+}

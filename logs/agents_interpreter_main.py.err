@@ -1,0 +1,5 @@
+nohup: ignoring input
+  File "/workspaces/VoicexAI/agents/interpreter/main.py", line 1
+    a"""
+     ^^^
+SyntaxError: invalid syntax
