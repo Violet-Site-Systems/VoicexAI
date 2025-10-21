@@ -124,8 +124,94 @@ COGNITIVE_CORE_URL=https://your-cognitive-core-api.com
 REDIS_URL=redis://your-redis-instance:6379
 CUDOS_RPC_URL=https://rpc.cudos.org
 AGENTVERSE_API_URL=https://api.agentverse.ai
-AGENTVERSE_API_KEY=your_agentverse_api_key
+AGENTVERSE_API_KEY=sk_dfdb772ee76f4a519f2d81870831911bb99530554f754e36a29aad452bf729df
 ```
+
+### Troubleshooting: Vercel `vercel.json` conflict (functions vs builds)
+
+One of the most common deployment errors when hosting Python (FastAPI) or hybrid backends on Vercel is mixing the new `functions` configuration with the old `builds` configuration in `vercel.json`.
+
+- The `functions` property is the newer configuration style used to declare Serverless/Edge functions and their runtimes (for example `python3.11`).
+- The `builds` array is the older, Next.js 12-era style. Vercel does not allow both at the same time and will fail with:
+
+```
+The functions property cannot be used in conjunction with the builds property.
+```
+
+Why this happens:
+
+- You may have a project template (or an existing `vercel.json`) that contains `builds`, then add a `functions` entry (for example to pin `python3.11`). Mixing them triggers the error.
+
+How to fix it (recommended):
+
+1. Decide which style you want to use. For most Python/FastAPI single-file deployments on Vercel it's simpler to use the `functions` style so you can explicitly pin the Python runtime.
+2. Remove the entire `builds` array from your `vercel.json` if you add `functions`.
+3. Ensure routes still point to your entry file (for example `frontend/app.py` or `app.py`).
+
+Example: converting an old `builds` config to the new `functions` style
+
+Old (builds) style (what you may currently have):
+
+```json
+{
+  "version": 2,
+  "name": "voicexai-frontend",
+  "builds": [{
+    "src": "frontend/app.py",
+    "use": "@vercel/python"
+  }],
+  "routes": [{ "src": "/(.*)", "dest": "frontend/app.py" }],
+  "env": { "PYTHON_VERSION": "3.9" }
+}
+```
+
+New (functions) style — explicit runtime (recommended):
+
+```json
+{
+  "version": 2,
+  "name": "voicexai-frontend",
+  "functions": {
+    "frontend/app.py": { "runtime": "python3.11" }
+  },
+  "routes": [{ "src": "/(.*)", "dest": "frontend/app.py" }],
+  "env": { "PYTHON_VERSION": "3.11" }
+}
+```
+
+Notes and tips:
+
+- If you prefer to keep `builds` (old style) then do not add any `functions` property. Instead, keep your `builds` and `routes` as-is and update `PYTHON_VERSION` only if needed.
+- If you use the Vercel UI to create Functions or change runtimes it may automatically add a `functions` section; in that case remove `builds` from the file stored in your repo.
+- Use `python3.11` where possible for FastAPI to benefit from newer stdlib/security fixes and better runtime support.
+- After making the change locally, run `vercel dev` (local dev) and `vercel --prod` (production) to test deployments.
+
+Quick checklist to resolve the error:
+
+1. Open any `vercel.json` files in your repo (root and `frontend/`).
+2. If you see both `functions` and `builds`, pick one style. I recommend `functions` for Python backends and pin `python3.11`.
+3. Commit the change and redeploy.
+
+If you'd like, I can convert the project's `vercel.json` files to `functions` style for you and pin `python3.11` — tell me whether you want me to update both the root `vercel.json` and `frontend/vercel.json` or just one.
+
+Update applied in this repository:
+
+- The root `vercel.json` and `frontend/vercel.json` were converted to the `functions` style and `PYTHON_VERSION` was updated to `3.11` to pin the runtime.
+
+Final recommended `vercel.json` (root) example:
+
+```json
+{
+  "version": 2,
+  "name": "voicexai-frontend",
+  "functions": {
+    "frontend/app.py": { "runtime": "python3.11" }
+  },
+  "routes": [{ "src": "/(.*)", "dest": "frontend/app.py" }],
+  "env": { "PYTHON_VERSION": "3.11" }
+}
+```
+
 
 ### 3. Custom Domain (Optional)
 
@@ -253,7 +339,7 @@ contract EPPNGovernance {
 
 # Get API key from dashboard
 # Set environment variable
-export AGENTVERSE_API_KEY="your_api_key_here"
+export AGENTVERSE_API_KEY=sk_dfdb772ee76f4a519f2d81870831911bb99530554f754e36a29aad452bf729df
 ```
 
 ### 2. Register EPPN Agents
@@ -264,7 +350,7 @@ from agentverse_integration import AgentVerseIntegration
 
 agentverse = AgentVerseIntegration(
     agentverse_api_url="https://api.agentverse.ai",
-    api_key="your_api_key"
+    api_key="sk_dfdb772ee76f4a519f2d81870831911bb99530554f754e36a29aad452bf729df"
 )
 
 # Register each agent

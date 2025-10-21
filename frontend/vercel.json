@@ -1,20 +1,15 @@
 {
-  "version": 2,
-  "name": "eppn-dashboard",
-  "builds": [
-    {
-      "src": "app.py",
-      "use": "@vercel/python"
+    "version": 2,
+    "name": "eppn-dashboard",
+    "functions": {
+        "app.py": { "runtime": "python3.11" }
+    },
+    "routes": [{
+        "src": "/(.*)",
+        "dest": "app.py"
+    }],
+    "env": {
+        "PYTHON_VERSION": "3.11"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app.py"
-    }
-  ],
-  "env": {
-    "PYTHON_VERSION": "3.9"
-  },
-  
+
 }
