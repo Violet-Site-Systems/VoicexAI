@@ -60,9 +60,11 @@ class EPPNIntegrationManager:
             api_key=config.get("agentverse_api_key")
             )
 
-        # Optional mapping role -> public endpoint (for AgentVerse to call)
+        # Optional mapping role -> public endpoint (for AgentVerse to call).
         # Example: {"librarian": "https://mydomain.com/agents/librarian"}
-        self.agent_endpoints: Dict[str, str] = config.get("agent_endpoints", {})
+        self.agent_endpoints: Dict[
+            str, str
+        ] = config.get("agent_endpoints", {})
 
         # Agent registry
         self.registered_agents: Dict[str, str] = {}

@@ -85,12 +85,12 @@ class AgentVerseIntegration:
         self.active_collaborations: Dict[str, AgentCollaboration] = {}
         self.completed_collaborations: Dict[str, AgentCollaboration] = {}
 
-        # Discovery
-        self.discovered_agents: Dict[str, AgentProfile] = {}
+    # Discovery
+    self.discovered_agents: Dict[str, AgentProfile] = {}
 
-        # Configuration
-        self.agent_domain = "urban_planning_ethics"
-        self.agent_version = "1.0.0"
+    # Configuration
+    self.agent_domain = "urban_planning_ethics"
+    self.agent_version = "1.0.0"
 
     def register_agent(self, agent_name: str, agent_type: str,
                        capabilities: List[Dict[str, Any]],
@@ -585,16 +585,16 @@ class AgentVerseIntegration:
         """Register agent with AgentVerse platform."""
         
         try:
-            headers = ({"Authorization": f"Bearer {self.api_key}"} 
+            headers = ({"Authorization": f"Bearer {self.api_key}"}
                        if self.api_key else {})
-            
+
             response = requests.post(
                 f"{self.api_url}/agents/register",
                 json=asdict(profile),
                 headers=headers,
-                timeout=30
+                timeout=30,
             )
-            
+
             return response.status_code == 200
         except (requests.RequestException, Exception):
             # Fallback to simulation for development
