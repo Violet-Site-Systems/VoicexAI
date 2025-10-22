@@ -1,0 +1,27 @@
+{
+  "uuid": "724c0cd1-960f-4fb6-813a-64dcf74d61f4",
+  "atom_type": "PolicySection",
+  "name": "Page 5",
+  "content": {
+    "title": "Page 5",
+    "text": "1071081091010\nTokens in Dataset2.53.03.54.04.5LossLoss vs Model and Dataset Size\nParams\n708M\n302M\n85M\n3M\n25M\n393.2K\n104105\nEstimated Smin2.42.83.23.64.04.4LossLoss vs Model Size and Training Steps\n106107108\nParameters (non-embed)Figure 4 Left : The early-stopped test loss L(N;D )varies predictably with the dataset size Dand model\nsizeNaccording to Equation (1.5). Right : After an initial transient period, learning curves for all model\nsizesNcan be ﬁt with Equation (1.6), which is parameterized in terms of Smin, the number of steps when\ntraining at large batch size (details in Section 5.1).\nThese relations hold across eight orders of magnitude in Cmin, six orders of magnitude in N, and over two\norders of magnitude in D. They depend very weakly on model shape and other Transformer hyperparameters\n(depth, width, number of self-attention heads), with speciﬁc numerical values associated with the Webtext2\ntraining set [RWC+19]. The power laws \u000bN;\u000bD;\u000bmin\nCspecify the degree of performance improvement\nexpected as we scale up N,D, orCmin; for example, doubling the number of parameters yields a loss that\nis smaller by a factor 2\u0000\u000bN= 0:95. The precise numerical values of Nc;Cmin\nc;andDcdepend on the\nvocabulary size and tokenization and hence do not have a fundamental meaning.\nThe critical batch size, which determines the speed/efﬁciency tradeoff for data parallelism ([MKAT18]), also\nroughly obeys a power law in L:\nBcrit(L) =B\u0003\nL1=\u000bB; B\u0003\u00182\u0001108tokens; \u000bB\u00180:21 (1.4)\nEquation (1.1) and (1.2) together suggest that as we increase the model size, we should increase the dataset\nsize sublinearly according to D/N\u000bN\n\u000bD\u0018N0:74. In fact, we ﬁnd that there is a single equation combining\n(1.1) and (1.2) that governs the simultaneous dependence on NandDand governs the degree of overﬁtting:\nL(N;D ) =\"\u0012Nc\nN\u0013\u000bN\n\u000bD+Dc\nD#\u000bD\n(1.5)\nwith ﬁts pictured on the left in ﬁgure 4. We conjecture that this functional form may also parameterize the\ntrained log-likelihood for other generative modeling tasks.\nWhen training a given model for a ﬁnite number of parameter update steps Sin the inﬁnite data limit, after\nan initial transient period, the learning curves can be accurately ﬁt by (see the right of ﬁgure 4)\nL(N;S) =\u0012Nc\nN\u0013\u000bN\n+\u0012Sc\nSmin(S)\u0013\u000bS\n(1.6)\nwhereSc\u00192:1\u0002103and\u000bS\u00190:76, andSmin(S)is the minimum possible number of optimization steps\n(parameter updates) estimated using Equation (5.4).\nWhen training within a ﬁxed compute budget C, but with no other constraints, Equation (1.6) leads to the\nprediction that the optimal model size N, optimal batch size B, optimal number of steps S, and dataset size\nDshould grow as\nN/C\u000bmin\nC=\u000bN; B/C\u000bmin\nC=\u000bB; S/C\u000bmin\nC=\u000bS; D =B\u0001S (1.7)\nwith\n\u000bmin\nC= 1=(1=\u000bS+ 1=\u000bB+ 1=\u000bN) (1.8)\nwhich closely matches the empirically optimal results N/C0:73\nmin,B/C0:24\nmin, andS/C0:03\nmin. As the\ncomputational budget Cincreases, it should be spent primarily on larger models, without dramatic increases\nin training time or dataset size (see Figure 3). This also implies that as models grow larger, they become\nincreasingly sample efﬁcient. In practice, researchers typically train smaller models for longer than would\n5",
+    "page": 5
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.3177842565597668,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:39.629652",
+  "updated_at": "2025-10-21T02:01:00.974493",
+  "last_accessed": "2025-10-21T01:59:39.638750"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "e4e6fcb0-8be4-4890-81ce-c8a552cc28f1",
+  "atom_type": "PolicySection",
+  "name": "Page 11",
+  "content": {
+    "title": "Page 11",
+    "text": "106107108109\nParams (non-embed)2.53.03.54.04.5Test LossData Size Bottleneck\nData Size\n21M\n43M\n86M\n172M\n344M\n688M\n1.4B\n22.0B\n104\n103\n102\n101\nNN/D/D\n0.00.10.20.30.40.5L/L(D=)1\nOverfitting\nData Size\n21M\n43M\n86M\n172M\n344M\n688M\n1.4B\n22.0BFigure 9 The early-stopped test loss L(N;D )depends predictably on the dataset size Dand model size N\naccording to Equation (1.5). Left: For largeD, performance is a straight power law in N. For a smaller ﬁxed\nD, performance stops improving as Nincreases and the model begins to overﬁt. (The reverse is also true,\nsee Figure 4.) Right : The extent of overﬁtting depends predominantly on the ratio N\u000bN\n\u000bD=D, as predicted in\nequation (4.3). The line is our ﬁt to that equation.\nSince we stop training early when the test loss ceases to improve and optimize all models in the same way, we\nexpect that larger models should always perform better than smaller models. But with ﬁxed ﬁnite D, we also\ndo not expect any model to be capable of approaching the best possible loss (ie the entropy of text). Similarly,\na model with ﬁxed size will be capacity-limited. These considerations motivate our second principle. Note\nthat knowledge of L(N)at inﬁniteDandL(D)at inﬁniteNfully determines all the parameters in L(N;D ).\nThe third principle is more speculative. There is a simple and general reason one might expect overﬁtting\nto scale/1=Dat very large D. Overﬁtting should be related to the variance or the signal-to-noise ratio\nof the dataset [AS17], and this scales as 1=D. This expectation should hold for any smooth loss function,\nsince we expect to be able to expand the loss about the D!1 limit. However, this argument assumes that\n1=Dcorrections dominate over other sources of variance, such as the ﬁnite batch size and other limits on the\nefﬁcacy of optimization. Without empirical conﬁrmation, we would not be very conﬁdent of its applicability.\nOur third principle explains the asymmetry between the roles of NandDin Equation (1.5). Very similar\nsymmetric expressions4are possible, but they would not have a 1=Dexpansion with integer powers, and\nwould require the introduction of an additional parameter.\nIn any case, we will see that our equation for L(N;D )ﬁts the data well, which is the most important justiﬁ-\ncation for our L(N;D )ansatz.\n4.2 Results\nWe regularize all our models with 10% dropout, and by tracking test loss and stopping once it is no longer\ndecreasing. The results are displayed in Figure 9, including a ﬁt to the four parameters \u000bN;\u000bD;Nc;Dcin\nEquation (1.5):\nParameter \u000bN\u000bDNcDc\nValue 0:076 0:103 6:4\u000210131:8\u00021013\nTable 2 Fits toL(N;D )\nWe obtain an excellent ﬁt, with the exception of the runs where the dataset has been reduced by a factor of\n1024 , to about 2\u0002107tokens. With such a small dataset, an epoch consists of only 40 parameter updates.\nPerhaps such a tiny dataset represents a different regime for language modeling, as overﬁtting happens very\nearly in training (see Figure 16). Also note that the parameters differ very slightly from those obtained in\nSection 3, as here we are ﬁtting the full L(N;D )rather than just L(N;1)orL(1;D).\nTo chart the borderlands of the inﬁnite data limit, we can directly study the extent of overﬁtting. For all but\nthe largest models, we see no sign of overﬁtting when training with the full 22B token WebText2 dataset,\nso we can take it as representative of D=1. Thus we can compare ﬁnite Dto the inﬁnite data limit by\n4For example, one might have used L(N; D ) =\u0002\u0000Nc\nN\u0001\u000bN+\u0000Dc\nD\u0001\u000bD\u0003\f, but this does not have a 1=Dexpansion.\n11",
+    "page": 11
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4757998708764747,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:01.898510",
+  "updated_at": "2025-10-21T02:01:01.015340",
+  "last_accessed": "2025-10-21T01:56:01.903562"
+}

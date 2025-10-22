@@ -1,0 +1,27 @@
+{
+  "uuid": "1b98e49e-855b-49eb-98e2-e385b3cd8ee4",
+  "atom_type": "PolicySection",
+  "name": "Page 16",
+  "content": {
+    "title": "Page 16",
+    "text": "Figure 4.1. Gaussian mixture\nwith\u00160= (1;0),\u00161= (\u00001\n2;p\n3\n2),\n\u00162= (\u00001\n2;\u0000p\n3\n2), and\u00163= (\u00001\n2;0);\nand \u0006 0= diag(0:3;1), \u0006 1=\n\u00062= diag(0:2;0:4), and \u0006 3=\ndiag(0:2;0:5).\nof labels grows. For this reason, we focus on the methods in this paper, highlighting the\npotential advantages of each one while comparing them to an oracle (conditionally perfect)\ncon\fdence set in simulation.\nWe present \fve experiments: two with simulated datasets and three with real datasets\n(CIFAR-10 [23], ImageNet [9] and Pascal VOC 2012 [13]), and both in multiclass and mul-\ntilabel settings. In each experiment, a single trial corresponds to a realized random split of\nthe data between training, validation and calibration sets I1,I2andI3, and in each \fgure,\nthe red dotted line represents the desired level of coverage 1 \u0000\u000b. Unless otherwise speci\fed,\nwe summarize results via boxplots that display the lower and upper quartiles as the hinges of\nthe box, the median as a bold line, and whiskers that extend to the 5% and 95% quantiles of\nthe statistic of interest (typically coverage or average con\fdence set size).\n4.1 Simulation\n4.1.1 More uniform coverage on a multiclass example\nOur \frst simulation experiment allows us to compute the conditional coverage of each sample\nand evaluate our CQC method 1. We study its performance on small sub-populations, a\nchallenge for traditional machine learning models [10, 15]. In contrast to the traditional split-\nconformal algorithm (method (3), cf. [40]), we expect the quantile estimator (5) in the CQC\nmethod 1 to better account for data heterogeneity, maintaining higher coverage on subsets of\nthe data, in particular in regions of the space where multiple classes coexist.\nTo test this, we generate n= 105data pointsfXi;Yigi2[N]i.i.d. from a Gaussian mixture\nwith one majority group and three minority ones,\nY\u0018Mult(\u0019) andXjY=y\u0018N(\u0016y;\u0006y): (25)\nwhere\u0019= (:7;:1;:1;:1) (see Fig. 4.1). We purposely introduce more confusion for the three\nminority groups (1, 2 and 3), whereas the majority (0) has a clear linear separation. We\nchoose\u000b= 10%, the same as the size of the smaller sub-populations, then we apply our CQC\nmethod and compare it to both the Marginal (3) and the Oracle (which outputs the smallest\nrandomized conditionally valid 1 \u0000\u000bcon\fdence set) methods.\nThe results in Figure 4.2 are consistent with our expectations. The randomized oracle\nmethod provides exact 1 \u0000\u000bconditional coverage, but CQC appears to provide more robust\ncoverage for individual classes than the marginal method. While all methods have compa-\nrable con\fdence set sizes and maintain 1 \u0000\u000bcoverage marginally (see also supplementary\n16",
+    "page": 16
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4661198192270645,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:08.659011",
+  "updated_at": "2025-10-21T02:01:01.046892",
+  "last_accessed": "2025-10-21T01:56:08.669193"
+}

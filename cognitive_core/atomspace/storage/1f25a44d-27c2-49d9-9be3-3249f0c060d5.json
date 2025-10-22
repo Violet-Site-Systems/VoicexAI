@@ -1,0 +1,27 @@
+{
+  "uuid": "1f25a44d-27c2-49d9-9be3-3249f0c060d5",
+  "atom_type": "PolicySection",
+  "name": "Page 23",
+  "content": {
+    "title": "Page 23",
+    "text": "103104105\nSc×[L(N,D)L(N,)]1/S\n103104105SstopEarly Stopping Step\nData Size\n21M\n43M\n86M\n172M\n344M\n688M\n1.4B\n103104105\nStep23456LossTest Loss\nTrain Loss\n1081091010\nDataset Size (Tokens)Figure 16 Left: We characterize the step on which early stopping occurs, as a function of the extent of\noverﬁtting. The red line indicates a lower bound for early stopping that is derived in Section 5.3. Right:\nWe display train and test loss for a series of 300M parameter models trained on different sized dataset sub-\nsamples. The test loss typically follows that of a run done with unrestricted data until diverging. Note that the\ndegree of overﬁtting (as compared to the inﬁnite data limit) is signiﬁcantly overestimated by Ltest\u0000Ltrain\n(denoted by a black bar for each run).\n\u000fWe are not especially conﬁdent in the prediction of Bcrit(L)for values of the loss far outside the\nrange we have explored. Changes in Bcritcould have a signiﬁcant impact on trade-offs between\ndata parallelism and the number of serial training steps required, which would have a major impact\non training time.\n\u000fWe did not thoroughly investigate the small data regime, and our ﬁts for L(N;D )were poor for\nthe smallest values of D(where an epoch corresponded to only 40steps). Furthermore, we did\nnot experiment with regularization and data augmentation. Improvements in these could alter our\nresults, quantitatively or qualitatively.\n\u000fWe used the estimated training compute C\u00196NBS , which did not include contributions propor-\ntional tonctx(see Section 2.1). So our scalings with compute may be confounded in practice in the\nregime of very large nctx, speciﬁcally where nctx&12dmodel .\n\u000fWe tuned learning rates, and we experimented with learning rate schedules. But we may have\nneglected to tune some hyperparameter (e.g. intialization scale or momentum) that have an important\neffect on scaling.\n\u000fThe optimal choice of learning rate is sensitive to the target loss. When training close to convergence,\nit may be necessary to use a smaller learning rate to avoid divergences. But when conducting a short\ntraining run (eg due to compute limitations), it may be possible to use a larger learning rate. We did\nnot experiment with higher learning rates for training runs that did not proceed to convergence.\nD Supplemental Figures\nD.1 Early Stopping and Test vs Train\nIn section 5.3 we described the result shown in Figure 16, which provides a prediction for a lower bound on\nthe early stopping step. We also show the train and test loss for a given model size when training on different\nsized datasets.\nD.2 Universal Transformers\nWe compare the performance of standard Transformers to recurrent Transformers [DGV+18] in Figure 17.\nThese models re-use parameters, and so perform slightly better as a function of N, but slightly worse as a\nfunction of compute C. We include several different different possibilities for parameter re-use.\nD.3 Batch Size\nWe measure the critical batch size using the data displayed in ﬁgure 18. This made it possible to estimate\nBcrit(L)in ﬁgure 10.\n23",
+    "page": 23
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4911807109608145,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:55:40.444164",
+  "updated_at": "2025-10-21T02:01:01.007587",
+  "last_accessed": "2025-10-21T01:55:40.446165"
+}

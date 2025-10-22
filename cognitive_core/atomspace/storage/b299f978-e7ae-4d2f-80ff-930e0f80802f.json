@@ -1,0 +1,27 @@
+{
+  "uuid": "b299f978-e7ae-4d2f-80ff-930e0f80802f",
+  "atom_type": "PolicySection",
+  "name": "Page 26",
+  "content": {
+    "title": "Page 26",
+    "text": "[12] M. Everingham, L. Van Gool, C. K. I. Williams, J. Winn, and A. Zisserman. The\nPASCAL Visual Object Classes Challenge 2007 (VOC2007) Results, 2007. URL http:\n//www.pascal-network.org/challenges/VOC/voc2007/workshop/index.html .\n[13] M. Everingham, L. Van Gool, C. K. I. Williams, J. Winn, and A. Zisserman. The\nPASCAL Visual Object Classes Challenge 2012 (VOC2012) Results, 2012. URL http:\n//www.pascal-network.org/challenges/VOC/voc2012/workshop/index.html .\n[14] Moritz Hardt, Eric Price, and Nati Srebro. Equality of opportunity in supervised learning.\nInAdvances in Neural Information Processing Systems 29 , 2016.\n[15] Tatsunori Hashimoto, Megha Srivastava, Hongseok Namkoong, and Percy Liang. Fair-\nness without demographics in repeated loss minimization. In Proceedings of the 35th\nInternational Conference on Machine Learning , 2018.\n[16] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning for\nimage recognition. In Proceedings of the IEEE Conference on Computer Vision and\nPattern Recognition , pages 770{778, 2016.\n[17] Yotam Hechtlinger, Barnab\u0013 as P\u0013 oczos, and Larry Wasserman. Cautious deep learning.\narXiv:1805.09460 [stat.ML] , 2019.\n[18] Francisco Herrera, Francisco Charte, Antonio J Rivera, and Mar\u0013 \u0010a J Del Jesus. Multilabel\nclassi\fcation. In Multilabel Classi\fcation , pages 17{31. Springer, 2016.\n[19] Armand Joulin, Edouard Grave, Piotr Bojanowski, and Tomas Mikolov. Bag of tricks\nfor e\u000ecient text classi\fcation. arXiv:1607.01759 [cs.CL] , 2016.\n[20] Nidhi Kalra and Susan M Paddock. Driving to safety: How many miles of driving would\nit take to demonstrate autonomous vehicle reliability? Transportation Research Part A:\nPolicy and Practice , 94:182{193, 2016.\n[21] Roger Koenker and Gilbert Bassett Jr. Regression quantiles. Econometrica: Journal of\nthe Econometric Society , 46(1):33{50, 1978.\n[22] Daphne Koller and Nir Friedman. Probabilistic Graphical Models: Principles and Tech-\nniques . MIT Press, 2009.\n[23] Alex Krizhevsky and Geo\u000brey Hinton. Learning multiple layers of features from tiny\nimages. Technical report, University of Toronto, 2009.\n[24] J. La\u000berty, A. McCallum, and F. Pereira. Conditional random \felds: Probabilistic models\nfor segmenting and labeling sequence data. In Proceedings of the Eighteenth International\nConference on Machine Learning , pages 282{289, 2001.\n[25] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ra-\nmanan, Piotr Doll\u0013 ar, and C. Lawrence Zitnick. Microsoft COCO: Common objects in\ncontext. In Computer Vision { ECCV 2014 , pages 740{755, Cham, 2014. Springer In-\nternational Publishing.\n[26] Huma Lodhi, John Shawe-Taylor, Nello Cristianini, and Christopher J. C. H. Watkins.\nText classi\fcation using string kernels. Journal of Machine Learning Research , 2:419{444,\n2002.\n[27] Andrew McCallum and Kamal Nigam. Employing EM in pool-based active learning\nfor text classi\fcation. In Machine Learning: Proceedings of the Fifteenth International\nConference , 1998.\n[28] Kai min Chung and Hsueh-I Lu. An optimal algorithm for the maximum-density segment\nproblem. In Proceedings of the 11th Annual European Symposium on Algorithms , 2003.\n[29] Luke Oakden-Rayner, Jared Dunnmon, Gustavo Carneiro, and Christopher R\u0013 e. Hidden\n26",
+    "page": 26
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4876529953451402,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:55:49.009641",
+  "updated_at": "2025-10-21T02:01:01.071043",
+  "last_accessed": "2025-10-21T01:55:49.012322"
+}

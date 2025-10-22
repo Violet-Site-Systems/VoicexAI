@@ -1,0 +1,27 @@
+{
+  "uuid": "386d0d15-714c-4c40-a023-22f7be1d9919",
+  "atom_type": "PolicySection",
+  "name": "Page 21",
+  "content": {
+    "title": "Page 21",
+    "text": "0.000.250.500.751.00\n0.75 0.80 0.85 0.90\nWSCf(Worst−Slab Coverage)Method\nMarginal\nCQC\nGIQ\n0.000.250.500.751.00\n0.00 0.04 0.08 0.12\ndWSCf(Worst−Slab Coverage Difference)Method\nCQC\nGIQ\nPv(WSC n(bCMethod;v)\u0014t)\nPv(WSC n(bCMethod;v)\u0000WSC n(bCCDioC;v)\u0014t)\nWorst Coverage probability t Di\u000berence of coverage t\nFigure 4.6. Worst-slab coverage for ImageNet-10 with \u000e=:2 overM= 1000 draws\nviid\u0018Uni(Sd\u00001). The dotted line is the desired (marginal) coverage. Left: CDF of worst-slab\ncoverage. Right: CDF of coverage di\u000berence WSC n(bCCQC;v)\u0000WSC n(bCMarginal;v).\n2). Infrequently, the CQC and GIQ methods yield very large con\fdence sets, with jbC(X)j\u0015\n200 about 5% of the time for the GIQ method and the completely informative jbC(X)j= 1000\nabout 2% of the time for the CQC method. While the average con\fdence set size E[jbC(X)j]\nis smaller for the marginal method (cf. supplementary Fig. B.15), this is evidently a very\nincomplete story. The bottom plot in Fig. 4.7 shows the behavior we expect for a marginal\nmethod given a reasonably accurate classi\fer: it overcovers for examples xwithbC(x) small.\nGIQ exhibits the opposite behavior, overcovering when bC(x) is large and undercovering for\nsmallbC(x), while CIQ provides nearly 1 \u0000\u000bcoverage roughly independent of con\fdence set\nsize, as one would expect for a method with valid conditional coverage. (In supplementary\nFig. B.13, we see similar but less-pronounced behavior on CIFAR-10.)\n4.3 A multilabel image recognition dataset\nOur \fnal set of experiments considers the multilabel image classi\fcation problems in the\nPASCAL VOC 2007 and VOC 2012 datasets [12, 13], which consist of n2012= 11540 and\nn2007= 9963 distinct 224 \u0002224 images, where the goal is to predict the presence of entities\nfromK= 20 di\u000berent classes, (e.g. birds, boats, people). We compare the direct inner outer\nmethod (CDioC) 3 with the split-conformalized inner/outer method (CQioC) 2, where we use\nthe tree-based score functions that Algorthims 4 and 5 output. For the PGM method, which\nperforms best in practice, we additionally compare the performance of standard inner and\nouter sets (see Alg. 2), to the re\fnement that we describe in section 3.1.1, where we instead\noutput a con\fdence set as a union of inner and outer sets. Here, we choose m= 2, which\ncorresponds to outputting a union of 4 inner/outer sets in equation 14, and select the indices\nIaccording to the heuristics that we describe in that same section.\n21",
+    "page": 21
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.444593",
+  "updated_at": "2025-10-21T02:01:01.035935",
+  "last_accessed": "2025-10-21T01:59:47.448250"
+}

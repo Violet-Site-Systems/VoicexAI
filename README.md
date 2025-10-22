@@ -64,6 +64,22 @@ eppn/
    - `python agents/summarizer/main.py`
    - `python agents/ethical_analyst/main.py`
    - `python agents/communicator/main.py`
+3. Start the FastAPI backend:
+   ```bash
+   cd frontend
+   uvicorn app:app --reload --port 8000
+   ```
+
+Static demo (Netlify):
+
+1. Deploy the static site to Netlify or use `netlify dev`:
+
+```bash
+# From repository root
+netlify deploy --dir=frontend/static --prod
+```
+
+Set BACKEND_URL to your local backend in the static UI.
 3. Send a `CrawlRequest` to Librarian with a public PDF URL.
 
 ### CLI helper

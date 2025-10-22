@@ -1,0 +1,27 @@
+{
+  "uuid": "f64ce0c7-e716-4fde-b1be-f7f133bdd071",
+  "atom_type": "PolicySection",
+  "name": "Page 36",
+  "content": {
+    "title": "Page 36",
+    "text": "0.000.250.500.75\n0 1 2 3 4 5 6\nSizeCDF P(|C_inner(X)| > Size)Conformalization\nCDioC\nArbiTree−CQC\nPGM−CQC\n0.000.250.500.751.00\n0 2 4 6 8 10 12 14 16 18 20\nSizeCDF P(|C_outer(X)| <= Size)Conformalization\nCDioC\nArbiTree−CQC\nPGM−CQC\nP(jbyout(X)j\u0014t) P(jbyin(X)j>t)\nOuter set size tInner set size t\nFigure B.17. Results for PASCAL VOC dataset [13] over M= 20 trials. Methods are\nthe conformalized direct inner/outer method (CDioC), Alg. 3; and tree-based methods with\nimplicit con\fdence sets bCimpor explicit inner/outer sets bCio, labeled ArbiTree and PGM (see\ndescription in Sec. 4.1.2). Top: 1 \u0000empirical c.d.f of sizes for the inner sets byin. Bottom:\nempirical c.d.f of sizes for the outer sets byout.\n36",
+    "page": 36
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.448004",
+  "updated_at": "2025-10-21T02:01:01.045308",
+  "last_accessed": "2025-10-21T01:59:47.448266"
+}

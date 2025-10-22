@@ -1,0 +1,27 @@
+{
+  "uuid": "0c7c8c97-92d5-4190-b17a-06c7dc788ced",
+  "atom_type": "PolicySection",
+  "name": "Page 4",
+  "content": {
+    "title": "Page 4",
+    "text": "sample (Xn+1;Yn+1) and the full procedure. We tacitly identify the vector Y2Y=f0;1gK\nwith the subset of [ K] =f1;:::;Kgit represents, and the notation X\u0013[K] indicates a\nset-valued mapping between Xand [K]. We de\fnekfk2\nL2(P):=R\nf2dP.\n2 Conformal multiclass classi\fcation\nWe begin with multiclass classi\fcation problems, developing Conformalized Quantile Classi-\n\fcation (CQC) to construct \fnite sample marginally valid con\fdence sets. CQC is similar to\nRomano et al.'s Conformalized Quantile Regression (CQR) [32]: we estimate a quantile func-\ntion of the scores, which we use to construct valid con\fdence sets after conformalization. We\nsplit the data into subsets I1,I2, andI3with sample sizes n1;n2andn3, whereI3is disjoint\nfromI1[I2. Algorithm 1 outlines the basic idea: we use the set I1for \ftting the scoring\nfunction with an (arbitrary) learning algorithm A, useI2for \ftting a quantile function from\na familyQ\u001aX ! Rof possible quantile functions to the resulting scores, and use I3for\ncalibration. In the algorithm, we recall the \\pinball loss\" [21] \u001a\u000b(t) = (1\u0000\u000b) [\u0000t]++\u000b[t]+,\nwhich satis\fes argminq2RE[\u001a\u000b(Z\u0000q)] = inffqjP(Z\u0014q)\u0015\u000bgfor any random variable Z.\nAlgorithm 1: Split Conformalized Quantile Classi\fcation (CQC).\nInput: Samplef(Xi;Yi)gn\ni=1, index setsI1;I2;I3\u001a[n], \ftting algorithm A, quantile\nfunctionsQ, and desired con\fdence level \u000b\n1. Fit scoring function via\nbs:=A((Xi;Yi)i2I1): (4)\n2. Fit quantile function via\nbq\u000b2argmin\nq2Q\u001a1\njI2jX\ni2I2\u001a\u000b(bs(Xi;Yi)\u0000q(Xi))\u001b\n(5)\n3. Calibrate by computing conformity scores Si=bq\u000b(Xi)\u0000bs(Xi;Yi), de\fning\nQ1\u0000\u000b(S;I3):= (1 + 1=n3)(1\u0000\u000b) empirical quantile of fSigi2I3\nand return prediction set function\nbC1\u0000\u000b(x):=fk2[K]jbs(x;k)\u0015bq\u000b(x)\u0000Q1\u0000\u000b(S;I3)g: (6)\n2.1 Finite sample validity of CQC\nWe begin by showing that Alg. 1 enjoys the coverage guarantees we expect, which is more\nor less immediate by the marginal guarantees for the method (3). We include the proof for\ncompleteness and because its cleanness highlights the ease of achieving validity.\nNone of our guarantees for Alg. 1 explicitly requires that we \ft the scoring function and the\nquantile function on disjoint subsets I1andI2. We assume for simplicity that the full sample\nf(Xi;Yi)gn+1\ni=1is exchangeable, though we only require the sample f(Xi;Yi)gi2I3[fn+1gbe\nexchangeable conditionally on f(Xi;Yi)gi2I1[I2. In general, so long as the score bsand quantile\nbq1\u0000\u000bfunctions are measurable with respect to f(Xi;Yi)gi2I1[I2and a\u001b-\feld independent of\n4",
+    "page": 4
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4661198192270645,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:08.654636",
+  "updated_at": "2025-10-21T02:01:01.047435",
+  "last_accessed": "2025-10-21T01:56:08.669179"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "30630fd0-c858-40d7-afc8-c6374e8c0a02",
+  "atom_type": "PolicySection",
+  "name": "Page 16",
+  "content": {
+    "title": "Page 16",
+    "text": "107\n105\n103\n101\nCompute (PF-days), non-embedding103105107Parameters (non-embedding)N=(1.3109)C0.73\nmin\nN=(1.6109)C0.88\n107\n105\n103\n101\nCompute (PF-days), excluding embeddings050001000015000Steps\nSmin (adjusted)\nSmin=(5.4103)C0.03\nmin\nS (fixed-batch)Figure 14 Left: Each value of the compute budget Cminhas an associated optimal model size N. Optimal\nmodel size grows very rapidly with Cmin, increasing by 5x for each 10x increase in compute. The number\nof data examples processed makes up the remainder of the increase, growing relatively modestly by only 2x.\nRight: The batch-adjusted number of optimization steps also grows very slowly, if at all, meaning that most\nof the growth in data examples processed can be used for increased batch sizes.\ncan be ﬁt very well with a power-law\nN(Cmin)/(Cmin)0:73: (6.1)\nIn Figure 12, we show the effect of training models of sub-optimal sizes (see Appendix B.4).\nBy deﬁnition Cmin\u00116NBcritS, and so we can use N(Cmin)to extract further results. In particular, since\nprior ﬁts show B/L\u00004:8andL/C\u00000:05\nmin , we can conclude that Bcrit/C0:24\nmin. This leads us to conclude\nthat the optimal number of steps will only grow very slowly with compute, as\nSmin/(Cmin)0:03; (6.2)\nmatching the empirical results in Figure 14. In fact the measured exponent is sufﬁciently small that our results\nmay even be consistent with an exponent of zero.\nThus we conclude that as we scale up language modeling with an optimal allocation of computation, we\nshould predominantly increase the model size N, while simultaneously scaling up the batch size via B/\nBcritwith negligible increase in the number of serial steps. Since compute-efﬁcient training uses relatively\nfew optimization steps, additional work on speeding up early training dynamics may be warranted.\n6.2 Predictions from L(N;S min)\nThe results for L(Cmin)and the allocations can be predicted from the L(N;S min)equation obtained in\nSection 5. Given our equation for L(N;S min), we can substitute Smin=Cmin\n6NBand then ﬁnd the minimum\nof the loss as a function of N, while ﬁxing the training compute. We carry out this procedure in detail in\nAppendix B, where we also provide some additional predictions.\nFor the loss as a function of training compute, we predict that\nL(Cmin) =\u0012Cmin\nc\nCmin\u0013\u000bmin\nC\n(6.3)\nwhere\n\u000bmin\nC\u00111\n1=\u000bS+ 1=\u000bB+ 1=\u000bN\u00190:054 (6.4)\nin excellent agreement with the exponent of Figure 13. We also predict that\nN(Cmin)/(Cmin)\u000bmin\nC=\u000bN\u0019(Cmin)0:71(6.5)\nwhich also matches the scaling of Figure 14 to within a few percent. Our scaling laws provide a predictive\nframework for the performance of language modeling.\n16",
+    "page": 16
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4335948456850463,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:34.780235",
+  "updated_at": "2025-10-21T02:01:00.964732",
+  "last_accessed": "2025-10-21T01:56:34.791427"
+}

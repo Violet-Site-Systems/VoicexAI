@@ -1,0 +1,27 @@
+{
+  "uuid": "937fbe6f-e2ed-434b-882a-e527d2a9ff5a",
+  "atom_type": "PolicySection",
+  "name": "Page 27",
+  "content": {
+    "title": "Page 27",
+    "text": "101102\nDepth2.32.42.52.62.72.8Test Loss\nWikipedia\nBooks\nInternet Books\nCommon Crawl\nWebText2 (Train)\nWebText2 (Test)Figure 24 We show evaluations on a series of datasets for models with approximately 1.5 Billion param-\neters. We observe no effect of depth on generalization; generalization performance depends primarily on\ntraining distribution performance. The 12-layer model overﬁt the Internet Books dataset and we show the\nearly-stopped performance; we have not seen this surprising result in other experiments.\nList of Figures\n1 Summary of simple power laws. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3\n2 Illustration of sample efﬁciency and compute efﬁciency. . . . . . . . . . . . . . . . . . . . . 4\n3 How to scale up model size, batch size, and serial steps . . . . . . . . . . . . . . . . . . . . 4\n4 Performance when varying model and data size, or model and training steps, simultaneously 5\n5 Weak dependence of performance on hyperparameter tuning . . . . . . . . . . . . . . . . . 8\n6 Comparison of performance trend when including or excluding embeddings . . . . . . . . . 8\n7 LSTM and Transformer performance comparison . . . . . . . . . . . . . . . . . . . . . . . 9\n8 Generalization to other test datasets . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10\n9 Universality of overﬁtting . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11\n10 Critical batch size . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12\n11 Performance versus compute budget or number of parameter updates . . . . . . . . . . . . . 14\n12 Training on suboptimal models . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15\n13 Comparison between empirical and adjusted compute trends . . . . . . . . . . . . . . . . . 15\n14 Optimal model size and serial number of steps versus compute budget . . . . . . . . . . . . 16\n15 Contradiction between compute and data trends . . . . . . . . . . . . . . . . . . . . . . . . 17\n16 Early stopping lower bound and training curves for overﬁt models . . . . . . . . . . . . . . 23\n17 Universal transformers . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24\n18 Batch size scans . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24\n19 Another look at sample efﬁciency . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 24\n20 Power-law dependence of performance on position in context . . . . . . . . . . . . . . . . . 25\n21 Performance at different context positions versus model size . . . . . . . . . . . . . . . . . 25\n22 Learning rate schedule scan . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 26\n23 Comparison of Power-Law and Logarithmic Fits . . . . . . . . . . . . . . . . . . . . . . . 26\n24 Generalization versus depth . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 27\n27",
+    "page": 27
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.3177842565597668,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:39.637708",
+  "updated_at": "2025-10-21T02:01:01.057896",
+  "last_accessed": "2025-10-21T01:59:39.638776"
+}

@@ -1,4 +1,4 @@
-a"""
+"""
 Interpreter uAgent
 
 Extracts text and structure from PDFs and emits ParsedText.

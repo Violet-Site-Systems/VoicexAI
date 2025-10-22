@@ -1,0 +1,27 @@
+{
+  "uuid": "540151ea-b1ce-49ec-92de-4ca2fd05a892",
+  "atom_type": "PolicySection",
+  "name": "Page 33",
+  "content": {
+    "title": "Page 33",
+    "text": "0.8920.8960.9000.904\nMarginal CQC GIQ Oracle\nMethodCoverage\n0.000.250.500.751.00\n01234\nSizeProportion of instancesConformalization\nMarginal\nCQC\nGIQ\nOracle\nP(Y2^C(X))\nP(j^C(X)j=t)\nt\nFigure B.11. Marginal coverage and distribution of the con\fdence set size in the multiclass\nsimulation (25) over M= 20 trials.\n0.00.20.40.6\n0 2 4\nSizeProportion of instancesConformalization\nCDioC\nArbiTree−CQC\nPGM−CQC\nOracle\n0.00.20.40.6\n0 2 4\nSizeProportion of instancesConformalization\nCDioC\nArbiTree−CQC\nPGM−CQC\nOracleP(jbyout(X)j=t) P(jbyin(X)j=t)\nOuter set size tInner set size t\nFigure B.12. Simulated multilabel experiment with label distribution (26). Methods are the\ntrue oracle con\fdence set; the conformalized direct inner/outer method (CDioC), Alg. 3; and\ntree-based methods with implicit con\fdence sets bCimpor explicit inner/outer sets bCio, labeled\nArbiTree and PGM (see description in Sec. 4.1.2). Top: distribution of the inner sets byinsizes.\nBottom: distribution of the outer sets byoutsizes.\n33",
+    "page": 33
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4661198192270645,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:08.667053",
+  "updated_at": "2025-10-21T02:01:00.961768",
+  "last_accessed": "2025-10-21T01:56:08.669210"
+}

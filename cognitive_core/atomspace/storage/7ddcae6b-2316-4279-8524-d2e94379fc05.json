@@ -1,0 +1,27 @@
+{
+  "uuid": "7ddcae6b-2316-4279-8524-d2e94379fc05",
+  "atom_type": "PolicySection",
+  "name": "Page 8",
+  "content": {
+    "title": "Page 8",
+    "text": "andbCout(X) the more con\fdent we may be in a single prediction. As we mention in the\nintroduction, we extend the inner/outer coverage guarantees (9) to construct to unions of\nsuch rectangles to allow more nuanced coverage; see Sec. 3.1.1.\nIn the remainder of this section, we propose methods to conformalize multilabel predic-\ntors in varying generality, using tree-structured graphical models to both address correlations\namong labels and computational e\u000eciency. We begin in Section 3.1 with a general method\nfor conformalizing an arbitrary scoring function s:X\u0002Y! Ron multilable vectors, which\nguarantees validity no matter the score. We then show di\u000berent strategies to e\u000eciently imple-\nment the method, depending on the structure of available scores, in Section 3.2, showing how\n\\tree-structured\" scores allow computational e\u000eciency while modeling correlations among the\ntask labels y. Finally, in Section 3.3, we show how to build such a tree-structured score func-\ntionsfrom both arbitrary predictive models (e.g. [4, 42]) and those more common multilabel\npredictors|in particular, those based on neural networks|that learn and output per-task\nscoressk:X!Rfor each task [18, 30].\n3.1 A generic split-conformal method for multilabel sets\nWe begin by assuming we have a general score function s:X\u0002Y! RforY=f\u00001;1gKthat\nevaluates the quality of a given set of labels y2Yfor an instance x; in the next subsection,\nwe describe how to construct such scores from multilabel prediction methods, presenting our\ngeneral method \frst. We consider the variant of the CQC method 1 in Alg. 2.\nThere are two considerations for Algorithm 2: its computational e\u000eciency and its validity\nguarantees. Deferring the e\u000eciency questions to the coming subsections, we begin with the\nlatter. The naive approach is to simply use the \\standard\" or implicit conformalization\napproach, used for regression or classi\fcation, by de\fning\nbCimp(x):=n\ny2Yjs(x;y)\u0015bq\u000b(x)\u0000bQ1\u0000\u000bo\n; (10)\nwherebq\u000bandbQ1\u0000\u000bare as in the CQioC method 2. This does guarantee validity, as we have\nthe following corollary of Theorem 1.\nAlgorithm 2: Split Conformalized Inner/Outer method for classi\fcation (CQioC)\nInput: Samplef(Xi;Yi)gn\ni=1, disjoint index sets I2;I3\u001a[n], quantile functions Q,\ndesired con\fdence level \u000b, and score function s:X\u0002Y! R.\n1. Fit quantile function bq\u000b2argminq2QfP\ni2I2\u001a\u000b(s(Xi;Yi)\u0000q(Xi))g, as in (5).\n2. Compute conformity scores Si=bq\u000b(Xi)\u0000s(Xi;Yi), de\fnebQ1\u0000\u000bas (1 + 1=jI3j)\u0001\n(1\u0000\u000b) empirical quantile of S=fSigi2I3, and return prediction set function\nbCio(x):=fy2Yjbyin(x)\u0016y\u0016byout(x)g; (11)\nwherebyinandbyoutsatisfy\nbyin(x)k= 1 if and only if max\ny2Y:yk=\u00001s(x;y)<bq\u000b(x)\u0000bQ1\u0000\u000b\nbyout(x)k=\u00001 if and only if max\ny2Y:yk=1s(x;y)<bq\u000b(x)\u0000bQ1\u0000\u000b:(12)\n8",
+    "page": 8
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4876529953451402,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:55:49.005323",
+  "updated_at": "2025-10-21T02:01:01.056775",
+  "last_accessed": "2025-10-21T01:55:49.012302"
+}

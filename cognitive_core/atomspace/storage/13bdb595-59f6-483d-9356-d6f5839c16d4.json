@@ -1,0 +1,27 @@
+{
+  "uuid": "13bdb595-59f6-483d-9356-d6f5839c16d4",
+  "atom_type": "PolicySection",
+  "name": "Page 23",
+  "content": {
+    "title": "Page 23",
+    "text": "0.000.250.500.751.00\n0.70 0.75 0.80 0.85\nWSCf(Worst−Slab Coverage)ConfidenceSetType\nImplicit\nExplicit\nMethod\nCDioC\nArbiTree−CQC\nPGM−CQC\n0.000.250.500.751.00\n−0.10 −0.05 0.00 0.05 0.10\ndWSCf(Worst−Slab Coverage Difference)ConfidenceSetType\nImplicit\nExplicit\nMethod\nArbiTree−CQC\nPGM−CQC\nPv(WSC n(bCMethod;v)\u0014t)\nPv(WSC n(bCMethod;v)\u0000WSC n(bCCDioC;v)\u0014t)\nWorst Coverage probability t Di\u000berence of coverage t\nFigure 4.9. Worst-slab coverage (23) for Pascal-VOC with \u000e=:2 overM= 1000 draws\nviid\u0018Uni(Sd\u00001). For tree-structured methods ArbiTree-CQC and PGM-CQC, we compute the\nworst-slab coverage using implicit con\fdence sets bCimpand explicit inner/outer sets bCio. The\ndotted line is the desired (marginal) coverage. Left: distribution of worst-slab coverage. Right:\ndistribution of the coverage di\u000berence WSC n(bCMethod;v)\u0000WSC n(bCCDioC;v) for Method i2\nfArbiTree-CQC ;PGM-CQCgwith implicit bCimpor explicit inner/outer bCiocon\fdence sets.\nIn this problem, we use the d= 2048 dimensional output of a ResNet-101 with pretrained\nweights on the ImageNet dataset [9] as our feature vectors X. For each of the Kclasses, we \ft\na binary logistic regression model b\u0012k2RdofYk2f\u0006 1gagainstX, then usesk(x) =b\u0012T\nkxas\nthe scores for the PGM-CQC method (Alg. 5). We use byk(x) = sign(sk(x)) for the ArbiTree-\nCQC method 4. The \ft predictors have F1-score 0 :77 on held-out data, so we do not expect\nour con\fdence sets to be uniformly small while maintaining the required level of coverage, in\nparticular for ArbiTree-CQC. We use a validation set of nv= 3493 images to \ft the quantile\nfunctions (5) as above using a one layer fully-connected neural network with 16 hidden neurons\nand tree parameters.\nThe results from Figure 4.9 are consistent with our hypotheses that the tree-based models\nshould improve robustness of the coverage. Indeed, while all methods ensure marginal coverage\nat level\u000b=:8 (see Fig. 4.8), Figure 4.9 shows that worst-case slabs (23) for the tree-based\nmethods have closer to 1 \u0000\u000bcoverage. In particular, for most random slab directions v,\nthe tree-based methods have higher worst-slab coverage than the direct inner/outer method\n(CDioC, Alg. 3). At the same time, both the CDioC method and PGM-CQC method (using\nbCio) provide similarly-sized con\fdence sets, as the inner set of the PGM-CQC method is\ntypically smaller, as is its outer set (cf. Fig. B.17). The ArbiTree-CQC method performs\npoorly on this example: its coverage is at the required level, but the con\fdence sets are too\nlarge and thus essentially uninformative.\nFinally, Figure 4.10 investigates re\fning the con\fdence sets as we suggest in Section 3.1.1\nby taking pairs of the most negatively correlated labels i;jsatisfyingbyin(x)(i;j)=\u00001 and\nbyout(x)(i;j)= 1. Moving from a single inner/outer set to the union of 4 inner/outer sets non\nonly mitigates increased coverage, moving closer to the target level 1 \u0000\u000band to the coverage\nof the implicit con\fdence sets, but in addition, for more than half of the examples, it decreases\n23",
+    "page": 23
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.444997",
+  "updated_at": "2025-10-21T02:01:00.974736",
+  "last_accessed": "2025-10-21T01:59:47.448252"
+}

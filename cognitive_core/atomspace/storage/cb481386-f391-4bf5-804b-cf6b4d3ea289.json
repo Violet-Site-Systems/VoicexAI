@@ -1,0 +1,27 @@
+{
+  "uuid": "cb481386-f391-4bf5-804b-cf6b4d3ea289",
+  "atom_type": "PolicySection",
+  "name": "Page 20",
+  "content": {
+    "title": "Page 20",
+    "text": "Appendices\nA Summary of Power Laws\nFor easier reference, we provide a summary below of the key trends described throughout the paper.\nParameters Data Compute Batch Size Equation\nN11 FixedL(N) = (Nc=N)\u000bN\n1D Early Stop FixedL(D) = (Dc=D)\u000bD\nOptimal1C FixedL(C) = (Cc=C)\u000bC(naive)\nNoptDoptCminB\u001cBcritL(Cmin) =\u0000\nCmin\nc=Cmin\u0001\u000bmin\nC\nND Early Stop FixedL(N;D ) =\u0014\u0000Nc\nN\u0001\u000bN\n\u000bD+Dc\nD\u0015\u000bD\nN1Ssteps BL(N;S) =\u0000Nc\nN\u0001\u000bN+\u0010\nSc\nSmin(S;B)\u0011\u000bS\nTable 4\nThe empirical ﬁtted values for these trends are:\nPower Law Scale (tokenization-dependent)\n\u000bN= 0:076Nc= 8:8\u00021013params (non-embed)\n\u000bD= 0:095Dc= 5:4\u00021013tokens\n\u000bC= 0:057Cc= 1:6\u0002107PF-days\n\u000bmin\nC= 0:050Cmin\nc= 3:1\u0002108PF-days\n\u000bB= 0:21B\u0003= 2:1\u0002108tokens\n\u000bS= 0:76Sc= 2:1\u0002103steps\nTable 5\nThe optimal parameters for compute efﬁcient training are given by:\nCompute-Efﬁcient Value Power Law Scale\nNopt=Ne\u0001CpN\nmin pN= 0:73Ne= 1:3\u0001109params\nB\u001cBcrit=B\u0003\nL1=\u000bB=BeCpB\nminpB= 0:24Be= 2:0\u0001106tokens\nSmin=Se\u0001CpS\nmin(lower bound) pS= 0:03Se= 5:4\u0001103steps\nDopt=De\u0001CpD\nmin(1 epoch) pD= 0:27De= 2\u00011010tokens\nTable 6\nB Empirical Model of Compute-Efﬁcient Frontier\nThroughout this appendix all values of C;S; and\u000bCare adjusted for training at the critical batch size Bcrit.\nWe have left off the ‘adj’ label to avoid cluttering the notation.\nB.1 Deﬁning Equations\nThe power-law ﬁt to the learning curves implies a simple prescription for compute-efﬁcient training. In this\nappendix, we will derive the optimal performance, model size, and number of training steps as a function of\n20",
+    "page": 20
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4757998708764747,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:01.900972",
+  "updated_at": "2025-10-21T02:01:00.992823",
+  "last_accessed": "2025-10-21T01:56:01.903572"
+}

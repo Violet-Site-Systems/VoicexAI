@@ -1,0 +1,27 @@
+{
+  "uuid": "f180daad-ba2d-4762-9936-0c9d30e76173",
+  "atom_type": "PolicySection",
+  "name": "Page 13",
+  "content": {
+    "title": "Page 13",
+    "text": "convex conjugate r\u0003(t):= sup\u000bf\u000bt\u0000r(\u000b)g. Then immediately\nsup\n\u000b;\f\u001anX\ni=1sT;\u000b;\f(Xi;Yi)\u0000KX\nk=1r1(\u000b1)\u0000X\ne2Er2(\fe)\u001b\n=KX\nk=1r\u0003\n1 nX\ni=1Yi;kbyk(Xi)!\n+X\ne=(k;l)2Er\u0003\n2 nX\ni=1Yi;kYi;l!\n;\nwhich decomposes along the edges of the putative tree. As a consequence, we may solve\nproblem (19) by \fnding the maximum weight spanning tree in a graph with edge weights\nr\u0003\n2(Pn\ni=1Yi;kYi;l) for each edge ( k;l), then choosing \u000b;\fto maximize the objective (19), which\nis a collection of 1-dimensional convex optimization problems.\nFrom single-task scores to a tree-based probabilistic model While Algorithm 4 will\nwork regardless of the predictor it is given|which may simply output a vector by2f\u0000 1;1gK,\nas in Alg. 3 it is frequently the case that multilabel methods output scores sk:X ! Rfor\neach task. To that end, a natural strategy is to model the distribution of YjXdirectly via\na tree-structured graphical model [24]. Similar to the score in Eq. (16), we de\fne interaction\nfactors :f\u00001;1g2!R4by (\u00001;\u00001) =e1, (1;\u00001) =e2, (\u00001;1) =e3and (1;1) =e4,\nthe standard basis vectors, and marginal factors 'k:f\u00001;1g\u0002X! R2with\n'k(yk;x):=1\n2\u0014(yk\u00001)\u0001sk(x)\n(yk+ 1)\u0001sk(x)\u0015\n;\nincorporating information sk(x) provides on yk. For a treeT= ([K];E), the label model is\npT;\u000b;\f(yjx)/exp\u0012X\ne=(k;l)2E\fT\ne (yk;yl) +KX\nk=1\u000bT\nk'k(yk;x)\u0013\n; (20)\nwhere (\u000b;\f) is a set of parameters such that, for each edge e2E,\fe2R4and1T\fe= 0\n(for identi\fability), while \u000bk2R2for each label k2[K]. Because we view this as a \\bolt-\non\" approach, applicable to anymethod providing scores sk, we include only pairwise label\ninteraction factors independent of x, allowing singleton factors to depend on the observed\nfeature vector xthrough the scores sk.\nThe log-likelihood log pT;\u000b;\fis convex in ( \u000b;\f) for any \fxed tree T, and the Chow-Liu\ndecomposition [6] of the likelihood of a tree T= ([K];E) gives\nlogpT;\u000b;\f(yjx) =KX\nk=1logpT;\u000b;\f(ykjx) +X\ne=(k;l)2ElogpT;\u000b;\f(yk;yljx)\npT;\u000b;\f(ykjx)pT;\u000b;\f(yljx);(21)\nthat is, the sum of the marginal log-likelihoods and pairwise mutual information terms, con-\nditional on X=x. Given a sample ( Xi;Yi)n\ni=1, the goal is to then solve\nmaximize\nT;\u000b;\fLn(T;\u000b;\f ):=nX\ni=1logpT;\u000b;\f(YijXi): (22)\nWhen there is no conditioning on x, the pairwise mutual information terms logpT;\u000b;\f(yk;yl)\np(yk)p(yl)\nare independent of the tree T[6]. We heuristically compute empirical conditional mutual\n13",
+    "page": 13
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.2448979591836735,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:47.441355",
+  "updated_at": "2025-10-21T02:01:01.069558",
+  "last_accessed": "2025-10-21T01:59:47.448242"
+}

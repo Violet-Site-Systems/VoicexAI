@@ -1,0 +1,27 @@
+{
+  "uuid": "d19604ea-1f24-46fa-9db2-7778e5b5b59f",
+  "atom_type": "PolicySection",
+  "name": "Page 17",
+  "content": {
+    "title": "Page 17",
+    "text": "0.50.60.70.80.91.0\n0.00 0.25 0.50 0.75 1.00\nConditional.coveragef(Worst−Slab Coverage)Method\nMarginal\nCQC\nGIQ\nOracle0.000.250.500.751.00\nMarginal CQC GIQ Oracle\nMethodClass−Wise coverageClass\n0\n1\n2\n3\nX-measurePX(fx:P(Y2bC(X)jX=x)\u0015tg)\nConditional coverage probability t\nPer-class coverage\nFigure 4.2. Simulation results on multiclass problem. Left: X-probability of achieving a given\nleveltof conditional coverage versus coverage t, i.e.,t7!PX(P(Y2bCMethod (X)jX)\u0015t). The\nideal is to observe t7!1ft\u00141\u0000\u000bg. Right: class-wise coverage P(Y2bCMethod (X)jY=y) on\nthe distribution (25) (as in Fig. 4.1) for each method. Con\fdence bands and error bars display\nthe range of the statistic over M= 20 trials.\nFig. B.11), the left plot shows the CQC and GIQ methods provide consistently better condi-\ntional coverage than the marginal method. The latter (3) has a coverage close to 1 for 70% of\nthe examples (typically all examples from the majority class) and so undercovers the remain-\ning 30% minority examples, in distinction from the CQC and GIQ methods, whose aims for\nconditional coverage yield better coverage for minority classes (see right plot of Fig. 4.2).\n4.1.2 Improved coverage with graphical models\nOur second simulation addresses the multilabel setting, where we have a predictive model\noutputting scores sk(x)2Rfor each task k. As a baseline comparison, we compute oracle\ncon\fdence sets (the smallest 1 \u0000\u000b-conditionally valid (non-randomized) con\fdence set in\nthe implicit case and the smaller inner and outer sets containing it in the explicit case).\nWe run three methods, First, the direct Inner/Outer method (CDioC), Alg. 3. Second,\nwe use the graphical model score from the likelihood model in Alg. 5 to choose a scoring\nfunctionsT:X\u0002Y! R, which we call the PGM-CQC method; we then either use the CQC\nmethod 1 with this scoring function directly, that is, the implicit con\fdence set (recall (10))\nbCimp(x) =fy2YjsT(x;y)\u0015^q(x)\u0000bQ1\u0000\u000bgor the explicit bCioset of Eqs. (11){(12). Finally,\nwe do the same except that we use the arbitrary predictor method (Alg. 4) to construct the\nscoresT, where we use the f\u00061gKassignmentbyinstead of scores as input predictors, which\nwe term ArbiTree-CQC.\nWe consider a misspeci\fed logistic regression model, where hidden confounders induce\ncorrelation between labels. Because of the dependency structure, we expect the tree-based\nmethods to output smaller and more robust con\fdence sets than the direct CDioC method 3.\nComparing the two score-based methods (CDioC and PGM-CQC) with the scoreless tree\nmethod ArbiTree-CQC is perhaps unfair, as the latter uses less information|only signs of\npredicted labels. Yet we expect the ArbiTree-CQC method to leverage the correlation between\n17",
+    "page": 17
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4661198192270645,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:08.660512",
+  "updated_at": "2025-10-21T02:01:00.964485",
+  "last_accessed": "2025-10-21T01:56:08.669194"
+}

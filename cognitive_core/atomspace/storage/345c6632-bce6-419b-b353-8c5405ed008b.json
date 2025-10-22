@@ -1,0 +1,27 @@
+{
+  "uuid": "345c6632-bce6-419b-b353-8c5405ed008b",
+  "atom_type": "PolicySection",
+  "name": "Page 35",
+  "content": {
+    "title": "Page 35",
+    "text": "0.8950.9000.905\nMarginal CQC GIQ\nMethodCoverage\n102030\nMarginal CQC GIQ\nMethodAverage Set Size\nP(Y2^C(X))\nE\f\f\f^C(X)\f\f\f\nFigure B.15. Marginal coverage and average con\fdence set size on ImageNet over M= 20\ntrials.\n0.000.250.500.751.00\n0.88 0.90 0.92 0.94\nWSCf(Worst−Slab Coverage)Method\nMarginal\nCQC\nGIQ\n0.000.250.500.751.00\n−0.02 0.00 0.02 0.04\ndWSCf(Worst−Slab Coverage Difference)Method\nCQC\nGIQPv(WSC n(bCMethod;v)\u0014t)\nPv(WSC n(bCMethod;v)\u0000WSC n(bCCDioC;v)\u0014t)\nWorst Coverage probability t Di\u000berence of coverage t\nFigure B.16. Worst-slab coverage for CIFAR-10 with \u000e=:2 overM= 1000 draws viid\u0018\nUni(Sd\u00001). The dotted line is the desired (marginal) coverage. Left: distribution of worst-slab\ncoverage. Right: distribution of the coverage di\u000berence WSC n(bCCQC;v)\u0000WSC n(bCMarginal;v).\n35",
+    "page": 35
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4661198192270645,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:08.667522",
+  "updated_at": "2025-10-21T02:01:00.976761",
+  "last_accessed": "2025-10-21T01:56:08.669212"
+}

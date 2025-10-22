@@ -1,0 +1,27 @@
+{
+  "uuid": "cff093e7-1d5e-4b7d-8fe0-bf344af5bee1",
+  "atom_type": "PolicySection",
+  "name": "Page 25",
+  "content": {
+    "title": "Page 25",
+    "text": "(by a factor up to 4 = 2m) the number of con\fgurations in the con\fdence set.\n5 Conclusions\nAs long as we have access to a validation set, independent of (or at least exchangeable with)\nthe sets used to \ft a predictive model, split conformal methods guarantee marginal validity,\nwhich gives great freedom in modeling. It is thus of interest to \ft models more adaptive to the\nsignal inputs xat hand|say, by quantile predictions as we have done, or other methods yet to\nbe discovered|that can then in turn be conformalized. As yet we have limited understanding\nof what \\near\" conditional coverage might be possible: Barber et al. [1] provide procedures\nthat can guarantee coverage uniformly across subsets of X-space as long as those subsets are\nnot too complex, but it appears computationally challenging to \ft the models they provide,\nand our procedures empirically appear to have strong coverage across slabs of the data as in\nEq. (23). Our work, then, is a stepping stone toward more uniform notions of validity, and we\nbelieve exploring approaches to this|perhaps by distributionally robust optimization [8, 10],\nperhaps by uniform convergence arguments [1, Sec. 4]|will be both interesting and essential\nfor trusting applications of statistical machine learning.\nReferences\n[1] Rina Foygel Barber, Emmanuel J. Cand\u0012 es, Aaditya Ramdas, and Ryan J. Tibshirani. The\nlimits of distribution-free conditional predictive inference. arXiv:1903.04684v2 [math.ST] ,\n2019.\n[2] P. L. Bartlett, M. I. Jordan, and J. McAuli\u000be. Convexity, classi\fcation, and risk bounds.\nJournal of the American Statistical Association , 101:138{156, 2006.\n[3] St\u0013 ephane Boucheron, Olivier Bousquet, and G\u0013 abor Lugosi. Theory of classi\fcation: a\nsurvey of some recent advances. ESAIM: Probability and Statistics , 9:323{375, 2005.\n[4] Matthew R Boutell, Jiebo Luo, Xipeng Shen, and Christopher M Brown. Learning\nmulti-label scene classi\fcation. Pattern Recognition , 37(9):1757{1771, 2004.\n[5] Stephen Boyd and Lieven Vandenberghe. Convex Optimization . Cambridge University\nPress, 2004.\n[6] C. K. Chow and C. N. Liu. Approximating discrete probability distributions with de-\npendence trees. IEEE Transactions on Information Theory , 14(3):462{467, 1968.\n[7] A. P. Dawid. Applications of a general propagation algorithm for probabilistic expert\nsystems. Statistics and Computing , 2(1):25{36, 1992.\n[8] Erick Delage and Yinyu Ye. Distributionally robust optimization under moment uncer-\ntainty with application to data-driven problems. Operations Research , 58(3):595{612,\n2010.\n[9] J. Deng, W. Dong, R. Socher, L. Li, K. Li, and L. Fei-Fei. ImageNet: a large-scale\nhierarchical image database. In Proceedings of the IEEE Conference on Computer Vision\nand Pattern Recognition , pages 248{255, 2009.\n[10] John C. Duchi and Hongseok Namkoong. Learning models with uniform performance\nvia distributionally robust optimization. arXiv:1810.08750 [stat.ML] , 2018.\n[11] Andre Esteva, Brett Kuprel, Roberto A. Novoa, Justin Ko, Susan M. Swetter, Helen M.\nBlau, and Sebastian Thrun. Dermatologist-level classi\fcation of skin cancer with deep\nneural networks. Nature , 542:115{118, 2017.\n25",
+    "page": 25
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4661198192270645,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:08.663793",
+  "updated_at": "2025-10-21T02:01:00.986929",
+  "last_accessed": "2025-10-21T01:56:08.669202"
+}

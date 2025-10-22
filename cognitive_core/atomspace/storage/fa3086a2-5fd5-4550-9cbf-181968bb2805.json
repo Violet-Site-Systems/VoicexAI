@@ -1,0 +1,27 @@
+{
+  "uuid": "fa3086a2-5fd5-4550-9cbf-181968bb2805",
+  "atom_type": "PolicySection",
+  "name": "Page 13",
+  "content": {
+    "title": "Page 13",
+    "text": "prediction for Bcrit, and that neither depends directly on model size except through the value of the loss that\nhas been attained. These results can be used to predict how training time and compute will vary with the\nbatch size. To utilize both training time and compute as effectively as possible, it is best to train with a batch\nsizeB\u0019Bcrit. Training at B\u001dBcritminimizes the number of training steps, while B\u001cBcritminimizes\nthe use of compute.\nMore speciﬁcally, it was demonstrated that for a wide variety of neural network tasks, the number of training\nstepsSand the number of data examples processed E=BSsatisfy the simple relation\n\u0012S\nSmin\u00001\u0013\u0012E\nEmin\u00001\u0013\n= 1 (5.1)\nwhen training to any ﬁxed value of the loss L. HereSminis the minimum number of steps necessary to reach\nL, whileEminis the minimum number of data examples that must be processed.\nWe demonstrate the relation (5.1) for Transformers in Figure 18 in the appendix. This relation deﬁnes the\ncritical batch size\nBcrit(L)\u0011Emin\nSmin(5.2)\nwhich is a function of the target value of the loss. Training at the critical batch size makes a roughly optimal\ntime/compute tradeoff, requiring 2Smintraining steps and processing E= 2Emindata examples.\nIn Figure 10 we have plotted the critical batch size and gradient noise scale5as a function of training loss for\ntwo different models. We see that Bcrit(L)is independent of model size, and only depends on the loss L. So\nthe predictions of [MKAT18] continue to hold for Transformer language models. The critical batch size can\nbe ﬁt with a power-law in the loss\nBcrit(L)\u0019B\u0003\nL1=\u000bB(5.3)\nwhereB\u0003\u00192\u0002108and\u000bB\u00190:21.\nWe have chosen this parameterization for Bcrit(L)because as the loss approaches its minimum value Lmin,\nthe gradient noise scale is expected to diverge, and we expect Bcritto track this noise scale. We do not\nknowLmin, as we see no sign that our models are approaching it, but Lmin>0since the entropy of natural\nlanguage is non-zero. Since apparently Lminis much smaller than the values of Lwe have achieved, we used\na parameterization where Bcritdiverges asL!0.\nWe will use Bcrit(L)to estimate the relation between the number of training steps Swhile training at batch\nsizeB= 219tokens and the number of training steps while training at B\u001dBcrit. This is simply\nSmin(S)\u0011S\n1 +Bcrit(L)=B(minimum steps, at B\u001dBcrit) (5.4)\nfor any given target value Lfor the loss. This also deﬁnes a critical value of the compute needed to train to L\nwith a model of size Nif we were to train at B\u001cBcrit(L). This is\nCmin(C)\u0011C\n1 +B=B crit(L)(minimum compute, at B\u001cBcrit) (5.5)\nwhereC= 6NBS estimates the (non-embedding) compute used at batch size B.\n5.2 Results for L(N;S min)and Performance with Model Size and Compute\nNow we will use Smindeﬁned in Equation (5.4) to obtain a simple and universal ﬁt for the dependence of the\nloss on model size and training time in the inﬁnite data limit. We will ﬁt the stable, Adam-optimized training\nruns using Equation (1.6), repeated here for convenience:\nL(N;S min) =\u0012Nc\nN\u0013\u000bN\n+\u0012Sc\nSmin\u0013\u000bS\n(5.6)\nfor the loss. We include all training steps after the warmup period of the learning rate schedule, and ﬁnd a ﬁt\nto the data with the parameters:\n5Although the critical batch size roughly matches the gradient noise scale, we are using a direct measurements of\nBcritfrom Figures 18 and 10 for all our later analyses.\n13",
+    "page": 13
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.3177842565597668,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:59:39.631992",
+  "updated_at": "2025-10-21T02:01:01.031665",
+  "last_accessed": "2025-10-21T01:59:39.638759"
+}

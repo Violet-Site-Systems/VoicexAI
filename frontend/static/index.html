@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>EPPN Dashboard (Static Demo)</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 2rem;
+        }
+        
+        header {
+            margin-bottom: 1rem;
+        }
+        
+        #docs {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>EPPN Static Demo</h1>
+        <p>Simple demo UI that talks to a locally running backend at <code>BACKEND_URL</code>.</p>
+    </header>
+
+    <label>Backend URL: <input id="backend_url" value="http://localhost:8000" size="40"/></label>
+    <button id="load">Load documents</button>
+
+    <div id="docs"></div>
+
+    <script>
+        const backendInput = document.getElementById('backend_url');
+        const loadBtn = document.getElementById('load');
+        const docsDiv = document.getElementById('docs');
+
+        async function loadDocs() {
+            const base = backendInput.value.replace(/\/$/, '');
+            try {
+                const res = await fetch(base + '/docs');
+                if (!res.ok) {
+                    docsDiv.textContent = 'Error: ' + res.status;
+                    return;
+                }
+                const body = await res.json();
+                const list = body.documents || [];
+                docsDiv.innerHTML = '<h2>Documents</h2>' + (list.length ? '<ul>' + list.map(d => `<li>${d} - <a href="#" onclick="openSummary(\''+d+'\')">Summary</a> | <a href="#" onclick="openEthics(\''+d+'\')">Ethics</a></li>`).join('') + '</ul>' : '<p>No documents</p>');
+            } catch (err) {
+                docsDiv.textContent = 'Fetch error: ' + err;
+            }
+        }
+
+        async function openSummary(doc) {
+            const base = backendInput.value.replace(/\/$/, '');
+            const res = await fetch(base + '/docs/' + doc + '/summary');
+            const body = await res.json();
+            alert('Summary: ' + JSON.stringify(body));
+        }
+
+        async function openEthics(doc) {
+            const base = backendInput.value.replace(/\/$/, '');
+            const res = await fetch(base + '/docs/' + doc + '/ethics');
+            const body = await res.json();
+            alert('Ethics: ' + JSON.stringify(body));
+        }
+
+        loadBtn.addEventListener('click', loadDocs);
+    </script>
+</body>
+
+</html>

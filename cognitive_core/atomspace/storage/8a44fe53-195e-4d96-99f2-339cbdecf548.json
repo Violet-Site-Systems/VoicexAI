@@ -1,0 +1,27 @@
+{
+  "uuid": "8a44fe53-195e-4d96-99f2-339cbdecf548",
+  "atom_type": "PolicySection",
+  "name": "Page 12",
+  "content": {
+    "title": "Page 12",
+    "text": "Such a score allows us to consider interactions between tasks k;lwhile maintaining computa-\ntional e\u000eciency, and we will show how to construct such a score function both from arbitrary\nmultilabel prediction methods and from those with individual scores as above. When we\nhave a tree-structured score (16), we can use e\u000ecient message-passing algorithms [7, 22] to\ncompute the collections (maximum marginals) of scores\nS\u0000:=n\nmax\ny2Y:yk=\u00001s(x;y)oK\nk=1andS+:=n\nmax\ny2Y:yk=1s(x;y)oK\nk=1(17)\nin timeO(K), from which it is immediate to construct byinandbyoutas in the conditions (12).\nWe outline the approach in Appendix A.3, as it is not the central theme of this paper, though\nthis e\u000eciency highlights the importance of the tree-structured scores for practicality.\n3.3 Building tree-structured scores\nWith the descriptions of the generic multilabel conformalization method in Alg. 2 and that we\ncan e\u000eciently compute predictions using tree-structured scoring functions (16), we now turn\nto constructing such scoring functions from predictors, which trade between label dependency\nstructure, computational e\u000eciency, and accuracy of the predictive function. We begin with\na general case of an arbitrary predictor function, then describe a heuristic graphical model\nconstruction when individual label scores are available (as we assume in Alg. 3).\nFrom arbitrary predictions to scores We begin with the most general case that we have\naccess only to a predictive function by:X ! RK. This prediction function is typically the\noutput of some learning algorithm, and in the generality here, may either output real-valued\nscoresbyk(x)2Ror simply output byk(x)2f\u0000 1;1g, indicating element k's presence.\nWe compute a regularized scoring function based on a tree-structured graphical model\n(cf. [22]) as follows. Given a tree T= ([K];E) on the labels [ K] and parameters \u000b2RK,\n\f2RE, we de\fne\nsT;\u000b;\f(x;y):=KX\nk=1\u000bkykbyk(x) +X\ne=(k;l)2E\feykyl (18)\nfor all (x;y)2X\u0002f\u0000 1;1gK, where we recall that we allow byk(x)2R. We will \fnd the tree T\nassigning the highest (regularized) scores to the true data ( Xi;Yi)n\ni=1using e\u000ecient dynamic\nprograms reminiscent of the Chow-Liu algorithm [6]. To that end, we use Algorthim 4.\nAlgorithm 4: Method to \fnd optimal tree from arbitrary predictor by.\nInput: Samplef(Xi;Yi)gi2I1, regularizers r1;r2:R!R, predictorby:X!RK.\nSet\n(bT;b\u000b;b\f):= argmax\nT=([K];E);\u000b;\f\u001anX\ni=1sT;\u000b;\f(Xi;Yi)\u0000KX\nk=1r1(\u000bk)\u0000X\ne2Er2(\fe)\u001b\n:(19)\nand return score function sbT;b\u000b;b\fof form (18).\nBecause the regularizers r1;r2decompose along the edges and nodes of the tree, we can\nimplement Alg. 4 using a maximum spanning tree algorithm. Indeed, recall [5] the familiar\n12",
+    "page": 12
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4661198192270645,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:08.658012",
+  "updated_at": "2025-10-21T02:01:01.019053",
+  "last_accessed": "2025-10-21T01:56:08.669189"
+}

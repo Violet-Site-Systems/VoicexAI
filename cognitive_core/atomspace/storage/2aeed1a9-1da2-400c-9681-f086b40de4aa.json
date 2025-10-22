@@ -1,0 +1,27 @@
+{
+  "uuid": "2aeed1a9-1da2-400c-9681-f086b40de4aa",
+  "atom_type": "PolicySection",
+  "name": "Page 29",
+  "content": {
+    "title": "Page 29",
+    "text": "In particular, by integrating the preceding inequality, we have\nP\u0010\nbC\u001b\n1\u0000\u000b(Xn+1;Zn+1)6=bC(Xn+1;Zn+1);Xn+162Bn;jbQj\u0014\u000f\u0011\n\u0014\u0011:\nAsP(jbQj\u0014\u000f)!1 and P(Xn+162Bn)!1 by the convergence guarantees (27) and (28), we\nhave the theorem.\nA.2 Proof of Proposition 1\nWe wish to show that lim \u001b!0P\u0000\nC\u001b\n1\u0000\u000b(X;Z)\u001aC1\u0000\u000b(X)\u0001\n= 1, which, by a union bound over\nk2[K], is equivalent to showing\nP(s(X;k) +\u001bZ\u0015q\u001b\n\u000b(X);s(X;k)<q\u000b(X))\u0000!\n\u001b!00\nfor allk2[K]. Fixk2[K], and de\fne the events\nA:=fs(X;k)<q\u000b(X)g\nand\nB\u001b:=fs(X;k) +\u001bZ\u0015q\u001b\n\u000b(X)g:\nNow, for any \u000e >0, consider A\u000e:=fs(X;k)\u0014q\u000b(X)\u0000\u000eg. On the event A\u000e\\B\u001b, it must\nhold that\n\u000e\u0014q\u000b(X)\u0000q\u001b\n\u000b(X) +\u001bZ:\nThe following lemma|whose proof we defer to Section A.2.1|shows that the latter can only\noccur with small probability.\nLemma A.1. With probability 1 over X, the quantile function satis\fes\nlim inf\n\u001b!0q\u001b\n\u000b(X)\u0015q\u000b(X);\nand hence lim sup\u001b!0fq\u000b(X)\u0000q\u001b\n\u000b(X) +\u001bZg\u00140almost surely.\nLemma A.1 implies that\nP(q\u000b(X)\u0000q\u001b\n\u000b(X) +\u001bZ\u0015\u000e)\u0000!\n\u001b!00;\nwhich, in turn, shows that, for every \fxed \u000e>0,\nP(A\u000e\\B\u001b)\u0000!\n\u001b!00:\nTo conclude the proof, \fx \u000f>0. The event A\u000eincreases to Awhen\u000e!0, so there exists\n\u000e>0 so that\nP(AnA\u000e)\u0014\u000f:\nFinally,\nlim sup\n\u001b!0P(A\\B\u001b)\u0014P(AnA\u000e) + lim sup\n\u001b!0P(A\u000e\\B\u001b)\u0014\u000f;\nas lim sup\u001b!0P(A\u000e\\B\u001b) = 0. We conclude the proof by sending \u000f!0.\n29",
+    "page": 29
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4876529953451402,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:55:49.010354",
+  "updated_at": "2025-10-21T02:01:01.029573",
+  "last_accessed": "2025-10-21T01:55:49.012325"
+}

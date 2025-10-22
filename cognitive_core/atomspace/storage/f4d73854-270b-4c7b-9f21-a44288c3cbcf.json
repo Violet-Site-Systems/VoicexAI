@@ -1,0 +1,27 @@
+{
+  "uuid": "f4d73854-270b-4c7b-9f21-a44288c3cbcf",
+  "atom_type": "PolicySection",
+  "name": "Page 28",
+  "content": {
+    "title": "Page 28",
+    "text": "List of Tables\n1 Parameter and compute counts for Transformer . . . . . . . . . . . . . . . . . . . . . . . . 7\n2 Fits to L(N;D ). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11\n3 Fits to L(N;S). . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14\n4 Key trend equations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20\n5 Key parameters to trend ﬁts . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20\n6 Trends for compute-efﬁcient training . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 20\nReferences\n[ACDE12] Eduardo G Altmann, Giampaolo Cristadoro, and Mirko Degli Esposti. On the origin of long-\nrange correlations in texts. Proceedings of the National Academy of Sciences , 109(29):11582–\n11587, 2012. 25\n[AS17] Madhu S. Advani and Andrew M. Saxe. High-dimensional dynamics of generalization error in\nneural networks. arXiv , 2017, 1710.03667. 11, 18, 22\n[BB01] Michele Banko and Eric Brill. Scaling to very very large corpora for natural language disam-\nbiguation. In Proceedings of the 39th annual meeting on association for computational linguis-\ntics, pages 26–33. Association for Computational Linguistics, 2001. 18\n[BHMM18] Mikhail Belkin, Daniel Hsu, Siyuan Ma, and Soumik Mandal. Reconciling modern machine\nlearning and the bias-variance trade-off. arXiv , 2018, 1812.11118. 18\n[Bia12] GÃŠrard Biau. Analysis of a random forests model. Journal of Machine Learning Research ,\n13(Apr):1063–1095, 2012. 18\n[CGRS19] Rewon Child, Scott Gray, Alec Radford, and Ilya Sutskever. Generating long sequences with\nsparse transformers. CoRR , abs/1904.10509, 2019, 1904.10509. URL http://arxiv.org/\nabs/1904.10509 . 19\n[DCLT18] Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. Bert: Pre-training of deep\nbidirectional transformers for language understanding, 2018, arXiv:1810.04805. 2\n[DGV+18] Mostafa Dehghani, Stephan Gouws, Oriol Vinyals, Jakob Uszkoreit, and Lukasz Kaiser. Uni-\nversal transformers. CoRR , abs/1807.03819, 2018, 1807.03819. URL http://arxiv.org/\nabs/1807.03819 . 6, 9, 23, 24\n[EP94] Werner Ebeling and Thorsten Pöschel. Entropy and long-range correlations in literary english.\nEPL (Europhysics Letters) , 26(4):241, 1994. 25\n[Fou] The Common Crawl Foundation. Common crawl. URL http://commoncrawl.org . 7\n[GARD18] Guy Gur-Ari, Daniel A. Roberts, and Ethan Dyer. Gradient descent happens in a tiny subspace.\n2018, arXiv:1812.04754. 18\n[GJS+19] Mario Geiger, Arthur Jacot, Stefano Spigler, Franck Gabriel, Levent Sagun, Stéphane d’Ascoli,\nGiulio Biroli, Clément Hongler, and Matthieu Wyart. Scaling description of generalization with\nnumber of parameters in deep learning. arXiv , 2019, 1901.01608. 18\n[GKX19] Behrooz Ghorbani, Shankar Krishnan, and Ying Xiao. An investigation into neural net op-\ntimization via hessian eigenvalue density. CoRR , abs/1901.10159, 2019, 1901.10159. URL\nhttp://arxiv.org/abs/1901.10159 . 18\n[Goo01] Joshua Goodman. A bit of progress in language modeling. CoRR , cs.CL/0108005, 2001. URL\nhttp://arxiv.org/abs/cs.CL/0108005 . 18\n[GRK17] Scott Gray, Alec Radford, and Diederik P Kingma. Gpu kernels for block-sparse weights. ope-\nnai.com , 2017. 19\n[HAD19] Joel Hestness, Newsha Ardalani, and Gregory Diamos. Beyond human-level accuracy: Compu-\ntational challenges in deep learning. In Proceedings of the 24th Symposium on Principles and\nPractice of Parallel Programming , PPoPP ’19, pages 1–14, New York, NY , USA, 2019. ACM.\ndoi:10.1145/3293883.3295710. 18\n28",
+    "page": 28
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4335948456850463,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:34.788708",
+  "updated_at": "2025-10-21T02:01:00.966879",
+  "last_accessed": "2025-10-21T01:56:34.791439"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "d35f367e-a2b9-44da-9923-e12e09ea6de6",
+  "atom_type": "PolicySection",
+  "name": "Page 7",
+  "content": {
+    "title": "Page 7",
+    "text": "Operation Parameters FLOPs per Token\nEmbed (nvocab +nctx)dmodel 4dmodel\nAttention: QKV nlayerdmodel 3dattn 2nlayerdmodel 3dattn\nAttention: Mask — 2nlayernctxdattn\nAttention: Project nlayerdattndmodel 2nlayerdattndembd\nFeedforward nlayer2dmodeld\u000b 2nlayer2dmodeld\u000b\nDe-embed — 2dmodelnvocab\nTotal (Non-Embedding) N= 2dmodelnlayer(2dattn+d\u000b)Cforward = 2N+ 2nlayernctxdattn\nTable 1 Parameter counts and compute (forward pass) estimates for a Transformer model. Sub-leading\nterms such as nonlinearities, biases, and layer normalization are omitted.\nFor contexts and models with dmodel> n ctx=12, the context-dependent computational cost per token is a\nrelatively small fraction of the total compute. Since we primarily study models where dmodel\u001dnctx=12,\nwe do not include context-dependent terms in our training compute estimate. Accounting for the backwards\npass (approximately twice the compute as the forwards pass), we then deﬁne the estimated non-embedding\ncompute asC\u00196Nﬂoating point operators per training token.\n2.2 Training Procedures\nUnless otherwise noted, we train models with the Adam optimizer [KB14] for a ﬁxed 2:5\u0002105steps with\na batch size of 512sequences of 1024 tokens. Due to memory constraints, our largest models (more than\n1B parameters) were trained with Adafactor [SS18]. We experimented with a variety of learning rates and\nschedules, as discussed in Appendix D.6. We found that results at convergence were largely independent of\nlearning rate schedule. Unless otherwise noted, all training runs included in our data used a learning rate\nschedule with a 3000 step linear warmup followed by a cosine decay to zero.\n2.3 Datasets\nWe train our models on an extended version of the WebText dataset described in [RWC+19]. The original\nWebText dataset was a web scrape of outbound links from Reddit through December 2017 which received at\nleast 3 karma. In the second version, WebText2, we added outbound Reddit links from the period of January\nto October 2018, also with a minimum of 3 karma. The karma threshold served as a heuristic for whether\npeople found the link interesting or useful. The text of the new links was extracted with the Newspaper3k\npython library. In total, the dataset consists of 20.3M documents containing 96 GB of text and 1:62\u00021010\nwords (as deﬁned by wc). We then apply the reversible tokenizer described in [RWC+19], which yields\n2:29\u00021010tokens. We reserve 6:6\u0002108of these tokens for use as a test set, and we also test on similarly-\nprepared samples of Books Corpus [ZKZ+15], Common Crawl [Fou], English Wikipedia, and a collection\nof publicly-available Internet Books.\n3 Empirical Results and Basic Power Laws\nTo characterize language model scaling we train a wide variety of models, varying a number of factors\nincluding:\n\u000fModel size (ranging in size from 768 to 1.5 billion non-embedding parameters)\n\u000fDataset size (ranging from 22 million to 23 billion tokens)\n\u000fShape (including depth, width, attention heads, and feed-forward dimension)\n\u000fContext length (1024 for most runs, though we also experiment with shorter contexts)\n\u000fBatch size ( 219for most runs, but we also vary it to measure the critical batch size)\n7",
+    "page": 7
+  },
+  "metadata": {
+    "source": "docs/2001.08361.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4911807109608145,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:55:40.440061",
+  "updated_at": "2025-10-21T02:01:00.995844",
+  "last_accessed": "2025-10-21T01:55:40.446147"
+}

@@ -1,0 +1,27 @@
+{
+  "uuid": "60aec010-9b92-4a9b-abf5-6a280691a72a",
+  "atom_type": "PolicySection",
+  "name": "Page 1",
+  "content": {
+    "title": "Page 1",
+    "text": "Knowing what you know: valid and validated con\fdence sets\nin multiclass and multilabel prediction\u0003\nMaxime Cauchoisy1, Suyash Guptay1, and John C. Duchi1, 2\n1Department of Statistics, Stanford University\n2Department of Electrical Engineering, Stanford University\nfmaxcauch, suyash28, jduchi g@stanford.edu\nAbstract\nWe develop conformal prediction methods for constructing valid predictive con\fdence\nsets in multiclass and multilabel problems without assumptions on the data generating\ndistribution. A challenge here is that typical conformal prediction methods|which give\nmarginal validity (coverage) guarantees|provide uneven coverage, in that they address\neasy examples at the expense of essentially ignoring di\u000ecult examples. By leveraging\nideas from quantile regression, we build methods that always guarantee correct coverage\nbut additionally provide (asymptotically optimal) conditional coverage for both multiclass\nand multilabel prediction problems. To address the potential challenge of exponentially\nlarge con\fdence sets in multilabel prediction, we build tree-structured classi\fers that\ne\u000eciently account for interactions between labels. Our methods can be bolted on top of\nany classi\fcation model|neural network, random forest, boosted tree|to guarantee its\nvalidity. We also provide an empirical evaluation, simultaneously providing new validation\nmethods, that suggests the more robust coverage of our con\fdence sets.\n1 Introduction\nThe average accuracy of a machine-learned model by itself is insu\u000ecient to trust the model's\napplication; instead, we should ask for valid con\fdence in its predictions. Valid here does\nnot mean \\valid under modeling assumptions,\" or \\trained to predict con\fdence,\" but honest\nvalidity, independent of the underlying distribution. In particular, for a supervised learning\ntask with inputs x2X, targetsy2Y, and a given con\fdence level \u000b2(0;1), we seek\ncon\fdence sets C(x) such that P(Y2C(X))\u00151\u0000\u000b; that is, we cover the true target Ywith\na given probability 1 \u0000\u000b. Given the growing importance of statistical learning in real-world\napplications|autonomous vehicles [20], skin lesion identi\fcation [11, 29], loan repayment\nprediction [14]|such validity is essential.\nThe typical approach in supervised learning is to learn a scoring function s:X\u0002Y! R\nwhere high scores s(x;y) mean that yis more likely for a given x. Given such a score, a\nnatural goal for prediction with con\fdence is to compute a quantile function q\u000bsatisfying\nP(s(x;Y)\u0015q\u000b(x)jX=x)\u00151\u0000\u000b; (1)\n\u0003Research supported by NSF CAREER award CCF-1553086, ONR Young Investigator Program award\nN00014-19-2288, and NSF award HDR-1934578 (the Stanford Data Science Collaboratory)\nyEqual contribution.\n1arXiv:2004.10181v3  [stat.ML]  10 Jul 2020",
+    "page": 1
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4070327839590647,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:41.944919",
+  "updated_at": "2025-10-21T02:01:01.079143",
+  "last_accessed": "2025-10-21T01:56:41.953868"
+}

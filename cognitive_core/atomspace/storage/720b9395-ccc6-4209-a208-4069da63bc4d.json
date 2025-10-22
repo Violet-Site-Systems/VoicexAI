@@ -1,0 +1,27 @@
+{
+  "uuid": "720b9395-ccc6-4209-a208-4069da63bc4d",
+  "atom_type": "PolicySection",
+  "name": "Page 20",
+  "content": {
+    "title": "Page 20",
+    "text": "0.000.250.500.751.00\n0.6 0.7 0.8 0.9\nWSCf(Worst−Slab Coverage)ConfidenceSetType\nImplicit\nExplicit\nMethod\nCDioC\nArbiTree−CQC\nPGM−CQC\nOracle\n0.000.250.500.751.00\n−0.05 0.00 0.05 0.10 0.15 0.20\ndWSCf(Worst−Slab Coverage Difference)Method\nArbiTree−CQC\nPGM−CQC\nOracle\nConfidenceSetType\nImplicit\nExplicit\nPv(WSC n(bCMethod;v)\u0014t)\nPv(WSC n(bCMethod;v)\u0000WSC n(bCCDioC;v)\u0014t)\nWorst Coverage probability t Di\u000berence of coverage t\nFigure 4.5. Cumulative distribution of worst-slab coverage (23) (with \u000e= 20%) on mis-\nspecifed logistic regression model (26) over M= 1000 i.i.d. choices of direction v2Sd\u00001. We ex-\npect to have Pv(WSC n(bC;v)\u0014t) = 1ft\u00151\u0000\u000bgifbCprovides exact 1\u0000\u000b-conditional coverage.\nLeft: CDF of WSC n(bC;v). Right: CDF of di\u000berence WSC n(bCMethod 1;v)\u0000WSC n(bCMethod 2;v),\nMethod 2is always the CDioC method (Alg. 3), and the other four are ArbiTree-CQC and\nPGM-CQC with both implicit bCimpand explicitbCiocon\fdence sets.\nmodel, a validation set of size nv= 6,000 for \ftting quantile functions and hyperparameter\ntuning,nc= 3,000 for calibration and the last nte= 1,000 for testing. We train a standard\nResNet50 [16] architecture for 200 epochs, obtaining test set accuracy 92 :5\u00060:5%, and use\nthed= 256-dimensional output of the \fnal layer of the ResNet as the inputs Xto the\nquantile estimation. For the ImageNet classi\fcation problem, we load a pre-trained Inception-\nResNetv2 [36] architecture, achieving top-1 test accuracy 80 :3\u00060:5%, using the d= 1536-\ndimensional output of the \fnal layer as features X. Splitting the original ImageNet validation\nset containing 50,000 instances into 3 di\u000berent sets, we \ft our quantile function on nv= 30,000\nexamples, calibrate on nc= 10,000 and test on the last nte= 10,000 images.\nWe apply the CQC method 1 with \u000b= 5% for CIFAR-10 and \u000b= 10% for ImageNet and\nit to the benchmark marginal method (3) and GIQ [33]. We expect the former to typically\noutput small con\fdence sets, as the neural network's accuracy is close to the con\fdence level\n1\u0000\u000b; this allows (typically) predicting a single label while maintaining marginal coverage.\nSupplementary \fgures B.14 and B.15 show this. The worst-slab coverage (23) tells a di\u000berent\nstory. In Figure 4.6, we compare worst-slab coverage over M= 1000 draws of viid\u0018Uni(Sd\u00001)\non the ImageNet dataset (see also Fig. B.16 for the identical experiment with CIFAR-10). The\nCQC and GIQ methods provide signi\fcant 3{5% and 5{7% better coverage, respectively, in\nworst-slab coverage over the marginal method. The CQC and GIQ methods provide stronger\ngains on ImageNet than on CIFAR-10, which we attribute to the relative easiness of CIFAR-\n10: the accuracy of the classi\fer is high, allowing near coverage by Dirac measures.\nFigure 4.7 compares the con\fdence set sizes and probability of coverage given con\fdence\nset size for the marginal, CQC, and GIQ methods. We summarize brie\ry. The CQC method\ngives con\fdence sets of size at most 2 for 80% of the instances|comparable to the marginal\nmethod and more frequently than the GIQ method (which yields 75% examples with jbC(X)j\u0014\n20",
+    "page": 20
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4876529953451402,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:55:49.008202",
+  "updated_at": "2025-10-21T02:01:01.033349",
+  "last_accessed": "2025-10-21T01:55:49.012315"
+}

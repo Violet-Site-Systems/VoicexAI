@@ -1,0 +1,27 @@
+{
+  "uuid": "affbc636-4f29-4e49-a0c0-a21499508382",
+  "atom_type": "PolicySection",
+  "name": "Page 34",
+  "content": {
+    "title": "Page 34",
+    "text": "0.00.51.01.52.0\n 0  1  2  3  4  5  6  7  8  9 10\nSizeProportion of instancesConformalization\nMarginal\nCQC\nGIQ\n0.00.30.60.9\n 1  2  3  4  5  6  7  8  9 10\nSizeP(Coverage | |C(X)| = Size)Conformalization\nMarginal\nCQC\nGIQ\nP(Y2bC(X)jjbC(X)j=t) P(jbC(X)j=t)\nCon\fdence set size tCon\fdence set size t\nFigure B.13. Results for CIFAR-10 dataset over M= 20 trials. Methods are the marginal\nmethod (Marginal, procedure 3), the CQC method (Alg. 1), and the GIQ method (Alg. 1, [33]).\nTop: Distribution of the con\fdence set size jbC(X)j. Bottom: Probability of coverage condi-\ntioned on the size of the con\fdence set.\n0.930.940.950.96\nMarginal CQC GIQ\nMethodCoverage\n1.11.21.3\nMarginal CQC GIQ\nMethodAverage Set SizeP(Y2^C(X))\nE\f\f\f^C(X)\f\f\f\nFigure B.14. Marginal coverage and average con\fdence set size on CIFAR-10 over M= 20\ntrials.\n34",
+    "page": 34
+  },
+  "metadata": {
+    "source": "docs/2004.10181.pdf"
+  },
+  "attention_value": {
+    "short_term": 0.2,
+    "long_term": 0.4070327839590647,
+    "very_long_term": 0.0
+  },
+  "truth_value": {
+    "strength": 1.0,
+    "confidence": 1.0
+  },
+  "incoming_links": [],
+  "outgoing_links": [],
+  "created_at": "2025-10-21T01:56:41.953164",
+  "updated_at": "2025-10-21T02:01:01.073996",
+  "last_accessed": "2025-10-21T01:56:41.953905"
+}
