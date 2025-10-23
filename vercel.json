@@ -1,16 +1,28 @@
 {
     "version": 2,
     "name": "voicexai-frontend",
-    "builds": [{
-        "src": "frontend/app.py",
-        "use": "@vercel/python"
-    }],
-    "routes": [{
-        "src": "/(.*)",
-        "dest": "frontend/app.py"
-    }],
+    "builds": [
+        {
+            "src": "frontend/app.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/static/(.*)",
+            "dest": "frontend/static/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "frontend/app.py"
+        }
+    ],
     "env": {
         "PYTHON_VERSION": "3.11"
+    },
+    "functions": {
+        "frontend/app.py": {
+            "maxDuration": 30
+        }
     }
-
 }

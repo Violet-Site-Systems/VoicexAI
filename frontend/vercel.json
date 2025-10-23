@@ -1,16 +1,28 @@
 {
     "version": 2,
     "name": "eppn-dashboard",
-    "builds": [{
-        "src": "app.py",
-        "use": "@vercel/python"
-    }],
-    "routes": [{
-        "src": "/(.*)",
-        "dest": "app.py"
-    }],
+    "builds": [
+        {
+            "src": "app.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/static/(.*)",
+            "dest": "static/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "app.py"
+        }
+    ],
     "env": {
         "PYTHON_VERSION": "3.11"
+    },
+    "functions": {
+        "app.py": {
+            "maxDuration": 30
+        }
     }
-
 }

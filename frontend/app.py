@@ -10,7 +10,9 @@ from typing import Dict, Any, List
 from io import BytesIO
 
 from fastapi import FastAPI
-from fastapi.responses import JSONResponse, StreamingResponse
+from fastapi.responses import JSONResponse, StreamingResponse, FileResponse
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 import logging
 
 logging.basicConfig(level=logging.INFO)
@@ -37,6 +39,20 @@ except Exception:
 
 app = FastAPI(title="EPPN Dashboard")
 
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # In production, replace with specific origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Mount static files if directory exists
+static_dir = os.path.join(os.path.dirname(__file__), "static")
+if os.path.exists(static_dir):
+    app.mount("/static", StaticFiles(directory=static_dir), name="static")
+
 
 def read_jsonl(path: str) -> List[Dict[str, Any]]:
     if not os.path.exists(path):
@@ -54,7 +70,6 @@ def read_jsonl(path: str) -> List[Dict[str, Any]]:
         logger.exception("Error reading JSONL %s: %s", path, exc)
         return []
     return items
-    return items
 
 
 @app.get("/docs")
@@ -65,21 +80,32 @@ def list_documents():
     except Exception as exc:  # pragma: no cover - defensive logging
         logger.exception("Failed to list documents: %s", exc)
         return JSONResponse(status_code=500, content={"error": "internal"})
-    doc_ids = sorted({s.get("doc_id") for s in summaries} | {e.get("doc_id") for e in ethics})
+    doc_ids = sorted(
+        {s.get("doc_id") for s in summaries} |
+        {e.get("doc_id") for e in ethics}
+    )
     return {"documents": doc_ids}
 
 
 @app.get("/")
 def root():
-    """Simple health/status endpoint for the root path."""
+    """Serve the static HTML file or return API info."""
+    static_index = os.path.join(
+        os.path.dirname(__file__), "static", "index.html"
+    )
+    if os.path.exists(static_index):
+        return FileResponse(static_index)
     return {"status": "ok", "endpoints": ["/docs", "/docs/sample-001/summary"]}
 
 
 @app.get("/docs/{doc_id}/summary")
 def get_summary(doc_id: str):
     try:
-        summaries = [s for s in read_jsonl(SUMMARY_FILE) if s.get("doc_id") == doc_id]
-        return summaries[-1] if summaries else JSONResponse(status_code=404, content={"error": "Not found"})
+        summaries = [
+            s for s in read_jsonl(SUMMARY_FILE) if s.get("doc_id") == doc_id
+        ]
+        return (summaries[-1] if summaries else
+                JSONResponse(status_code=404, content={"error": "Not found"}))
     except Exception as exc:
         logger.exception("Error fetching summary for %s: %s", doc_id, exc)
         return JSONResponse(status_code=500, content={"error": "internal"})
@@ -88,10 +114,14 @@ def get_summary(doc_id: str):
 @app.get("/docs/{doc_id}/ethics")
 def get_ethics(doc_id: str):
     try:
-        reports = [e for e in read_jsonl(ETHICS_FILE) if e.get("doc_id") == doc_id]
-        return reports[-1] if reports else JSONResponse(status_code=404, content={"error": "Not found"})
+        reports = [
+            e for e in read_jsonl(ETHICS_FILE) if e.get("doc_id") == doc_id
+        ]
+        return (reports[-1] if reports else
+                JSONResponse(status_code=404, content={"error": "Not found"}))
     except Exception as exc:
-        logger.exception("Error fetching ethics report for %s: %s", doc_id, exc)
+        logger.exception("Error fetching ethics report for %s: %s",
+                         doc_id, exc)
         return JSONResponse(status_code=500, content={"error": "internal"})
 
 
@@ -105,13 +135,16 @@ def synthesize_speech(payload: Dict[str, Any]):
     - lang: BCP-47 language code, e.g., "en" (default: "en")
     - slow: bool for slower speech (default: False)
     """
-    try:
-        if gTTS is None:
-            return JSONResponse(status_code=500, content={"error": "TTS engine unavailable"})
+    if gTTS is None:
+        return JSONResponse(
+            status_code=500, content={"error": "TTS engine unavailable"}
+        )
 
     text = str(payload.get("text", "")).strip()
     if not text:
-        return JSONResponse(status_code=400, content={"error": "'text' is required"})
+        return JSONResponse(
+            status_code=400, content={"error": "'text' is required"}
+        )
 
     lang = str(payload.get("lang", "en"))
     slow = bool(payload.get("slow", False))
@@ -129,5 +162,6 @@ def synthesize_speech(payload: Dict[str, Any]):
     headers = {
         "Content-Disposition": "inline; filename=tts.mp3"
     }
-    return StreamingResponse(mp3_bytes, media_type="audio/mpeg", headers=headers)
-
+    return StreamingResponse(
+        mp3_bytes, media_type="audio/mpeg", headers=headers
+    )
