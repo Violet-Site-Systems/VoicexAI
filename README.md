@@ -105,10 +105,7 @@ docker run -p 8000:8000 -v %cd%/../data:/app/data eppn-dashboard
  Deployment (ASI:cloud)
 
 - Use `config/asi-config.yaml` for registry and agents. Then:
-
-```
-
-asi deploy --config config/asi-config.yaml
+deploy --config config/asi-config.yaml
 
 ## Development Stack
 
