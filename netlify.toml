@@ -1,6 +1,10 @@
 [build]
   publish = "frontend/static"
-  command = "echo 'No build needed'"
+  command = "echo 'Static deployment - no build needed'"
+
+# No Python dependencies needed for static deployment
+[build.environment]
+  NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"

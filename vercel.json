@@ -18,11 +18,17 @@
         }
     ],
     "env": {
-        "PYTHON_VERSION": "3.11"
+        "PYTHON_VERSION": "3.11.0"
     },
     "functions": {
         "frontend/app.py": {
-            "maxDuration": 30
+            "maxDuration": 30,
+            "runtime": "python3.11"
         }
+    },
+    "install": {
+        "pip": [
+            "frontend/requirements.txt"
+        ]
     }
 }
