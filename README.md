@@ -7,6 +7,7 @@ The Ethical Policy Pipeline Network (EPPN) is a hybrid multi-agent system that c
 ## Architecture
 
 ### Multi-Agent System (uAgents)
+
 - **Librarian uAgent**: Fetches PDFs from public government portals
 - **Interpreter uAgent**: Extracts and structures content from PDFs
 - **Summarizer uAgent**: Summarizes structured data using LLMs
@@ -14,6 +15,7 @@ The Ethical Policy Pipeline Network (EPPN) is a hybrid multi-agent system that c
 - **Communicator uAgent**: Interfaces with human ethics partner via dashboard
 
 ### Cognitive Core (OpenCog Integration)
+
 - **AtomSpace**: Concept graph representations of policy data
 - **Reasoning Engine**: Pattern mining, probabilistic logic reasoning, and ECAN-style attention control
 - **PLN Reasoner**: Probabilistic Logic Networks for ethical inference
@@ -27,9 +29,10 @@ The Ethical Policy Pipeline Network (EPPN) is a hybrid multi-agent system that c
 4. **Human-AI Collaboration**: Interactive dashboard for human oversight and feedback
 5. **Distributed Intelligence**: Scalable multi-agent architecture on ASI:cloud
 
-## Project Structure
+## Project Structu
 
-```
+eppn/
+├── agents/                    # uAgent implementations
 eppn/
 ├── agents/                    # uAgent implementations
 │   ├── librarian/            # PDF retrieval agent
@@ -45,7 +48,6 @@ eppn/
 ├── config/                   # Configuration files
 ├── tests/                    # Test suites
 └── docs/                     # Documentation
-```
 
 ## Agent Message Flow
 
@@ -65,6 +67,7 @@ eppn/
    - `python agents/ethical_analyst/main.py`
    - `python agents/communicator/main.py`
 3. Start the FastAPI backend:
+
    ```bash
    cd frontend
    uvicorn app:app --reload --port 8000
@@ -92,18 +95,20 @@ Set BACKEND_URL to your local backend in the static UI.
 
 ### Dashboard in Docker
 
-```
+cd frontend
+docker build -t eppn-dashboard .
 cd frontend
 docker build -t eppn-dashboard .
 docker run -p 8000:8000 -v %cd%/../data:/app/data eppn-dashboard
-```
 
-## Deployment (ASI:cloud)
+ Deployment (ASI:cloud)
+ Deployment (ASI:cloud)
 
 - Use `config/asi-config.yaml` for registry and agents. Then:
+
 ```
+
 asi deploy --config config/asi-config.yaml
-```
 
 ## Development Stack
 
@@ -116,21 +121,25 @@ asi deploy --config config/asi-config.yaml
 ## Getting Started
 
 1. **Install Dependencies**:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 2. **Initialize Cognitive Core**:
+
    ```bash
    python -m cognitive_core.init
    ```
 
 3. **Start Agent Development**:
+
    ```bash
    python -m agents.librarian.main
    ```
 
 4. **Deploy to ASI:cloud**:
+
    ```bash
    asi deploy --config asi-config.yaml
    ```
